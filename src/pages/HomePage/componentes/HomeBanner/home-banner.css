@@ -16,20 +16,20 @@
 
 /* IMAGENS DOS BANNERS */
 .carousel .c1 {
-    padding: 150px;
+    padding: 200px;
     background-size: 100% 100%;
     background-image: url('https://gerlan06.github.io/Boteco-Paramazon/img/sexta.jpg');
 }
 
 .carousel .c2 {
-    padding: 150px;
+    padding: 200px;
     /*background: #696969;*/
     background-size: 100% 100%;
     background-image: url('https://gerlan06.github.io/Boteco-Paramazon/img/sabad%C3%A3o%20mix.jpg');
 }
 
 .carousel .c3 {
-    padding: 150px;
+    padding: 200px;
     /*background: rgb(91, 91, 91);*/
     background-size: 100% 100%;
     background-image: url('https://gerlan06.github.io/Boteco-Paramazon/img/domingueira.jpg');
@@ -39,7 +39,7 @@
 .flickity-page-dots {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   
   .flickity-page-dots .dot {
