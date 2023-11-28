@@ -1,5 +1,12 @@
-.bi.bi-house-door-fill, .bi.bi-star-fill, .bi.bi-telephone-fill {
+a {
+    text-decoration: none !important;
+}
+
+.bi.bi-house-door-fill,
+.bi.bi-star-fill,
+.bi.bi-telephone-fill {
     font-size: 20px;
+    color: white;
 }
 
 .bi.bi-list {
@@ -35,7 +42,7 @@
     right: 0;
     width: 100vw;
     padding: 0;
-    
+
     background: rgba(21, 21, 21, 0.8);
     backdrop-filter: blur(6.6px);
     -webkit-backdrop-filter: blur(6.6px);

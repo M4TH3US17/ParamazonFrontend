@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './menu.css';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,8 @@ const Menu = () => {
                 ) : (
                     <div>
                         <ul className='menu-mobile'>
-                            <li className='menu-item-mobile'><i className="bi bi-house-door-fill"></i></li>
-                            <li className='menu-item-mobile'><i className="bi bi-star-fill"></i></li>
+                            <li className='menu-item-mobile'><Link to={'/'}><i className="bi bi-house-door-fill"></i></Link></li>
+                            <li className='menu-item-mobile'><Link to={'/shows'}><i className="bi bi-star-fill"></i></Link></li>
                             <li className='menu-item-mobile'><i className="bi bi-telephone-fill"></i></li>
                             <li className='menu-item-mobile'><i className="bi bi-list"></i></li>
                         </ul>

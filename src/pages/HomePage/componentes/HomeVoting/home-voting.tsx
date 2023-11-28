@@ -1,5 +1,6 @@
 import React from 'react';
 import './home-voting.css'
+import { Link } from 'react-router-dom';
 
 const HomeVoting = () => {
   return ( 
@@ -10,9 +11,9 @@ const HomeVoting = () => {
         <div className='home-voting-img'/>
     </div>
 
-    <button className='btn home-voting-btn-vote'>
+    <Link to={'/shows/selecao'} className='btn home-voting-btn-vote'>
         <span>Realizar Votação</span>
-    </button>
+    </Link>
   </div>
   );
 }
