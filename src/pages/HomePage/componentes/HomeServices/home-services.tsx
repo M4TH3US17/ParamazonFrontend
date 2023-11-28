@@ -5,13 +5,13 @@ import Flickity from 'react-flickity-component';
 const HomeServices = () => {
     const flickityOptions = {
         imagesLoaded: true,
-        pageDots: true,
+        pageDots: false,
         prevNextButtons: true,
     };
 
     return (
         <div className='home-contact-us'>
-            <h2 className='home-contact-us-title'> Servicos </h2>
+            <h2 className='home-contact-us-title'> Serviços </h2>
 
             <Flickity className={'carousel home-contact-us-container'} options={flickityOptions}>
                 
