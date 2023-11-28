@@ -13,7 +13,7 @@ const Menu = () => {
                     <ul className='menu-desktop'>
                         <li className='menu-item'>Home</li>
                         <li className='menu-item'>Shows</li>
-                        <li className='menu-item'>Redes Sociais</li>
+                        <li className='menu-item'>Contato</li>
                     </ul>
                 ) : (
                     <div>
@@ -22,7 +22,7 @@ const Menu = () => {
                         <ul className='menu-mobile' style={{display: isOpen ? 'block' : 'none'}}>
                             <li className='menu-item-mobile'>Home</li>
                             <li className='menu-item-mobile'>Shows</li>
-                            <li className='menu-item-mobile'>Redes Sociais</li>
+                            <li className='menu-item-mobile'>Contato</li>
                         </ul>
                     </div>
                 )
