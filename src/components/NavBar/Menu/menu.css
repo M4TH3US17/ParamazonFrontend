@@ -1,13 +1,13 @@
-.bi.bi-list {
-  font-size: 40px;
-  cursor: pointer;
+.bi.bi-house-door-fill, .bi.bi-star-fill, .bi.bi-telephone-fill {
+    font-size: 20px;
 }
 
-.bi.bi-x-lg {
-    font-size: 34px;
-    cursor: pointer;
+.bi.bi-list {
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
 }
-  
+
 .menu-desktop {
     display: flex;
     justify-content: space-between;
@@ -26,13 +26,14 @@
 }
 
 .menu-mobile {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    justify-content: space-around;
+    list-style: none;
     position: absolute;
     z-index: 1;
     top: 100px;
     right: 0;
-    width: 200px;
+    width: 100vw;
     padding: 0;
     
     background: rgba(21, 21, 21, 0.8);
@@ -44,13 +45,12 @@
 
 
 .menu-item-mobile {
-    display: flex;
-    justify-content: center;
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
     font-size: 17px;
     color: white;
+    text-align: center;
 }
 
 .menu-item:hover {

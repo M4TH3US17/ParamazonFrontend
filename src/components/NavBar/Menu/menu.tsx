@@ -17,12 +17,11 @@ const Menu = () => {
                     </ul>
                 ) : (
                     <div>
-                       {isOpen ? (<i className="bi bi-x-lg" onClick={() => setIsOpen(false)}></i>) : (<i className="bi bi-list" onClick={() => setIsOpen(true)}></i>)}
-
-                        <ul className='menu-mobile' style={{display: isOpen ? 'block' : 'none'}}>
-                            <li className='menu-item-mobile'>Home</li>
-                            <li className='menu-item-mobile'>Shows</li>
-                            <li className='menu-item-mobile'>Contato</li>
+                        <ul className='menu-mobile'>
+                            <li className='menu-item-mobile'><i className="bi bi-house-door-fill"></i></li>
+                            <li className='menu-item-mobile'><i className="bi bi-star-fill"></i></li>
+                            <li className='menu-item-mobile'><i className="bi bi-telephone-fill"></i></li>
+                            <li className='menu-item-mobile'><i className="bi bi-list"></i></li>
                         </ul>
                     </div>
                 )
