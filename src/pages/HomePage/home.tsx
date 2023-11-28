@@ -3,7 +3,7 @@ import NavBar from '../../components/NavBar/navbar';
 import './home.css';
 import HomeBanner from './componentes/HomeBanner/home-banner';
 import HomeVoting from './componentes/HomeVoting/home-voting';
-import HomeContactUs from './componentes/HomeContactUs/home-contact-us';
+import HomeServices from './componentes/HomeServices/home-services';
 
 const Home = () => {
 
@@ -16,7 +16,7 @@ const Home = () => {
             <div className='app-home-content'>
                 {ehTelaDesktop ? (<></>) : (<HomeBanner />)}
                 <HomeVoting />
-                <HomeContactUs />
+                <HomeServices />
             </div>
         </main>
     );
