@@ -12,7 +12,7 @@ const HomeServices = () => {
     return (
         <div className='home-contact-us'>
             <h2 className='home-contact-us-title'> Serviços </h2>
-
+            
             <Flickity className={'carousel home-contact-us-container'} options={flickityOptions}>
                 
                     <div className='carousel home-services-card services-bg-1'>
