@@ -1,0 +1,98 @@
+.login-page {
+    margin-top: 15%;
+}
+
+.login-page-form-item-header {
+    width: 300px;
+}
+
+.login-page-form-item-logo {
+    padding: 35px 0px 70px 70px;
+    width: 200px;
+    background-size: 100% 100%;
+    background-image: url('../../assets/images/paramazon.png');
+    margin: 0 auto;
+}
+
+.login-page-form-item-title {
+    font-weight: 300;
+    font-size: 22px;
+    font-family: arial;
+}
+
+.login-page .login-page-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-page .login-page-form .login-page-form-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    /*background: red;*/
+}
+
+.login-page .login-page-form .login-page-form-item .login-page-form-input-container {
+    height: 40px;
+}
+
+.login-page .login-page-form .login-page-form-item .login-page-form-input-container .bi.bi-person-fill, .bi.bi-dash-circle-fill {
+    position: relative;
+    top: -40px;
+    right: -270px;
+    font-size: 23px;
+    opacity: 0.5;
+}
+
+.bi.bi-dash-circle-fill {
+    font-size: 18px;
+    top: -37px;
+}
+
+.login-page .login-page-form .login-page-form-item .input-group-text {
+    padding: 0px;
+    width: 300px;
+    background: none;
+    border: none;
+    
+}
+
+.login-page .login-page-form .login-page-form-item .form-control {
+    padding: 10px;
+    width: 300px;
+}
+
+.login-page .login-page-form .login-page-form-item-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.login-page .login-page-form .login-page-form-item-btn .login-page-form-btn {
+    margin-top: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+.login-page-form-item-cadastro-title {
+    display: flex;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.login-page-form-item-cadastro-title hr {
+    width: 100%;
+}
+
+.login-page-form-item-cadastro-title span {
+    margin-top: 4px;
+    font-weight: bold;
+    color: #878787;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.login-page-form-item-create-account-link {
+    font-weight: 500;
+}

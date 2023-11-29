@@ -10,8 +10,7 @@ const ShowPageVoting = () => {
       <main className='show-page-vote'>
 
         <div className='show-page-vote-container'>
-          <h2 className='show-page-vote-title'>Show ao vivo Paramazon: vote para ficar.
-            cantor/show1, cantor/show2 ou cantor/show3?</h2>
+          <h2 className='show-page-vote-title'>Show ao vivo Paramazon: vote para ficar.</h2>
 
 
           <div className='show-page-vote-candidates'>
