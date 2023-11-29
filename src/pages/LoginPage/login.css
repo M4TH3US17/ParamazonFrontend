@@ -56,7 +56,8 @@
     width: 300px;
     background: none;
     border: none;
-    
+    margin-bottom: 4px;
+    font-family: arial;
 }
 
 .login-page .login-page-form .login-page-form-item .form-control {
