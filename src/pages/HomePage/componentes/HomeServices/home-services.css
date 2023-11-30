@@ -1,17 +1,26 @@
-.home-contact-us {
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
+
+.flickity-viewport {
+    background: #f5f5f5;
+}
+
+.home-services {
     padding-bottom: 70px;
     padding-top: 10px;
     margin-top: 20px;
     background: #f5f5f5;
 }
 
-.home-contact-us-title {
-    margin-left: 15px;
+.home-services-title {
     font-size: 20px;
-    margin-top: 20px;
+    font-weight: 600 !important;
+    padding-top: 10px;
+    text-align: center;
+
+    font-family: 'Public Sans', sans-serif;
 }
 
-.home-contact-us-container {
+.home-services-container {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
@@ -19,7 +28,7 @@
     padding-right: 5px;
 }
 
-.home-contact-us-container .home-contact-us-section {
+.home-services-container .home-services-section {
     margin-bottom: 5px;
     display: flex;
     flex-direction: row;
@@ -32,7 +41,7 @@
     margin-left: 2.5px;
     margin-right: 2.5px;
     width: 50%;
-    border: 0.1px solid black;
+    border: 0.1px solid #6a6a6a39;
     border-radius: 5px;
     padding: 70px;
 }

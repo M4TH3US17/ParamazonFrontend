@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
+
+.contact-fale-conosco {
+    padding: 10px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-title {
+    font-family: 'Public Sans', sans-serif;
+    margin-bottom: 12px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item input {
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-lbl {
+    margin-bottom: 3px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item-btn {
+    margin-top: 5px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item-btn button {
+    padding: 8px;
+    font-weight: bolder;
+}
+
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item textarea {
+    height: 120px;
+}

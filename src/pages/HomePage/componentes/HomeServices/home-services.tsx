@@ -10,10 +10,10 @@ const HomeServices = () => {
     };
 
     return (
-        <div className='home-contact-us'>
-            <h2 className='home-contact-us-title'> Serviços </h2>
+        <div className='home-services'>
+            <h2 className='home-services-title'> Serviços </h2>
             
-            <Flickity className={'carousel home-contact-us-container'} options={flickityOptions}>
+            <Flickity className={'carousel home-services-container'} options={flickityOptions}>
                 
                     <div className='carousel home-services-card services-bg-1'>
                     <h3 className='home-services-card-title'>Cervejas gelada!!</h3>
