@@ -10,11 +10,11 @@
 .home-service {
     color: white;
     background: #031d3d;
-    padding-top: 25px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.home-service .home-service-text {
+/*.home-service .home-service-text {
     width: 90%;
     margin: 0 auto;
     font-family: 'Public Sans', sans-serif;
@@ -24,7 +24,7 @@
 .home-service .home-service-text .home-service-text-title {
     text-align: center;
     font-size: 20px;
-}
+}*/
 
 .home-servico-slide {
     /*width: 150px !important;*/

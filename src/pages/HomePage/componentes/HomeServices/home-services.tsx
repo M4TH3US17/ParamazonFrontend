@@ -17,9 +17,9 @@ const HomeServices = () => {
 
     return (
         <div className='home-service'>
-            <div className='home-service-text'>
+            {/*<div className='home-service-text'>
                 <h2 className='home-service-text-title'>Nossos servicos</h2>
-            </div>
+    </div>*/}
 
             <Swiper
                 style={{ height: '200px' }}
