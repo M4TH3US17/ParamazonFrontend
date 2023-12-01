@@ -1,36 +1,47 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, } from 'swiper/modules';
 import './home-services.css';
-import Flickity from 'react-flickity-component';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/swiper-bundle.css';
 
 const HomeServices = () => {
-    const flickityOptions = {
-        imagesLoaded: true,
-        pageDots: false,
-        prevNextButtons: true,
-    };
+    const servicos = [
+        { id: 0, name: 'Entretenimento' },
+        { id: 1, name: 'Comidas' },
+        { id: 2, name: 'Som ao vivo' },
+        { id: 3, name: 'Card 4' },
+        { id: 4, name: 'Card 5' },
+    ];
 
     return (
-        <div className='home-services'>
-            <h2 className='home-services-title'> Serviços </h2>
-            
-            <Flickity className={'carousel home-services-container'} options={flickityOptions}>
-                
-                    <div className='carousel home-services-card services-bg-1'>
-                    <h3 className='home-services-card-title'>Cervejas gelada!!</h3>
-                    </div>
+        <div className='home-service'>
+            <div className='home-service-text'>
+                <h2 className='home-service-text-title'>Nossos servicos</h2>
+            </div>
 
-                    <div className='carousel home-services-card services-bg-2'>
-                    <h3 className='home-services-card-title t3'>Tacaca Original Paraense aos domingos</h3>
-                    </div>
-
-                    <div className='carousel home-services-card services-bg-3'>
-                        <h3 className='home-services-card-title t3'>Trasmissão ao Vivo de jogos e lutas de MMA.</h3>
-                    </div>
-
-                    <div className='carousel home-services-card services-bg-4'>
-                    <h3 className='home-services-card-title'>Caipifrutas</h3>
-                    </div>
-          </Flickity>
+            <Swiper
+                style={{ height: '200px' }}
+                autoplay={{ delay: 3000, disableOnInteraction: false, }}
+                slidesPerView={3}
+                spaceBetween={20}
+                pagination={{ clickable: true, }}
+                modules={[Autoplay, Navigation]}
+                className="mySwiper"
+            >
+                {servicos.map((x, index) => (
+                    <SwiperSlide className='home-servico-slide'>
+                        <div className="card">
+                            <div className="card-img-top" />
+                            {/*<div className="card-body">
+                                <h5 className="card-title">{x.name}</h5>
+                                <p className="card-text">description.</p>
+                </div>*/}
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     );
 };

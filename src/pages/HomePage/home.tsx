@@ -27,8 +27,8 @@ const Home = () => {
                 {ehTelaDesktop ? (<></>) : (<HomeBanner />)}
                 <HomeVoting />
                 <HomeFaleConosco scrollYPosition={scrollPosition}/>
+                <HomeServices />
                 <Footer />
-                {/*<HomeServices />*/}
             </div>
         </main>
     );
