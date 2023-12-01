@@ -4,8 +4,8 @@ import './fale-conosco.css';
 function FaleConoscoComponent () {
   return (
     <div className='contact-fale-conosco'>
-      <div className='contact-fale-conosco-title'>
-        <h2>Fale Conosco</h2>
+      <div className='contact-fale-conosco-text-container'>
+        <h2 className='contact-fale-conosco-text-title'>Fale Conosco</h2>
       </div>
 
         <form className='contact-fale-conosco-container'>

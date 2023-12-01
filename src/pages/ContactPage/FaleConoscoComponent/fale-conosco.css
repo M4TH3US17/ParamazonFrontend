@@ -4,9 +4,13 @@
     padding: 10px;
 }
 
-.contact-fale-conosco .contact-fale-conosco-title {
+.contact-fale-conosco .contact-fale-conosco-text-container {
     font-family: 'Public Sans', sans-serif;
     margin-bottom: 12px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-text-container .contact-fale-conosco-text-title {
+    text-align: center;
 }
 
 .contact-fale-conosco .contact-fale-conosco-container {
@@ -21,10 +25,12 @@
     font-family: 'Public Sans', sans-serif;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item input {
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .form-control {
+    height: 45px;
 }
 
 .contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-lbl {
+    font-size: 17px;
     margin-bottom: 3px;
 }
 
@@ -39,5 +45,5 @@
 
 
 .contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item textarea {
-    height: 120px;
+    height: 120px !important;
 }

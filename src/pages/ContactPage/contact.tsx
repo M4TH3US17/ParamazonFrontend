@@ -7,6 +7,7 @@ function ContactPage() {
   return (
     <>
       <NavBar />
+      < div className='contact-page-bg'/>
       <main className='contact'>
         
         <div className='contact-container'>
