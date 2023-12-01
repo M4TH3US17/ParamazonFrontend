@@ -10,6 +10,7 @@ const Menu = () => {
     let ehTelaDesktop = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) > 730;
 
     useEffect(() => {
+        /*console.log(scrollPosition);*/
         if(scrollPosition >= 100) setIsFixed(true);
         else setIsFixed(false);
 
