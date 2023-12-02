@@ -18,7 +18,11 @@ function HomeFaleConosco({ scrollYPosition = 0 }: { scrollYPosition?: number }) 
 
             <Link to={'/contato'} className={`home-fale-conosco-link animate__animated ${insertAnimate ? 'animate__fadeInLeft' : ''}`}>
                 <div className='home-fale-conosco-link-container'>
-                    <div className='home-fale-conosco-link-image' />
+                    <div className='home-fale-conosco-image'>
+                        <div className='home-fale-conosco-link-bg' />
+                        <i className="bi bi-chat-left-dots"></i>
+                    </div>
+
                     <span className='home-fale-conosco-link-text animate__animated'>Entrar em contato com Paramazon</span>
                 </div>
 

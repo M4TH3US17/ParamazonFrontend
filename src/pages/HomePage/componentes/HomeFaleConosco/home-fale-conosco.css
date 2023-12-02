@@ -3,8 +3,6 @@
 .home-fale-conosco {
     display: flex;
     flex-direction: column;
-    margin-top: 3px;
-    background: #f5f5f5;
     font-family: 'Public Sans', sans-serif;
 }
 
@@ -16,7 +14,9 @@
 
 .home-fale-conosco .home-fale-conosco-text .home-fale-conosco-text-title {
     font-size: 20px;
-    text-align: center;
+    text-align: left;
+    color: rgb(3, 29, 61);
+    margin: 0;
 }
 
 .home-fale-conosco .home-fale-conosco-link {
@@ -29,7 +29,7 @@
     margin-bottom: 50px;
     width: 90%;
     padding: 20px;
-    border: 1px solid /*rgb(225, 225, 225)*/ #0d6efd;
+    border: 0.25px solid #4e4b98;
     border-radius: 4px;
     background: /*#f4f4f4*/ #fff;
     cursor: pointer;
@@ -41,19 +41,35 @@
     align-items: center;
 }
 
-.home-fale-conosco .home-fale-conosco-link .home-fale-conosco-link-container .home-fale-conosco-link-image {
+.home-fale-conosco .home-fale-conosco-link .home-fale-conosco-link-container .home-fale-conosco-link-bg {
     padding: 20px;
-    background-size: 100% 100%;
-    background-image: url('../../../../assets/images/paramazon.png');
-    width: 65px;
+    background: rgb(238, 237, 249);
+    border-radius: 50%;
     margin-right: 10px;
 }
 
+.home-voting-conosco-link-container {
+    display: flex;
+}
+
 .home-fale-conosco .home-fale-conosco-link .home-fale-conosco-link-container .home-fale-conosco-link-text {
-    line-height: 17px;
+    color: rgb(3, 29, 61);
+    margin-top: 1px;
 }
 
 .home-fale-conosco .home-fale-conosco-link .home-fale-conosco-link-arrow {
     height: 19px;
-    color: /*#b8b8b8*/ #0d6efd;
+    color: #4e4b98 /*#0d6efd*/;
+}
+
+.home-fale-conosco-image {
+    position: relative;
+}
+
+.bi.bi-chat-left-dots {
+    top: 8px;
+    left: 11px;
+    position: absolute;
+    font-size: 18px;
+    color: #4e4b98;
 }
