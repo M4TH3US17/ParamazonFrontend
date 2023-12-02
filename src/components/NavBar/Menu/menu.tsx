@@ -11,7 +11,7 @@ const Menu = () => {
 
     useEffect(() => {
         /*console.log(scrollPosition);*/
-        if(scrollPosition >= 100) setIsFixed(true);
+        if (scrollPosition >= 100) setIsFixed(true);
         else setIsFixed(false);
 
         const handleScroll = () => setScrollPosition(window.scrollY);
@@ -32,12 +32,24 @@ const Menu = () => {
                     </ul>
                 ) : (
                     <div>
-                        <ul className='menu-mobile' style={{position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px'}}>
+                        <ul className='menu-mobile' style={{ position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px' }}>
                             <li className='menu-item-mobile'><Link to={'/'}><i className="bi bi-house-door-fill"></i></Link></li>
                             <li className='menu-item-mobile'><Link to={'/shows'}><i className="bi bi-star-fill"></i></Link></li>
-                            {/*<li className='menu-item-mobile'><Link to={'/contato'}><i className="bi bi-telephone-fill"></i></Link></li>*/}
-                            <li className='menu-item-mobile'><i className="bi bi-list"></i></li>
+                            <li className='menu-item-mobile'><i className="bi bi-list" onClick={() => setIsOpen(true)}></i></li>
                         </ul>
+
+                        
+                            <div className='navigation-bg-mobile' style={{ display: isOpen ? 'block' : 'none' }}/>
+                            <nav 
+                            className={`navigation-mobile animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`} 
+                            style={{ display: isOpen ? 'block' : 'none' }}>
+                                <div className='navigation-mobile-item navigation-mobile-item-header'>
+                                    <h5 className='navigation-mobile-item-header-title'>EMPRESA</h5>
+                                    <i className="bi bi-x-lg" onClick={() => setIsOpen(false)}></i>
+                                </div>
+                                <div className='navigation-mobile-item navigation-mobile-item-links'></div>
+                                <div className='navigation-mobile-item navigation-mobile-item-themes'></div>
+                            </nav>
                     </div>
                 )
             }
