@@ -26,7 +26,7 @@ const Home = () => {
             <div className='app-home-content'>
                 {ehTelaDesktop ? (<></>) : (<HomeBanner />)}
                 <HomeVoting />
-                <HomeFaleConosco scrollYPosition={scrollPosition}/>
+                <HomeFaleConosco />
                 <HomeServices />
                 <Footer />
             </div>

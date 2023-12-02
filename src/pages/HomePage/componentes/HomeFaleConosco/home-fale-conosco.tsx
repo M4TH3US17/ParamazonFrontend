@@ -2,13 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './home-fale-conosco.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-function HomeFaleConosco({ scrollYPosition = 0 }: { scrollYPosition?: number }) {
-    const [insertAnimate, setInsertAnimate] = useState(false);
-
-    useEffect(() => {
-        /*console.log(insertAnimate);*/
-        if (scrollYPosition >= 170) setInsertAnimate(true);
-    }, [scrollYPosition, insertAnimate, setInsertAnimate]);
+function HomeFaleConosco() {
 
     return (
         <div className='home-fale-conosco'>
@@ -16,14 +10,14 @@ function HomeFaleConosco({ scrollYPosition = 0 }: { scrollYPosition?: number }) 
                 <h2 className='home-fale-conosco-text-title'>Precisando falar conosco?</h2>
             </div>
 
-            <Link to={'/contato'} className={`home-fale-conosco-link animate__animated ${insertAnimate ? 'animate__fadeInLeft' : ''}`}>
+            <Link to={'/contato'} className='home-fale-conosco-link animate__animated animate__fadeInLeft'>
                 <div className='home-fale-conosco-link-container'>
                     <div className='home-fale-conosco-image'>
                         <div className='home-fale-conosco-link-bg' />
                         <i className="bi bi-chat-left-dots"></i>
                     </div>
 
-                    <span className='home-fale-conosco-link-text animate__animated'>Entrar em contato com Paramazon</span>
+                    <span className='home-fale-conosco-link-text animate__animated'>Entrar em contato com [empresa]</span>
                 </div>
 
                 <svg className='home-fale-conosco-link-arrow' xmlns="http://www.w3.org/2000/svg" fill="none" focusable="false" viewBox="0 0 32 32">
