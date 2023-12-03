@@ -97,7 +97,7 @@ a {
     width: 90vw;
 
     padding: 0px 15px 15px 15px;
-    background: #031d3d;
+    background: rgb(3, 29, 61);
 }
 
 .navigation-mobile .navigation-mobile-item {
@@ -123,6 +123,63 @@ a {
     color: #fff;
     margin-top: 2px;
     font-size: 18px;
+}
+
+.navigation-mobile-item-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation-mobile-item-links div {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-mobile-item-links div a {
+    color: #d6d6ff;
+}
+
+.navigation-mobile-item-themes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation-mobile-item-themes div {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-mobile-item-themes div a {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    color: #d6d6ff;
+}
+
+.navigation-mobile-item-themes div a .bi.bi-facebook {
+    font-size: 17px;
+}
+
+.navigation-mobile-item-themes div a .bi.bi-instagram {
+    font-size: 17px;
+}
+
+.navigation-mobile-item-themes div a .bi.bi-whatsapp {
+    font-size: 17px;
+    margin-right: 22px;
+}
+
+
+.navigation-mobile-item-themes div a .bi.bi-facebook {
+    margin-top: -2px;
+}
+
+.navigation-mobile-item-themes div a span {
+    margin-left: -14px;
+    margin-top: -2px;
 }
 
 /* NAVIGATION MOBILE ANIMATIONS */

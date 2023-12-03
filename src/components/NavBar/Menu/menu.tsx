@@ -38,18 +38,49 @@ const Menu = () => {
                             <li className='menu-item-mobile'><i className="bi bi-list" onClick={() => setIsOpen(true)}></i></li>
                         </ul>
 
-                        
-                            <div className='navigation-bg-mobile' style={{ display: isOpen ? 'block' : 'none' }}/>
-                            <nav 
-                            className={`navigation-mobile animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`} 
+
+                        <div className='navigation-bg-mobile' style={{ display: isOpen ? 'block' : 'none' }} />
+                        <nav
+                            className={`navigation-mobile animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`}
                             style={{ display: isOpen ? 'block' : 'none' }}>
-                                <div className='navigation-mobile-item navigation-mobile-item-header'>
-                                    <h5 className='navigation-mobile-item-header-title'>EMPRESA</h5>
-                                    <i className="bi bi-x-lg" onClick={() => setIsOpen(false)}></i>
+                            <div className='navigation-mobile-item navigation-mobile-item-header'>
+                                <h5 className='navigation-mobile-item-header-title'>EMPRESA</h5>
+                                <i className="bi bi-x-lg" onClick={() => setIsOpen(false)}></i>
+                            </div>
+
+                            <div className='navigation-mobile-item navigation-mobile-item-links'>
+                                <div className=''>
+                                    <Link to={'/'} className='mb-3'>Home</Link>
+                                    <Link to={'/shows'} className='mb-3'>Show Page</Link>
+                                    <Link to={'/shows/selecao'}>Votação</Link>
                                 </div>
-                                <div className='navigation-mobile-item navigation-mobile-item-links'></div>
-                                <div className='navigation-mobile-item navigation-mobile-item-themes'></div>
-                            </nav>
+
+                                <div className=''>
+                                    <Link to={'/contato'}>Fale Conosco</Link>
+                                </div>
+                            </div>
+
+                            <div className='navigation-mobile-item navigation-mobile-item-themes'>
+                                <div>
+                                    <a href='https://www.instagram.com/boteco_paramazon/' target='_blank' className='mb-3'>
+                                        <i className="bi bi-instagram"></i>
+                                        <span>Instagram</span>
+                                    </a>
+
+                                    <a href='https://www.facebook.com/botecoparamazon' target='_blank'>
+                                        <i className="bi bi-facebook"></i>
+                                        <span>Facebook</span>
+                                    </a>
+                                </div>
+
+                                <div className=''>
+                                    <a href='#'>
+                                        <i className="bi bi-whatsapp"></i>
+                                        <span>Whatsapp</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
                 )
             }
