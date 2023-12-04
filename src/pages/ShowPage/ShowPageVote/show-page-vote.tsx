@@ -1,6 +1,7 @@
 import React from 'react';
 import './show-page-vote.css';
 import NavBar from '../../../components/NavBar/navbar';
+import Footer from '../../../components/Footer/footer';
 
 const ShowPageVoting = () => {
   return (
@@ -17,17 +18,17 @@ const ShowPageVoting = () => {
 
 
             <div className='show-page-vote-candidates-candidate-card'>
-              <p className='show-page-vote-candidates-candidate-name'>candidate 1</p>
+              <span className='show-page-vote-candidates-candidate-name'>Candidato</span>
               <div className='show-page-vote-candidates-candidate-img' />
             </div>
 
             <div className='show-page-vote-candidates-candidate-card'>
-              <p className='show-page-vote-candidates-candidate-name'>candidate 2</p>
+              <span className='show-page-vote-candidates-candidate-name'>Candidato</span>
               <div className='show-page-vote-candidates-candidate-img' />
             </div>
 
             <div className='show-page-vote-candidates-candidate-card'>
-              <p className='show-page-vote-candidates-candidate-name'>candidate 3</p>
+              <span className='show-page-vote-candidates-candidate-name'>Candidato</span>
               <div className='show-page-vote-candidates-candidate-img' />
             </div>
 

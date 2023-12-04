@@ -2,6 +2,7 @@ import React from 'react';
 import './contact.css';
 import NavBar from '../../components/NavBar/navbar';
 import FaleConoscoComponent from './FaleConoscoComponent/fale-conosco';
+import Footer from '../../components/Footer/footer';
 
 function ContactPage() {
   return (
