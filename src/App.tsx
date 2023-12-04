@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './pages/HomePage/home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ShowPageVoting from './pages/ShowPage/ShowPageVote/show-page-vote';
+import ShowPageVoting from './pages/ShowPage/componentes/ShowPageVote/show-page-vote';
 import ShowPage from './pages/ShowPage/show-page';
 import LoginPage from './pages/LoginPage/login';
 import ContactPage from './pages/ContactPage/contact';

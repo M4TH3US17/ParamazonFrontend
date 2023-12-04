@@ -1,7 +1,8 @@
 import React from 'react';
 import './show-page-vote.css';
-import NavBar from '../../../components/NavBar/navbar';
-import Footer from '../../../components/Footer/footer';
+import NavBar from '../../../../components/NavBar/navbar';
+import Footer from '../../../../components/Footer/footer';
+import ShowPageDashboard from '../ShowPageDashboard/show-page-dashboard';
 
 const ShowPageVoting = () => {
   return (
@@ -53,6 +54,7 @@ const ShowPageVoting = () => {
             </ul>
           </nav>
         </div>
+        <ShowPageDashboard />
       </main>
     </>
   );
