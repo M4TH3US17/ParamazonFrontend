@@ -55,6 +55,7 @@ const ShowPageVoting = () => {
           </nav>
         </div>
         <ShowPageDashboard />
+        <Footer />
       </main>
     </>
   );

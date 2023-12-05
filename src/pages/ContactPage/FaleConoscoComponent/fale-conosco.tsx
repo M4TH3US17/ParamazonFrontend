@@ -1,5 +1,6 @@
 import React from 'react';
 import './fale-conosco.css';
+import Footer from '../../../components/Footer/footer';
 
 function FaleConoscoComponent () {
   return (
@@ -11,17 +12,29 @@ function FaleConoscoComponent () {
         <form className='contact-fale-conosco-container'>
           <div className='contact-fale-conosco-item'>
             <label htmlFor="" className='contact-fale-conosco-lbl'><strong>Qual seu nome?</strong></label>
-            <input className="form-control" type='text' required/>
+
+            <div className='contact-fale-conosco-item-container-icon'>
+              <input className="form-control" type='text' required/>
+              <i className="bi bi-person-fill"></i>
+            </div>
           </div>
 
           <div className='contact-fale-conosco-item'>
             <label htmlFor="" className='contact-fale-conosco-lbl'><strong>Qual seu email?</strong></label>
-            <input className="form-control" placeholder='seu-email@gmail.com' type='email' required/>
+
+            <div className='contact-fale-conosco-item-container-icon'>
+              <input className="form-control" placeholder='seu-email@gmail.com' type='email' required/>
+              <i className="bi bi-envelope-at-fill"></i>
+            </div>
           </div>
 
           <div className='contact-fale-conosco-item'>
             <label htmlFor="" className='contact-fale-conosco-lbl'><strong>Qual seu telefone?</strong></label>
-            <input className="form-control" placeholder='(00) 00000-0000' type='text' required/>
+
+            <div className='contact-fale-conosco-item-container-icon'>
+              <input className="form-control" placeholder='(00) 00000-0000' type='text' required/>
+              <i className="bi bi-telephone-fill"></i>
+            </div>
           </div>
 
           <div className='contact-fale-conosco-item'>
@@ -30,10 +43,9 @@ function FaleConoscoComponent () {
           </div>
 
           <div className='contact-fale-conosco-item contact-fale-conosco-item-btn'>
-            <button className="btn btn-outline-primary">ENVIAR</button>
+            <button className="btn btn-primary">ENVIAR</button>
           </div>
         </form>
-
     </div>
   );
 }

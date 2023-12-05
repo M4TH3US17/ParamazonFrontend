@@ -71,3 +71,7 @@ nav {
     justify-content: center;
     margin-top: 30px;
 }
+
+.page-link {
+    color: rgb(3, 29, 61);
+}

@@ -4,13 +4,23 @@
     padding: 10px;
 }
 
+.contact-fale-conosco .contact-fale-conosco-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .contact-fale-conosco .contact-fale-conosco-text-container {
+    width: 90%;
+    margin: 0 auto;
     font-family: 'Public Sans', sans-serif;
+    color: rgb(3, 29, 61);
     margin-bottom: 12px;
 }
 
 .contact-fale-conosco .contact-fale-conosco-text-container .contact-fale-conosco-text-title {
-    text-align: center;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .contact-fale-conosco .contact-fale-conosco-container {
@@ -21,17 +31,46 @@
 .contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-family: 'Public Sans', sans-serif;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon {
+    position: relative;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-person-fill, .bi.bi-envelope-at-fill, .bi.bi-telephone-fill {
+    position: absolute;
+
+    top: 9px;
+    right: 8px;
+
+    color: rgb(3, 29, 61);
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-person-fill {
+    top: 8px;
+    font-size: 20px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-envelope-at-fill {
+    font-size: 18px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-telephone-fill {
+    font-size: 18px;
 }
 
 .contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .form-control {
     height: 45px;
+    border: 0.25px solid rgb(191, 194, 197);
 }
 
 .contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-lbl {
-    font-size: 17px;
-    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(33, 37, 41);
+    margin-bottom: 6px;
 }
 
 .contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item-btn {
