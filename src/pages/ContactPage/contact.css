@@ -1,6 +1,7 @@
 .contact {
     margin-top: 47px;
     padding-top: 10px;
+    min-height: 80vh;
 }
 
 .contact .contact-container {

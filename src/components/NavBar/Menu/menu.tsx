@@ -63,19 +63,19 @@ const Menu = () => {
                             <div className='navigation-mobile-item navigation-mobile-item-themes'>
                                 <div>
                                     <a href='https://www.instagram.com/boteco_paramazon/' target='_blank' className='mb-3'>
-                                        <i className="bi bi-instagram"></i>
+                                        <i className="bi bi-instagram" style={{marginRight: '20px'}}></i>
                                         <span>Instagram</span>
                                     </a>
 
                                     <a href='https://www.facebook.com/botecoparamazon' target='_blank'>
-                                        <i className="bi bi-facebook"></i>
+                                        <i className="bi bi-facebook" style={{marginRight: '20px'}}></i>
                                         <span>Facebook</span>
                                     </a>
                                 </div>
 
                                 <div className=''>
                                     <a href='#'>
-                                        <i className="bi bi-whatsapp"></i>
+                                        <i className="bi bi-whatsapp" style={{marginRight: '20px'}}></i>
                                         <span>Whatsapp</span>
                                     </a>
                                 </div>

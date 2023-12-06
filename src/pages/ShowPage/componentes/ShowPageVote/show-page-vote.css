@@ -6,7 +6,9 @@
     /*background: red;*/
 }
 
-.show-page-vote .show-page-vote-container {}
+.show-page-vote .show-page-vote-container {
+    min-height: 540px;
+}
 
 .show-page-vote .show-page-vote-container .show-page-vote-title {
     margin-left: 10px;
@@ -37,6 +39,7 @@
     margin-top: 8px;
 
     border-radius: 5px;
+    background: #fafafa;
     border: 0.25px solid #4e4b98;
 }
 
@@ -74,4 +77,10 @@ nav {
 
 .page-link {
     color: rgb(3, 29, 61);
+}
+
+@media (max-width: 400px) {
+    .show-page-vote .show-page-vote-container .show-page-vote-title {
+        font-size: 19px;
+    }
 }

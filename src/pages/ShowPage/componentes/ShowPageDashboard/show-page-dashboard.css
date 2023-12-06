@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
 .show-page-dashboard-component {
-    padding: 20px 10px 30px 10px;
-    background: #fcfcfc;
+    padding: 20px 10px 40px 10px;
+    background: #f3f3f3;
 }
 
 .show-page-dashboard-component .show-page-dashboard-container {}
@@ -28,6 +28,22 @@
     max-height: 300px;
 }
 
+.show-page-dashboard-component .show-page-dashboard-details {
+    padding: 2px;
+    margin-top: 20px;
+}
+
+.show-page-dashboard-component .show-page-dashboard-details .show-page-dashboard-details-item .show-page-dashboard-details-title {
+    color:rgb(3, 29, 61);
+    font-weight: bold;
+}
+
 .show-page-dashboard-component .show-page-dashboard-graphic .graphic-pie {
     margin: 0 auto;
+}
+
+@media (max-width: 400px) {
+    .show-page-dashboard-component .show-page-dashboard-container .show-page-dashboard-text .show-page-dashboard-text-title {
+        font-size: 19px;
+    }
 }

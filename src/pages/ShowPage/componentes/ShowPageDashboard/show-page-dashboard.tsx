@@ -28,7 +28,14 @@ const ShowPageDashboard = () => {
                 </div>
 
                 <div className='show-page-dashboard-graphic'>
-                    <Pie data={data} className='graphic-pie'/>
+                    <Pie data={data} className='graphic-pie' color='black' />
+                </div>
+
+                <div className='show-page-dashboard-details'>
+                    <div className='show-page-dashboard-details-item'>
+                        <span className='show-page-dashboard-details-title'>votos: </span>
+                        100
+                    </div>
                 </div>
             </div>
 
