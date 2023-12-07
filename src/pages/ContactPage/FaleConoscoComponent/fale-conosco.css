@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
 .contact-fale-conosco {
-    padding: 10px;
+    padding: 25px 10px 40px 10px;
 }
 
 .contact-fale-conosco .contact-fale-conosco-container {
-    width: 90%;
     margin: 0 auto;
 }
 
 .contact-fale-conosco .contact-fale-conosco-text-container {
-    width: 90%;
     margin: 0 auto;
     font-family: 'Public Sans', sans-serif;
     color: rgb(3, 29, 61);
@@ -85,4 +83,13 @@
 
 .contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item textarea {
     height: 120px !important;
+}
+
+.btn-faleconosco {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 13px;
+    border-color: #053167;
+    color: #fff;
+    background-color: rgba(3, 29, 61, 0.9);
 }
