@@ -31,7 +31,7 @@
     padding: 20px;
     border: 0.25px solid #4e4b98;
     border-radius: 4px;
-    background: #fff;
+    background: /*#f4f4f4*/ #fff;
     cursor: pointer;
 }
 

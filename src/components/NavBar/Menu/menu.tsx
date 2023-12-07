@@ -80,6 +80,10 @@ const Menu = () => {
                                     </a>
                                 </div>
                             </div>
+
+                            <div className='navigation-mobile-item navigation-mobile-item-login'>
+                                <Link to={'/login'} className='navigation-mobile-item-login-item'><i className="bi bi-box-arrow-right"></i> <span className='navigation-mobile-item-login-text'>Login</span></Link>
+                            </div>
                         </nav>
                     </div>
                 )

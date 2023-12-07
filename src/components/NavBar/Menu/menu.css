@@ -182,6 +182,22 @@ a {
     margin-top: -2px;
 }
 
+.navigation-mobile-item-login {
+}
+
+.navigation-mobile-item-login .navigation-mobile-item-login-item {
+    color: white;
+}
+
+.navigation-mobile-item-login .navigation-mobile-item-login-item .bi.bi-box-arrow-right {
+    font-size: 17px;
+    margin-right: 4px;
+}
+
+.navigation-mobile-item-login .navigation-mobile-item-login-item .navigation-mobile-item-login-text {
+    color: rgb(214, 214, 255);
+}
+
 /* NAVIGATION MOBILE ANIMATIONS */
 .animate__animated.animate__slideInRight {
     animation-duration: 0.65s;
