@@ -1,95 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
+/* 1. DESIGN MOBILE - TITULO OU SUBTITULO DA PAGINA */
 .contact-fale-conosco {
     padding: 25px 10px 40px 10px;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container {
-    margin: 0 auto;
-}
-
 .contact-fale-conosco .contact-fale-conosco-text-container {
-    margin: 0 auto;
-    font-family: 'Public Sans', sans-serif;
-    color: rgb(3, 29, 61);
+    font-family:  'Public Sans', sans-serif;
+    color:     #031d3d;
     margin-bottom: 12px;
 }
 
 .contact-fale-conosco .contact-fale-conosco-text-container .contact-fale-conosco-text-title {
-    text-align: left;
-    font-size: 20px;
+    text-align:  left;
+    font-size:   20px;
     font-weight: 500;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container {
-    display: flex;
+/* 2. DESIGN MOBILE - FORM DESIGN */
+.contact-fale-conosco .contact-fale-conosco-form-container {
+    display:        flex;
     flex-direction: column;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item {
-    display: flex;
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item {
+    display:        flex;
     flex-direction: column;
-    margin-bottom: 15px;
-    font-family: 'Public Sans', sans-serif;
+    margin-bottom:  15px;
+    font-family:   'Public Sans', sans-serif;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon {
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-item-icon-container {
     position: relative;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-person-fill, .bi.bi-envelope-at-fill, .bi.bi-telephone-fill {
+/* 3 DESIGN MOBILE - FORM ICONS (CSS PADRAO DE TODOS OS ICONES) */
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-item-icon-container .person-icon, .envelope-icon, .phone-icon {
     position: absolute;
-
-    top: 9px;
-    right: 8px;
-
-    color: rgb(77, 77, 77);
+    top:      9px;
+    right:    8px;
+    color: #4d4d4d;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-person-fill {
-    top: 8px;
+/* 3.1 DESIGN MOBILE - FORM ICONS (CSS ESPECIFICO DE CADA ICONE) */
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-item-icon-container .phone-icon {
+    font-size: 18px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-item-icon-container .person-icon {
+    top:       8px;
     font-size: 20px;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-envelope-at-fill {
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-item-icon-container .envelope-icon {
     font-size: 18px;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-item-container-icon .bi.bi-telephone-fill {
-    font-size: 18px;
-}
-
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .form-control {
+/* 4. DESIGN MOBILE - INPUTS, LABELS, TEXTAREAS E BUTTONS DO FORM */
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-input {
     height: 45px;
-    border: 0.25px solid rgb(191, 194, 197);
+    border: 0.25px solid #bfc2c5;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item .contact-fale-conosco-lbl {
-    font-size: 16px;
-    font-weight: 700;
-    color: rgb(33, 37, 41);
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-label {
+    font-size:     16px;
+    font-weight:   700;
+    color:       #212529;
     margin-bottom: 6px;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item-btn {
-    margin-top: 5px;
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item .contact-fale-conosco-form-textarea {
+    height: 120px;
+    border: 0.25px solid #bfc2c5;
 }
 
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item-btn button {
-    padding: 8px;
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item-btn-container {
+    display:         flex;
+    justify-content: center;
+    margin-top:      5px;
+}
+
+.contact-fale-conosco .contact-fale-conosco-form-container .contact-fale-conosco-form-item-btn-container .contact-fale-conosco-form-btn-enviar {
+    padding:     8px;
     font-weight: bolder;
-}
-
-
-.contact-fale-conosco .contact-fale-conosco-container .contact-fale-conosco-item textarea {
-    height: 120px !important;
-}
-
-.btn-faleconosco {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 13px;
+    width:       50%;
+    font-size:   13px;
     border-color: #053167;
-    color: #fff;
-    background-color: rgba(3, 29, 61, 0.9);
+    color:      #fff;
+    background-color: #031d3de6;
 }

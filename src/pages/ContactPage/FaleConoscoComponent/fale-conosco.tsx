@@ -10,41 +10,41 @@ function FaleConoscoComponent() {
           <h2 className='contact-fale-conosco-text-title'>Fale Conosco</h2>
         </div>
 
-        <form className='contact-fale-conosco-container'>
-          <div className='contact-fale-conosco-item'>
-            <label htmlFor="" className='contact-fale-conosco-lbl'><strong>Qual seu nome?</strong></label>
+        <form className='contact-fale-conosco-form-container'>
+          <div className='contact-fale-conosco-form-item'>
+            <label htmlFor="" className='contact-fale-conosco-form-label'><strong>Qual seu nome?</strong></label>
 
-            <div className='contact-fale-conosco-item-container-icon'>
-              <input className="form-control" type='text' placeholder='Digite seu nome' required maxLength={35} />
-              <i className="bi bi-person-fill"></i>
+            <div className='contact-fale-conosco-form-item-icon-container'>
+              <input className="form-control contact-fale-conosco-form-input" type='text' placeholder='Digite seu nome' required maxLength={35} />
+              <i className="bi bi-person-fill person-icon"></i>
             </div>
           </div>
 
-          <div className='contact-fale-conosco-item'>
-            <label htmlFor="" className='contact-fale-conosco-lbl'><strong>Qual seu email?</strong></label>
+          <div className='contact-fale-conosco-form-item'>
+            <label htmlFor="" className='contact-fale-conosco-form-label'><strong>Qual seu email?</strong></label>
 
-            <div className='contact-fale-conosco-item-container-icon'>
-              <input className="form-control" placeholder='Digite seu email' type='email' required maxLength={40} />
-              <i className="bi bi-envelope-at-fill"></i>
+            <div className='contact-fale-conosco-form-item-icon-container'>
+              <input className="form-control contact-fale-conosco-form-input" placeholder='Digite seu email' type='email' required maxLength={40} />
+              <i className="bi bi-envelope-at-fill envelope-icon"></i>
             </div>
           </div>
 
-          <div className='contact-fale-conosco-item'>
-            <label htmlFor="" className='contact-fale-conosco-lbl'><strong>Qual seu telefone?</strong></label>
+          <div className='contact-fale-conosco-form-item'>
+            <label htmlFor="" className='contact-fale-conosco-form-label'><strong>Qual seu telefone?</strong></label>
 
-            <div className='contact-fale-conosco-item-container-icon'>
-              <input className="form-control" placeholder='Digite seu numero' type='text' required maxLength={20} />
-              <i className="bi bi-telephone-fill"></i>
+            <div className='contact-fale-conosco-form-item-icon-container'>
+              <input className="form-control contact-fale-conosco-form-input" placeholder='Digite seu numero' type='text' required maxLength={20} />
+              <i className="bi bi-telephone-fill phone-icon"></i>
             </div>
           </div>
 
-          <div className='contact-fale-conosco-item'>
-            <label htmlFor="" className='contact-fale-conosco-lbl'><strong>Como podemos te ajudar?</strong></label>
-            <textarea className="form-control" maxLength={1000}></textarea>
+          <div className='contact-fale-conosco-form-item'>
+            <label htmlFor="" className='contact-fale-conosco-form-label'><strong>Como podemos te ajudar?</strong></label>
+            <textarea className="form-control contact-fale-conosco-form-textarea" maxLength={1000}></textarea>
           </div>
 
-          <div className='contact-fale-conosco-item contact-fale-conosco-item-btn'>
-            <button className="btn btn-faleconosco">ENVIAR</button>
+          <div className='contact-fale-conosco-item contact-fale-conosco-form-item-btn-container'>
+            <button className="btn contact-fale-conosco-form-btn-enviar">ENVIAR</button>
           </div>
         </form>
       </div>

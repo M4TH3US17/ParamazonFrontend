@@ -1,87 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
-.home-voting {
-    display: flex;
+/* 1. DESIGN MOBILE - TITULO OU SUBTITULO DO HOME CARD (VOTING) COMPONENT */
+.home-card-voting {
+    display:        flex;
     flex-direction: column;
     padding-bottom: 10px;
-    padding-top: 20px;
+    padding-top:    20px;
 }
 
-.home-voting-title {
+.home-card-voting .home-card-voting-title {
     text-align: left;
-    font-size: 20px;
+    font-size:  20px;
     margin-top: 10px;
-    width: 90%;
-    margin: 0 auto;
-    color: rgb(3, 29, 61);
+    width:      90%;
+    margin:     0 auto;
+    color:   #031d3d;
 
     font-family: 'Public Sans', sans-serif;
 }
 
-.home-voting-img-container {
-    padding: 32px;
-    min-width: 300px;
-    margin: 0 auto;
-}
-
-.home-voting-img-container .home-voting-img {
-    height: 100%;
-    width: 100%;
-    padding: 110px;
-    background-size: 100% 100%;
-    background-image: url('https://cdn.pixabay.com/animation/2023/06/13/15/12/15-12-34-448_512.gif');
-}
-
-.home-voting-btn-vote {
-    display: flex;
-    align-items: center;
+/* 2. DESIGN MOBILE - LINK */
+.home-card-voting .home-card-voting-link {
+    display:         flex;
+    align-items:     center;
     justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-    border: none;
-    padding: 20px;
-    font-size: 16px;
+    width:       90%;
+    margin:      0 auto;
+    border:      none;
+    padding:     20px;
+    font-size:   16px;
     font-weight: 500;
     border: 0.25px solid #4e4b98;
-    color: rgb(3, 29, 61);
+    color: #031d3d;
     border-radius: 4px;
-    margin-top: 11px;
+    margin-top:    11px;
 }
 
-.home-voting-link-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.home-voting-link-bg {
-    padding: 20px;
-    margin-left: 5px;
-    margin-right: 10px;
-    border-radius: 50%;
-    background: rgb(238, 237, 249);
-}
-
-.home-voting-link-text {
-    margin-top: -2px;
-    font-weight: 400;
-    font-family: 'Public Sans', sans-serif;
-}
-
-.home-voting-link-arrow {
+.home-card-voting .home-card-voting-link .home-card-voting-link-arrow-icon {
     height: 19px;
     color: #4e4b98;
 }
 
+.home-card-voting .home-card-voting-link .home-card-voting-link-container {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+}
 
-.home-voting-image {
+.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-title {
+    margin-top:  -2px;
+    font-weight:  400;
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* 3. DESIGN MOBILE - LINK IMAGE */
+.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-image-container {
     position: relative;
 }
 
-.bi.bi-envelope {
-    position: absolute;
-    top: 5px;
-    left: 15px;
+.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-image-container .home-card-voting-link-image-bg {
+    padding:       20px;
+    margin-left:   5px;
+    margin-right:  10px;
+    border-radius: 50%;
+    background: #eeedf9;
+}
+
+.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-image-container .home-card-voting-link-image-envelope-icon {
+    position:  absolute;
+    top:       5px;
+    left:      15px;
     font-size: 20px;
-    color: #4e4b98;
+    color:   #4e4b98;
 }

@@ -1,99 +1,102 @@
+/* 1. MOBILE DESIGN - LOGIN PAGE */
 .login-page {
     margin-top: 15%;
 }
 
-.login-page-form-item-header {
+/* 2. MOBILE DESIGN - FORM LOGIN */
+.login-page .login-page-form {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+}
+
+/* 3. MOBILE DESIGN - FORM HEADER */
+.login-page .login-page-form .login-page-form-header {
     width: 300px;
 }
 
-.login-page-form-item-logo {
-    padding: 35px 0px 70px 70px;
-    width: 200px;
+.login-page .login-page-form .login-page-form-header .login-page-header-item-logo {
+    padding:         35px 0px 70px 70px;
+    width:           200px;
     background-size: 100% 100%;
     background-image: url('../../assets/images/paramazon.png');
-    margin: 0 auto;
+    margin:          0 auto;
 }
 
-.login-page-form-item-title {
-    font-weight: 300;
-    font-size: 22px;
-    font-family: arial;
-}
-
-.login-page .login-page-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.login-page .login-page-form .login-page-form-item {
-    display: flex;
-    flex-direction: column;
+/* 4. MOBILE DESIGN - FORM CONTAINER INPUTS */
+.login-page .login-page-form .login-page-form-item-container {
+    display:         flex;
+    flex-direction:  column;
     justify-content: center;
-    margin-bottom: 20px;
-    /*background: red;*/
+    margin-bottom:   20px;
 }
 
-.login-page .login-page-form .login-page-form-item .login-page-form-input-container {
+.login-page .login-page-form .login-page-form-item-container .login-page-form-input-container {
     height: 40px;
 }
 
-.login-page .login-page-form .login-page-form-item .login-page-form-input-container .bi.bi-person-fill, .bi.bi-dash-circle-fill {
-    position: relative;
-    top: -40px;
-    right: -270px;
-    font-size: 23px;
-    opacity: 0.5;
-}
-
-.bi.bi-dash-circle-fill {
-    font-size: 18px;
-    top: -37px;
-}
-
-.login-page .login-page-form .login-page-form-item .input-group-text {
-    padding: 0px;
-    width: 300px;
-    background: none;
-    border: none;
+/* 5. MOBILE DESIGN - INPUTS, LABELS AND BUTTONS */
+.login-page .login-page-form .login-page-form-item-container .login-page-form-item-label {
+    padding:       0px;
+    width:         300px;
+    background:    none;
+    border:        none;
     margin-bottom: 4px;
-    font-family: arial;
+    font-family:   arial;
 }
 
-.login-page .login-page-form .login-page-form-item .form-control {
+.login-page .login-page-form .login-page-form-item-container .login-page-form-item-input {
     padding: 10px;
-    width: 300px;
+    width:   300px;
 }
 
-.login-page .login-page-form .login-page-form-item-btn {
-    display: flex;
+.login-page .login-page-form .login-page-form-item-btn-container {
+    display:         flex;
     justify-content: center;
 }
 
-.login-page .login-page-form .login-page-form-item-btn .login-page-form-btn {
+.login-page .login-page-form .login-page-form-item-btn-container .login-page-form-btn-acessar {
     margin-top: 10px;
-    padding: 10px;
-    width: 300px;
+    padding:    10px;
+    width:      300px;
 }
 
-.login-page-form-item-cadastro-title {
-    display: flex;
-    width: 300px;
+/* 6. MOBILE DESIGN - ICONS INPUTS */
+.login-page .login-page-form .login-page-form-item-container .login-page-form-input-container .login-dash-circle-icon {
+    font-size: 18px;
+    top:      -37px;
+}
+
+.login-page .login-page-form .login-page-form-item-container .login-page-form-input-container .login-person-icon, .login-dash-circle-icon {
+    position:  relative;
+    top:       -40px;
+    right:     -270px;
+    font-size: 23px;
+    opacity:   0.5;
+}
+
+/* 7. MOBILE DESIGN - DESCRIPTION 'OU' AT THE END OF THE FORM */
+.login-page .login-page-form .login-page-form-item-or-container {
+    display:    flex;
+    width:      300px;
     margin-top: 10px;
 }
 
-.login-page-form-item-cadastro-title hr {
+.login-page .login-page-form .login-page-form-item-or-container .login-page-form-item-or-line {
     width: 100%;
 }
 
-.login-page-form-item-cadastro-title span {
-    margin-top: 4px;
-    font-weight: bold;
-    color: #878787;
-    margin-left: 5px;
+.login-page .login-page-form .login-page-form-item-or-container .login-page-form-item-or-text-title {
+    margin-top:   4px;
+    font-weight:  bold;
+    color:     #878787;
+    margin-left:  5px;
     margin-right: 5px;
 }
 
-.login-page-form-item-create-account-link {
+/* 8. MOBILE DESIGN - LINK */
+.login-page .login-page-form .login-page-form-item-link-container{}
+
+.login-page .login-page-form .login-page-form-item-link-container .login-page-form-item-register-link {
     font-weight: 500;
 }
