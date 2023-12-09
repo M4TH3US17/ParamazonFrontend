@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
 /* 1. DESIGN MOBILE - TITULO OU SUBTITULO DO HOME CARD (VOTING) COMPONENT */
-.home-card-voting {
+.home-card-voting-component {
     display:        flex;
     flex-direction: column;
     padding-bottom: 10px;
     padding-top:    20px;
 }
 
-.home-card-voting .home-card-voting-title {
+.home-card-voting-component .home-card-voting-component-title {
     text-align: left;
     font-size:  20px;
     margin-top: 10px;
@@ -20,7 +20,7 @@
 }
 
 /* 2. DESIGN MOBILE - LINK */
-.home-card-voting .home-card-voting-link {
+.home-card-voting-component .home-card-voting-component-link {
     display:         flex;
     align-items:     center;
     justify-content: space-between;
@@ -36,29 +36,29 @@
     margin-top:    11px;
 }
 
-.home-card-voting .home-card-voting-link .home-card-voting-link-arrow-icon {
+.home-card-voting-component .home-card-voting-component-link .home-card-voting-component-link-arrow-icon {
     height: 19px;
     color: #4e4b98;
 }
 
-.home-card-voting .home-card-voting-link .home-card-voting-link-container {
+.home-card-voting-component .home-card-voting-component-link .home-card-voting-component-link-container {
     display:         flex;
     align-items:     center;
     justify-content: space-between;
 }
 
-.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-title {
+.home-card-voting-component .home-card-voting-component-link .home-card-voting-component-link-container .home-card-voting-component-link-title {
     margin-top:  -2px;
     font-weight:  400;
     font-family: 'Public Sans', sans-serif;
 }
 
 /* 3. DESIGN MOBILE - LINK IMAGE */
-.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-image-container {
+.home-card-voting-component .home-card-voting-component-link .home-card-voting-component-link-container .home-card-voting-component-link-image-container {
     position: relative;
 }
 
-.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-image-container .home-card-voting-link-image-bg {
+.home-card-voting-component .home-card-voting-component-link .home-card-voting-component-link-container .home-card-voting-component-link-image-container .home-card-voting-component-link-image-bg {
     padding:       20px;
     margin-left:   5px;
     margin-right:  10px;
@@ -66,7 +66,7 @@
     background: #eeedf9;
 }
 
-.home-card-voting .home-card-voting-link .home-card-voting-link-container .home-card-voting-link-image-container .home-card-voting-link-image-envelope-icon {
+.home-card-voting-component .home-card-voting-component-link .home-card-voting-component-link-container .home-card-voting-component-link-image-container .home-card-voting-component-link-image-envelope-icon {
     position:  absolute;
     top:       5px;
     left:      15px;

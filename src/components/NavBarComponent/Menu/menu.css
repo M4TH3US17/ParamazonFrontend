@@ -97,7 +97,7 @@ a {
     width: 90vw;
 
     padding: 0px 15px 15px 15px;
-    background: rgb(3, 29, 61);
+    background: #031d3d;
 }
 
 .navigation-mobile .navigation-mobile-item {
@@ -195,7 +195,7 @@ a {
 }
 
 .navigation-mobile-item-login .navigation-mobile-item-login-item .navigation-mobile-item-login-text {
-    color: rgb(214, 214, 255);
+    color: #d6d6ff;
 }
 
 /* NAVIGATION MOBILE ANIMATIONS */

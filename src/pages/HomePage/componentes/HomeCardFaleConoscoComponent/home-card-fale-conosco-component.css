@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
 /* 1. DESIGN MOBILE - TITULO OU SUBTITULO DO HOME CARD (FALE CONOSCO) COMPONENT */
-.home-card-fale-conosco {
+.home-card-fale-conosco-component {
     display:        flex;
     flex-direction: column;
     font-family:    'Public Sans', sans-serif;
 }
 
-.home-card-fale-conosco .home-card-fale-conosco-text-container {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-text-container {
     width:      90%;
     margin:     0 auto;
     margin-top: 20px;
 }
 
-.home-card-fale-conosco .home-card-fale-conosco-text-container .home-card-fale-conosco-text-title {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-text-container .home-card-fale-conosco-component-text-title {
     font-size:  20px;
     text-align: left;
     color:   #031d3d;
@@ -21,7 +21,7 @@
 }
 
 /* 2. DESIGN MOBILE - LINK */
-.home-card-fale-conosco .home-card-fale-conosco-link-container {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-link-container {
     display:         flex;
     flex-direction:  row;
     justify-content: space-around;
@@ -37,30 +37,30 @@
     cursor:          pointer;
 }
 
-.home-card-fale-conosco .home-card-fale-conosco-link-container .home-card-fale-conosco-link-icon-arrow {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-link-container .home-card-fale-conosco-component-link-icon-arrow {
     height: 19px;
     color:  #4e4b98;
 }
 
 /* 2.1 DESIGN MOBILE - LINK IMAGE */
-.home-card-fale-conosco .home-card-fale-conosco-link-container .home-card-fale-conosco-link-image-container {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-link-container .home-card-fale-conosco-component-link-image-container {
     display:        flex;
     flex-direction: row;
     align-items:    center;
 }
 
-.home-card-fale-conosco .home-card-fale-conosco-link-container .home-card-fale-conosco-link-image-container {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-link-container .home-card-fale-conosco-component-link-image-container {
     position: relative;
 }
 
-.home-card-fale-conosco .home-card-fale-conosco-link-container .home-card-fale-conosco-link-image-container .home-card-fale-conosco-link-image-bg {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-link-container .home-card-fale-conosco-component-link-image-container .home-card-fale-conosco-component-link-image-bg {
     padding:       20px;
     background: #eeedf9;
     border-radius: 50%;
     margin-right:  10px;
 }
 
-.home-card-fale-conosco .home-card-fale-conosco-link-container .home-card-fale-conosco-link-image-container .home-card-fale-conosco-link-image-chat-left-dots-icon {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-link-container .home-card-fale-conosco-component-link-image-container .home-card-fale-conosco-component-link-image-chat-left-dots-icon {
     top:       8px;
     left:      11px;
     position:  absolute;
@@ -69,7 +69,7 @@
 }
 
 /* 2.2 DESIGN MOBILE - LINK TITLE */
-.home-card-fale-conosco .home-card-fale-conosco-link-container .home-card-fale-conosco-link-image-container .home-card-fale-conosco-link-text-title {
+.home-card-fale-conosco-component .home-card-fale-conosco-component-link-container .home-card-fale-conosco-component-link-image-container .home-card-fale-conosco-component-link-text-title {
     color:      #031d3d;
     margin-top: 1px;
 }

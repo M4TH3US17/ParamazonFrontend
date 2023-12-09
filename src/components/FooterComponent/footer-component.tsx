@@ -3,42 +3,52 @@ import './footer-component.css';
 
 function FooterComponent() {
   return (
-    <div className='footer'>
-      <div className='footer-container'>
+    <div className='footer-component'>
+      <div className='footer-component-content'>
 
-        <div className='footer-container-nav'>
-          <div className='footer-container-nav-item'>
-            <a href="#" className='nav-link'>Sobre</a>
-            <a href="#" className='nav-link'>Suporte</a>
+        <div className='footer-component-navigation-container'>
+          <div className='footer-component-navigation-container-item'>
+            <a href="#" className='footer-navigation-link'>Sobre</a>
+            <a href="#" className='footer-navigation-link'>Suporte</a>
           </div>
 
-          <div className='footer-container-nav-item'>
-            <div className='flag-brazil'/>
+          <div className='footer-component-navigation-container-item'>
+            <div className='footer-image-flag-brazil' />
           </div>
         </div>
-        <hr />
-        <div className='footer-container-links'>
 
-          <a href='https://www.instagram.com/boteco_paramazon/' className='footer-container-link-item' target='_blank'>
-            <div className='footer-container-link-item-destaque'><i className="bi bi-instagram"></i> <span className='link-text'>INSTAGRAM</span></div>
+        <hr className='footer-line'/>
+
+        <div className='footer-component-link-container'>
+          <a href='https://www.instagram.com/boteco_paramazon/' className='footer-component-link-item' target='_blank'>
+            <div className='footer-component-link-item-content-principal'>
+              <i className="bi bi-instagram footer-instagram-icon"></i>
+              <span className='footer-component-link-item-content-principal-text'>INSTAGRAM</span>
+            </div>
           </a>
 
-          <div>
-            <a href='https://www.facebook.com/botecoparamazon' className='footer-container-link-item' target='_blank'>
-              <div className='footer-container-link-item-subitem'><i className="bi bi-facebook"></i> <span className='link-text'>FACEBOOK</span></div>
+          <div className='footer-component-link-subcontainer'>
+            <a href='https://www.facebook.com/botecoparamazon' className='footer-component-link-item' target='_blank'>
+              <div className='footer-component-link-item-content'>
+                <i className="bi bi-facebook footer-facebook-icon"></i>
+                <span className='footer-component-link-item-content-principal-text'>FACEBOOK</span>
+              </div>
             </a>
 
-            <a href='#' className='footer-container-link-item' style={{ marginLeft: '5px' }}>
-              <div className='footer-container-link-item-subitem'><i className="bi bi-whatsapp"></i> <span className='link-text'>WHATSAPP</span></div>
+            <a href='#' className='footer-component-link-item' style={{ marginLeft: '5px' }}>
+              <div className='footer-component-link-item-content'>
+                <i className="bi bi-whatsapp footer-whatsapp-icon"></i>
+                <span className='footer-component-link-item-content-text'>WHATSAPP</span>
+              </div>
             </a>
           </div>
         </div>
 
-        <hr />
+        <hr className='footer-line'/>
 
-        <div className='footer-container-credits'>
-          <p className='footer-container-credits-item'>[empresa] - CNPJ 00.000.000/0000-00</p>
-          <p className='footer-container-credits-item'>Av. xxxxxxx, 02 - Jorge Teixeira, Manaus - AM, 00000-000</p>
+        <div className='footer-component-credits-container'>
+          <p className='footer-component-credits-container-item'>[empresa] - CNPJ 00.000.000/0000-00</p>
+          <p className='footer-component-credits-container-item'>Av. xxxxxxx, 02 - Jorge Teixeira, Manaus - AM, 00000-000</p>
         </div>
       </div>
     </div>
