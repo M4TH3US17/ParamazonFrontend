@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
+
+/* 1. DESIGN MOBILE - TITULO OU SUBTITULO DO COMPONENTE */
+.show-page-dashboard-component {
+    padding:      20px 10px 40px 10px;
+    background: #f3f3f3;
+}
+
+.show-page-dashboard-component .show-page-dashboard-container {}
+
+.show-page-dashboard-component .show-page-dashboard-container .show-page-dashboard-text {
+    color:       #031d3d;
+    font-family:   'Public Sans', sans-serif;
+    margin-bottom: 20px !important;
+}
+
+.show-page-dashboard-component .show-page-dashboard-container .show-page-dashboard-text .show-page-dashboard-text-title {
+    font-size:   20px;
+    font-weight: 400;
+}
+
+.show-page-dashboard-component .show-page-dashboard-container .show-page-dashboard-text .show-page-dashboard-text-subtitle {
+    font-size:   16px;
+    font-weight: 400;
+}
+
+@media (max-width: 400px) {
+    .show-page-dashboard-component .show-page-dashboard-container .show-page-dashboard-text .show-page-dashboard-text-title {
+        font-size: 19px;
+    }
+}
+
+/* 2. DESIGN MOBILE - CSS DO GRAFICO */
+.show-page-dashboard-component .show-page-dashboard-graphic {
+    width:      100%;
+    max-height: 300px;
+}
+
+.show-page-dashboard-component .show-page-dashboard-graphic .graphic-pie {
+    margin: 0 auto;
+}
+
+.show-page-dashboard-component .show-page-dashboard-graphic-details-container {
+    padding:    2px;
+    margin-top: 20px;
+}
+
+.show-page-dashboard-component .show-page-dashboard-graphic-details-container .show-page-dashboard-graphic-details-item .show-page-dashboard-graphic-details-text-votes {
+    color:    #031d3d;
+    font-weight: bold;
+}

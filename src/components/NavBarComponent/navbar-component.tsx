@@ -1,8 +1,8 @@
 import React from 'react';
-import './navbar.css';
+import './navbar-component.css';
 import Menu from './Menu/menu';
 
-const NavBar = () => {
+const NavBarComponent = () => {
     return (
     <header className='app-navbar'>
         <div className='app-navbar-container'>
@@ -14,4 +14,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default NavBarComponent;

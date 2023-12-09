@@ -1,8 +1,8 @@
 import React from 'react';
-import './home-voting.css';
+import './home-card-voting-component.css';
 import { Link } from 'react-router-dom';
 
-const HomeVoting = () => {
+const HomeCardVotingComponent = () => {
   return (
     <div className='home-card-voting'>
       <h2 className='home-card-voting-title'>Que tal escolher o show da próxima semana?</h2>
@@ -27,4 +27,4 @@ const HomeVoting = () => {
   );
 }
 
-export default HomeVoting;
+export default HomeCardVotingComponent;

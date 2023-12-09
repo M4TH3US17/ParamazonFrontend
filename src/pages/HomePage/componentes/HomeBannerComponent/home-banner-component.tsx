@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import './home-banner.css';
+import './home-banner-component.css';
 import Flickity from 'react-flickity-component';
 
 const slides = [
@@ -8,7 +8,7 @@ const slides = [
     { id: 2, title: 'O serviço aplicado atendeu o que estava proposto assim como a equipe se dedicou e buscou ser o mais solicito possivel para resolver eventualidades e também repasse de como manipular  o software, dando total suporte na troca de conhecimento.', testimony: 'Junior Gemaque, Ex-Engenheiro Florestal da Unifloresta' }
 ];
 
-const HomeBanner = () => {
+const HomeBannerComponent = () => {
     const flickityOptions = {
         imagesLoaded: true,
         pageDots: true,
@@ -31,4 +31,4 @@ const HomeBanner = () => {
     );
 };
 
-export default HomeBanner;
+export default HomeBannerComponent;

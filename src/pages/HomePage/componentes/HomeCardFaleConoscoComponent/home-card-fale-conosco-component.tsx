@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './home-fale-conosco.css';
+import './home-card-fale-conosco-component.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-function HomeFaleConosco() {
+function HomeCardFaleConoscoComponent() {
 
     return (
         <div className='home-card-fale-conosco'>
@@ -28,4 +28,4 @@ function HomeFaleConosco() {
     );
 }
 
-export default HomeFaleConosco;
+export default HomeCardFaleConoscoComponent;

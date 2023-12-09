@@ -1,11 +1,11 @@
 import React from 'react';
-import './show-page-dashboard.css';
+import './show-page-dashboard-component.css';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const ShowPageDashboard = () => {
+const ShowPageDashboardComponent = () => {
 
     const data = {
         labels: ['Candidato 1', 'Candidato 2', 'Candidato 3', 'Candidato 4'],
@@ -31,10 +31,9 @@ const ShowPageDashboard = () => {
                     <Pie data={data} className='graphic-pie' color='black' />
                 </div>
 
-                <div className='show-page-dashboard-details'>
-                    <div className='show-page-dashboard-details-item'>
-                        <span className='show-page-dashboard-details-title'>votos: </span>
-                        100
+                <div className='show-page-dashboard-graphic-details-container'>
+                    <div className='show-page-dashboard-graphic-details-item'>
+                        <span className='show-page-dashboard-graphic-details-text-votes'>votos:</span> 100
                     </div>
                 </div>
             </div>
@@ -44,4 +43,4 @@ const ShowPageDashboard = () => {
 }
 
 
-export default ShowPageDashboard;
+export default ShowPageDashboardComponent;

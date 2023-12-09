@@ -1,6 +1,6 @@
 import React from 'react';
-import './fale-conosco.css';
-import Footer from '../../../components/Footer/footer';
+import './fale-conosco-component.css';
+import Footer from '../../../../components/FooterComponent/footer-component';
 
 function FaleConoscoComponent() {
   return (

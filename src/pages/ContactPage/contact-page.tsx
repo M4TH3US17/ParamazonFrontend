@@ -1,13 +1,12 @@
 import React from 'react';
-import './contact.css';
-import NavBar from '../../components/NavBar/navbar';
-import FaleConoscoComponent from './FaleConoscoComponent/fale-conosco';
-import Footer from '../../components/Footer/footer';
+import './contact-page.css';
+import FaleConoscoComponent from './components/FaleConoscoComponent/fale-conosco-component';
+import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 
 function ContactPage() {
   return (
     <>
-      <NavBar />
+      <NavBarComponent />
       < div className='contact-page-bg'/>
       <main className='contact'>
         

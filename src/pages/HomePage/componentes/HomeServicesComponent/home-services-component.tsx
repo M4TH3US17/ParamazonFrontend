@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, } from 'swiper/modules';
-import './home-services.css';
+import './home-services-component.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/swiper-bundle.css';
 
-const HomeServices = () => {
+const HomeServicesComponent = () => {
     const servicos = [
         { id: 0, name: 'Entretenimento' },
         { id: 1, name: 'Comidas' },
@@ -17,9 +17,6 @@ const HomeServices = () => {
 
     return (
         <div className='home-service'>
-            {/*<div className='home-service-text'>
-                <h2 className='home-service-text-title'>Nossos servicos</h2>
-    </div>*/}
 
             <Swiper
                 style={{ height: '200px' }}
@@ -46,4 +43,4 @@ const HomeServices = () => {
     );
 };
 
-export default HomeServices;
+export default HomeServicesComponent;
