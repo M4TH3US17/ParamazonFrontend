@@ -39,50 +39,58 @@ const Menu = () => {
                         </ul>
 
 
-                        <div className='navigation-bg-mobile' style={{ display: isOpen ? 'block' : 'none' }} />
-                        <nav
-                            className={`navigation-mobile animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`}
-                            style={{ display: isOpen ? 'block' : 'none' }}>
-                            <div className='navigation-mobile-item navigation-mobile-item-header'>
-                                <h5 className='navigation-mobile-item-header-title'>EMPRESA</h5>
-                                <i className="bi bi-x-lg" onClick={() => setIsOpen(false)}></i>
+                        <div className='sidebar-mobile-bg-effect' style={{ display: isOpen ? 'block' : 'none' }} />
+
+                        <nav className={`sidebar-mobile animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: isOpen ? 'block' : 'none' }}>
+                            <div className='sidebar-mobile-item sidebar-mobile-header-container'>
+                                <h5 className='sidebar-mobile-header-title'>EMPRESA</h5>
+                                <i className="bi bi-x-lg sidebar-mobile-close-icon" onClick={() => setIsOpen(false)}></i>
                             </div>
 
-                            <div className='navigation-mobile-item navigation-mobile-item-links'>
-                                <div className=''>
-                                    <Link to={'/'} className='mb-3'>Home</Link>
-                                    <Link to={'/shows'} className='mb-3'>Show Page</Link>
-                                    <Link to={'/shows/selecao'}>Votação</Link>
-                                </div>
+                            <div className='sidebar-mobile-item'>
+                                <div className='sidebar-mobile-links-to-pages-container'>
+                                    <div className='sidebar-mobile-link-to-pages-item'>
+                                        <Link to={'/'} className='sidebar-mobile-link-to-page-link mb-3'>Home</Link>
+                                        <Link to={'/shows'} className='sidebar-mobile-link-to-page-link mb-3'>Show Page</Link>
+                                        <Link to={'/shows/selecao'} className='sidebar-mobile-link-to-page-link'>Votação</Link>
+                                    </div>
 
-                                <div className=''>
-                                    <Link to={'/contato'}>Fale Conosco</Link>
-                                </div>
-                            </div>
-
-                            <div className='navigation-mobile-item navigation-mobile-item-themes'>
-                                <div>
-                                    <a href='https://www.instagram.com/boteco_paramazon/' target='_blank' className='mb-3'>
-                                        <i className="bi bi-instagram" style={{marginRight: '20px'}}></i>
-                                        <span>Instagram</span>
-                                    </a>
-
-                                    <a href='https://www.facebook.com/botecoparamazon' target='_blank'>
-                                        <i className="bi bi-facebook" style={{marginRight: '20px'}}></i>
-                                        <span>Facebook</span>
-                                    </a>
-                                </div>
-
-                                <div className=''>
-                                    <a href='#'>
-                                        <i className="bi bi-whatsapp" style={{marginRight: '20px'}}></i>
-                                        <span>Whatsapp</span>
-                                    </a>
+                                    <div className='sidebar-mobile-link-to-pages-item'>
+                                        <Link to={'/contato'} className='sidebar-mobile-link-to-page-link'>Fale Conosco</Link>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className='navigation-mobile-item navigation-mobile-item-login'>
-                                <Link to={'/login'} className='navigation-mobile-item-login-item'><i className="bi bi-box-arrow-right"></i> <span className='navigation-mobile-item-login-text'>Login</span></Link>
+                            <div className='sidebar-mobile-item'>
+                                <div className='sidebar-mobile-links-to-social-networks-container'>
+                                    <div className='sidebar-mobile-links-to-social-networks-subcontainer'>
+                                        <a href='https://www.instagram.com/boteco_paramazon/' target='_blank' className='sidebar-mobile-links-to-social-networks-link mb-3'>
+                                            <i className="bi bi-instagram sidebar-mobile-instagram-icon" style={{ marginRight: '20px' }}></i>
+                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>Instagram</span>
+                                        </a>
+
+                                        <a href='https://www.facebook.com/botecoparamazon' target='_blank' className='sidebar-mobile-links-to-social-networks-link'>
+                                            <i className="bi bi-facebook sidebar-mobile-facebook-icon" style={{ marginRight: '20px' }}></i>
+                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>Facebook</span>
+                                        </a>
+                                    </div>
+
+                                    <div className='sidebar-mobile-links-to-social-networks-subcontainer'>
+                                        <a href='#' className='sidebar-mobile-links-to-social-networks-link'>
+                                            <i className="bi bi-whatsapp sidebar-mobile-whatsapp-icon" style={{ marginRight: '20px' }}></i>
+                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>Whatsapp</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className='sidebar-mobile-item'>
+                                    <div className='sidebar-mobile-link-to-login-page-container'>
+                                        <Link to={'/login'} className='sidebar-mobile-item-login-item'>
+                                            <i className="bi bi-box-arrow-right sidebar-mobile-arrow-right-icon"></i>
+                                            <span className='sidebar-mobile-item-login-text'>Login</span>
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         </nav>
                     </div>

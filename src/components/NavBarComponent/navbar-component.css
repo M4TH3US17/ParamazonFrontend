@@ -1,20 +1,18 @@
 .app-navbar {
     background: #f6f5f5;
-    box-shadow: 0px 0px 4px rgb(44, 44, 44);
+    box-shadow:  0px 0px 4px rgb(44, 44, 44);
 }
 
-.app-navbar-container {
-    display: flex;
+.app-navbar .app-navbar-content {
+    display:         flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
-
-    /*background-color: green;*/
+    align-items:     center;
+    height:          100px;
+    padding-left:    30px;
+    padding-right:   30px;
 }
 
-.app-navbar-logo {
+.app-navbar .app-navbar-content .app-navbar-logo {
     height: 70px;
     width: 112px;
     background-size: 100% 100%;
@@ -23,18 +21,16 @@
 }
 
 @media (max-width: 500px) {
-    .app-navbar-logo {
-        height: 58px;
-        width: 90px;
-        background-size: 100% 100%;
-        background-image: url('../../assets/images/paramazon.png');
-        cursor: pointer;
-    }
-    
-    .app-navbar-container {
-        padding-left: 20px;
+    .app-navbar .app-navbar-content {
+        padding-left:  20px;
         padding-right: 20px;
-    
-        /*background-color: green;*/
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-logo .app-navbar-logo {
+        height:           58px;
+        width:            90px;
+        background-size:  100% 100%;
+        background-image: url('../../assets/images/paramazon.png');
+        cursor:           pointer;
     }
 }

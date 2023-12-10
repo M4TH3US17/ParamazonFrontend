@@ -5,7 +5,7 @@ import Menu from './Menu/menu';
 const NavBarComponent = () => {
     return (
     <header className='app-navbar'>
-        <div className='app-navbar-container'>
+        <div className='app-navbar-content'>
             <div className='app-navbar-logo'/>
 
             <Menu/>
