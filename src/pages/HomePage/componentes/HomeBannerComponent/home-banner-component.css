@@ -1,5 +1,5 @@
 .flickity-page-dots .dot.is-selected {
-  background-color: rgb(3, 29, 61);
+  background-color: #031d3d;
 }
 
 .flickity-enabled {
@@ -7,68 +7,92 @@
   padding-bottom: 0.5px;
 }
 
+.carousel {}
+
+
+.flickity-enabled,
 .carousel {
-}
-
-
-.flickity-enabled, .carousel {
-    top: 2px;
-    outline: none;
-    width: 100vw;
+  top: 2px;
+  outline: none;
+  width: 100vw;
 }
 
 /* IMAGENS DOS BANNERS */
 .carousel .c1 {
-    padding: 200px;
-    background-size: 100% 100%;
-    background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+  padding: 200px;
+  background-size: 100% 100%;
+  background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
 }
 
 .carousel .c2 {
-    padding: 200px;
-    /*background: #696969;*/
-    background-size: 100% 100%;
-    background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+  padding: 200px;
+  /*background: #696969;*/
+  background-size: 100% 100%;
+  background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
 }
 
 .carousel .c3 {
-    padding: 200px;
-    /*background: rgb(91, 91, 91);*/
-    background-size: 100% 100%;
-    background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+  padding: 200px;
+  /*background: rgb(91, 91, 91);*/
+  background-size: 100% 100%;
+  background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
 }
 
 /* DOTS */
 .flickity-page-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-  }
-  
-  .flickity-page-dots .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
-  }
-  
-  .flickity-page-dots .dot.is-selected {
-    background-color: #333;
-  }
-  
-  .flickity-page-dots .dot.is-selected:after {
-    display: none;
-  }
-  
-  .flickity-page-dots .dot {
-    color: transparent;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.flickity-page-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background-color: #333;
+}
+
+.flickity-page-dots .dot.is-selected:after {
+  display: none;
+}
+
+.flickity-page-dots .dot {
+  color: transparent;
+}
+
+.previous {
+  display: none;
+}
+
+.next {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+
+  .app-home-content .app-home-content-container .flickity-enabled, .carousel {
+    width:      100%;
+    overflow-x: hidden;
+    margin-top: -1px;
+    padding-bottom: 0;
+    border-radius: 8px;
   }
 
-  .previous {
-    display: none;
+  /* IMAGENS DOS BANNERS */
+  .carousel .c1 {
+    border-radius: 8px;
   }
 
-  .next {
-    display: none;
+  .carousel .c2 {
+    border-radius: 8px;
   }
+
+  .carousel .c3 {
+    border-radius: 8px;
+  }
+}

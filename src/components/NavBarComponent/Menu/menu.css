@@ -17,14 +17,6 @@ a {
     top:       0px;
 }
 
-.menu-desktop {
-    display:         flex;
-    justify-content: space-between;
-    list-style:      none;
-    height:          100%;
-    margin:          0;
-}
-
 .menu-item {
     display:     flex;
     align-items: center;
@@ -201,4 +193,31 @@ a {
 /* SIDEBAR MOBILE ANIMATIONS */
 .animate__animated.animate__slideInRight {
     animation-duration: 0.65s;
+}
+
+/* 3 DESKTOP DESIGN - MENU DESKTOP */
+.menu-desktop {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    gap:             20px;
+    list-style:      none;
+    font-size:       20px;
+    margin-right:    8px !important;
+    height:          1010px;
+    margin:          0;
+    padding:         0;
+    cursor:          pointer;
+    position:        relative;
+}
+
+.menu-desktop .menu-desktop-item {
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    height:          100px;
+}
+
+.menu-desktop .menu-desktop-item:hover {
+    color: #262626;
 }

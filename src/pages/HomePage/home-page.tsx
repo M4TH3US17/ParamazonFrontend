@@ -1,11 +1,10 @@
-import React, {useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import './home-page.css';
 import HomeBanner from './componentes/HomeBannerComponent/home-banner-component';
-import HomeCardFaleConoscoComponent from './componentes/HomeCardFaleConoscoComponent/home-card-fale-conosco-component';
-import HomeCardVotingComponent from './componentes/HomeCardVotingComponent/home-card-voting-component';
 import HomeServicesComponent from './componentes/HomeServicesComponent/home-services-component';
 import FooterComponent from '../../components/FooterComponent/footer-component';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
+import HomeCardLinks from './componentes/HomeCardLink/home-card-link';
 
 const Home = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -21,15 +20,17 @@ const Home = () => {
 
     return (
         <main className='app-home'>
-            <NavBarComponent/>
+            <NavBarComponent />
 
             <div className='app-home-content'>
-                {ehTelaDesktop ? (<></>) : (<HomeBanner />)}
-                <HomeCardVotingComponent />
-                <HomeCardFaleConoscoComponent />
-                <HomeServicesComponent />
-                <FooterComponent />
+                <div className='app-home-content-container'>
+
+                    {/*ehTelaDesktop ? (<></>) :*/ (<HomeBanner />)}
+                    <HomeCardLinks />
+                    <HomeServicesComponent />
+                </div>
             </div>
+            <FooterComponent />
         </main>
     );
 };

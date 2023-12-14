@@ -26,9 +26,9 @@ const Menu = () => {
             {
                 ehTelaDesktop ? (
                     <ul className='menu-desktop'>
-                        <li className='menu-item'>Home</li>
-                        <li className='menu-item'>Shows</li>
-                        <li className='menu-item'>Contato</li>
+                        <li className='menu-desktop-item'>Home</li>
+                        <li className='menu-desktop-item'>Shows</li>
+                        <li className='menu-desktop-item'>Contato</li>
                     </ul>
                 ) : (
                     <div>

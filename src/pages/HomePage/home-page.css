@@ -2,7 +2,28 @@
     background: #ffffff;
 }
 
-.app-home-content {
+.app-home .app-home-content {
     padding: 0px;
     overflow-x: hidden;
+}
+
+@media (min-width: 1000px) {
+    .app-home .app-home-content .app-home-content-container {
+        width:     90%; 
+        max-width: 1100px;
+        margin:    0 auto;
+    }
+
+    .app-home .app-home-content .app-home-content-container .app-home-content-card-container {
+        display:            flex;
+        align-items:        center;
+        gap:                20px;
+        padding-top:        20px;
+        padding-bottom:     80px;
+    }
+
+    .app-home .app-home-content .app-home-content-container .app-home-content-card-container > div {
+        width: 25%;
+        height: 100px;
+    }
 }

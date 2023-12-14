@@ -1,79 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
-.card-img-top {
-    height: 200px;
-    width: 100%;
-    background-size: 102% 100%;
-    background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
-}
-
-.home-service {
-    color: white;
-    background: #031d3d;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.home-servico-slide {
-    /*width: 150px !important;*/
-}
-
-
-.swiper {
-    width: 100%;
-    height: 400px;
-    /*background: rgb(117, 117, 117);*/
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    filter: opacity(.3);
-    margin-top: 15px;
-    height: 170px !important;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide .card {
-    height: 170px;
-}
-
-.swiper-slide-prev {
-    transform: (0.8);
-    /*border: 4px solid yellow;*/
-}
-
-.swiper-slide-active {
-    transform: scale(1.5);
-    /*border: 4px solid red;
- */   filter: opacity(.3);
-    width: 135px !important;
-}
-
-.swiper-slide-next {
-    transform: scale(0.8);
-    /*border: 4px solid green;*/
-    filter: opacity(1);
-    margin-top: 0;
-    height: 200px !important;
-    width: 150px !important;
-}
-
-.swiper-slide-next .card {
-    height: 200px;
-}
-
-@media (min-width: 400px) {
+@media (max-width: 700px) {
     .home-service {
-        margin-left: -5%;
+        height: 300px;
+        width:  100vw;
+
+        display:         flex;
+        flex-direction:  column;
+        justify-content: center;
+        
+        background: #10004f;
+    }
+
+    .home-service .home-service-content {}
+
+    .home-service .home-service-content .home-service-content-text {
+        display: none;
+    }
+
+    .home-service .home-service-content .home-service-content-text .home-service-content-text-title {}
+
+    .home-service .home-service-content .home-service-content-text .home-service-content-text-subtitle {}
+
+    .home-service .home-service-content .home-service-content-slide {}
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container { }
+
+    /* CARDS */
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .home-service-content-slide-item {
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+        width:           170px !important;
+        margin-left:     20px;
+    }
+    
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .home-service-content-slide-item .home-service-content-slide-image {
+        height: 200px;
+        width:  100%;
+
+        transform: scale(0.95);
+        filter: opacity(0.3);
+        border-radius:    3px;
+        background-size:  100% 100%;
+        background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+    }
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .swiper-slide-next {
+    }
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .swiper-slide-next .home-service-content-slide-image {
+    }
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .swiper-slide-prev .home-service-content-slide-image {
+    }
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .swiper-slide-active .home-service-content-slide-image {
+        transform: scale(1);
+        filter:    opacity(1);
+    }
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-buttons {
+        display: none;
+    }
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-buttons .swiper-button-prev {}
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-buttons .swiper-button-next {}
+
+    .home-service .home-service-content .swiper-pagination {
+        display: none;
+    }
+
+    .home-service .home-service-content .swiper-pagination .swiper-pagination-bullet {
+    }
+
+    .home-service .home-service-content .swiper-pagination .swiper-pagination-bullet-active {
     }
 }
 
-@media (max-width: 399px) {
+
+@media (min-width: 1000px) {
     .home-service {
-        margin-left: -12%;
+        width: 100%;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        background: #10004f;
+        color: #fff;
+        padding: 64px 54px 80px 64px;
+    }
+
+    .home-service .home-service-content {
+        display:         flex;
+        justify-content: space-between;
+    }
+
+    .home-service .home-service-content .home-service-content-text {
+        min-width:    200px;
+        margin-right: 50px;
+        font-family:  'Public Sans', sans-serif;
+    }
+
+    .home-service .home-service-content .home-service-content-text .home-service-content-text-title {
+        font-size:        20px;
+        margin-bottom:    25px;
+        font-weight:      400;
+        text-size-adjust: 100%;
+    }
+
+    .home-service .home-service-content .home-service-content-text .home-service-content-text-subtitle {
+        font-size:        16px;
+        font-weight:      100;
+        word-wrap:        break-word;
+        text-size-adjust: 100%;
+    }
+
+    .home-service .home-service-content .home-service-content-slide {}
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container {
+        display:         flex;
+        justify-content: center;
+        max-width:       555px;
+        min-height:      390px;
+    }
+
+    /* CARDS */
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .home-service-content-slide-item {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .home-service-content-slide-item .home-service-content-slide-image {
+        height: 300px;
+        width:  250px;
+
+        border-radius:    3px;
+        background-size:  100% 100%;
+        background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+    }
+
+    .home-service .home-service-content .swiper-button-prev {
+        width:    2px;
+        height:   2px;
+        color:    #d6d6ff;
+        margin-left: 15%;
+        margin-top:  170px;
+    }
+
+    .home-service  .home-service-content .swiper-button-next {
+        width:    2px;
+        height:   2px;
+        color:    #d6d6ff;
+        margin-top:   170px;
+        margin-right: 15%;
+    }
+
+    .home-service .home-service-content .swiper-pagination {
+    }
+
+    .home-service .home-service-content .swiper-pagination .swiper-pagination-bullet {
+        background: #d6d6ff;
+    }
+
+    .home-service .home-service-content .swiper-pagination .swiper-pagination-bullet-active {
+        transform: scale(1.2);
+        color: #d6d6ff;
     }
 }
