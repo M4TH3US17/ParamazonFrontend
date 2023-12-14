@@ -20,13 +20,6 @@
     cursor: pointer;
 }
 
-@media (min-width: 1000px) {
-    .app-navbar {
-        width: 100vw;
-        z-index: 1;
-    }
-}
-
 @media (max-width: 500px) {
     .app-navbar .app-navbar-content {
         display:         flex;
@@ -42,5 +35,55 @@
         background-size:  100% 100%;
         background-image: url('../../assets/images/paramazon.png');
         cursor:           pointer;
+    }
+}
+
+@media (min-width: 1000px) {
+    .app-navbar {
+        width:         100vw;
+        z-index:       1;
+        padding-right: 50px;
+        padding-left:  50px;
+        background: #0a0030;
+    }
+
+    .app-navbar .app-navbar-content {
+        margin: 0 auto;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item {
+        display:     flex;
+        align-items: center;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container {
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container .app-navbar-logo {
+        height: 67px;
+        width: 112px;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container .app-navbar-logo-title {
+        font-size:  20px;
+        font-weight: 0;
+        margin-top: 15px;
+        margin-left: -8px;
+        color:     #f2f2f2;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-links-container {
+        display:     flex;
+        align-items: center;
+        gap:         12px;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-links-container .app-navbar-content-links-item {
+        font-size: 19px;
+        font-weight: 0;
+        color:     #f2f2f2;
     }
 }

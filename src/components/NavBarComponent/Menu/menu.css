@@ -204,11 +204,10 @@ a {
     list-style:      none;
     font-size:       20px;
     margin-right:    8px !important;
-    height:          1010px;
+    height:          100px;
     margin:          0;
     padding:         0;
     cursor:          pointer;
-    position:        relative;
 }
 
 .menu-desktop .menu-desktop-item {
@@ -216,8 +215,15 @@ a {
     flex-direction:  column;
     justify-content: center;
     height:          100px;
+    color:         #f2f2f2;
+    position:        relative;
+}
+
+.menu-desktop .menu-desktop-item .menu-desktop-link {
+    font-weight: none;
+    color: #f2f2f2;
 }
 
 .menu-desktop .menu-desktop-item:hover {
-    color: #262626;
+    filter: opacity(0.9);
 }

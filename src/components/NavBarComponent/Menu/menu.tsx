@@ -26,9 +26,18 @@ const Menu = () => {
             {
                 ehTelaDesktop ? (
                     <ul className='menu-desktop'>
-                        <li className='menu-desktop-item'>Home</li>
-                        <li className='menu-desktop-item'>Shows</li>
-                        <li className='menu-desktop-item'>Contato</li>
+                        <li className='menu-desktop-item'>
+                            <Link to={'/'} className='menu-desktop-link'>Home</Link>
+                        </li>
+
+                        <li className='menu-desktop-item'>
+                            <Link to={'/shows'} className='menu-desktop-link'>Shows</Link>
+                        </li>
+
+                        <li className='menu-desktop-item'>
+                            <Link to={'/contato'} className='menu-desktop-link'>Contato</Link>
+                        </li>
+
                     </ul>
                 ) : (
                     <div>
