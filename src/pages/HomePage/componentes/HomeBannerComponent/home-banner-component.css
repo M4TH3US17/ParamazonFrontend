@@ -1,145 +1,66 @@
-.flickity-page-dots .dot.is-selected {
-  background-color: #031d3d;
+:root {
+  --home-banner-link-image: url('https://gerlan06.github.io/Boteco-Paramazon/img/sexta.jpg');
 }
 
-.flickity-enabled {
-  margin-top: 43px;
-  padding-bottom: 0.5px;
+.home-banner-componente {
+  height: 480px;
+  width:  100%;
+  position: relative;
 }
 
-.carousel {}
+.home-banner-componente .home-banner-image {
+  top:             30px;
+  left:            50%;
+  transform:       translateX(-50%);
+  position:        absolute;
 
+  height:          400px;
+  width:           40%;
+  min-width: 400px;
 
-.flickity-enabled,
-.carousel {
-  top: 2px;
-  outline: none;
-  width: 100vw;
-}
-
-/* IMAGENS DOS BANNERS */
-.carousel .c1 {
-  padding: 200px;
   background-size: 100% 100%;
-  background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+  border-radius:   10px;
+  z-index:         1;
+
+  background-size:  100% 100%;
+  background-image: var(--home-banner-link-image);
 }
 
-.carousel .c2 {
-  padding: 200px;
-  /*background: #696969;*/
+.home-banner-componente .home-banner-content .home-banner-background {
+  height:          478px;
+  width:           100%;
   background-size: 100% 100%;
-  background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+  filter:          blur(3px);
+  background-image: var( --home-banner-link-image);
 }
 
-.carousel .c3 {
-  padding: 200px;
-  /*background: rgb(91, 91, 91);*/
-  background-size: 100% 100%;
-  background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+.home-banner-componente .home-banner-content .carousel-componente-overlay {
+  top:             0;
+  position:        absolute;
+  height:          480px;
+  width:           100%;
+  background: rgba(0, 0, 0, 0.63);
 }
 
-/* DOTS */
-.flickity-page-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-.flickity-page-dots .dot {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-
-.flickity-page-dots .dot.is-selected {
-  background-color: #333;
-}
-
-.flickity-page-dots .dot.is-selected:after {
-  display: none;
-}
-
-.flickity-page-dots .dot {
-  color: transparent;
-}
-
-.previous {
-  display: none;
-}
-
-.next {
-  display: none;
-}
-
-@media (min-width: 1000px) {
-  .carousel-componente {
-    position: relative;
+@media (max-width: 700px) {
+  .home-banner-componente {
+    height: 100%;
+    width:  100%;
+    margin-top: 47px;
   }
 
-  .carousel-componente .carousel-componente-overlay {
-    position: absolute;
-    height: 480px;
-    width: 100%;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.6);
-    pointer-events: none;
-  }
-
-  .app-home-content .app-home-content-container .flickity-enabled,
-  .carousel {
-    width: 100%;
-    overflow-x: hidden;
-    margin-top: -1px;
-    padding-bottom: 0;
-  }
-
-  .carousel .c1,
-  .carousel .c2,
-  .carousel .c3 {
-    padding: 0;
-    height: 480px;
-    width: 100%;
-    position: relative;
-  }
-
-  .carousel .c1::before,
-  .carousel .c2::before,
-  .carousel .c3::before {
-    content: '';
-    position: absolute;
+  .home-banner-componente .home-banner-image {
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: inherit;
-    background-size: 100% 100%;
-    filter: blur(10px);
-    z-index: -1;
+    width: 100%;
+    border-radius: inherit;
+    position: relative;
   }
 
-  .carousel .c1 .carousel-container,
-  .carousel .c2 .carousel-container,
-  .carousel .c3 .carousel-container {
-    position: absolute;
-    z-index: 200;
-    filter: blur(4px);
-    background-color: red;
+  .home-banner-componente .home-banner-content .home-banner-background {
+    display: none;
   }
-
-  .current-image {
-    z-index: 5;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    height: 400px;
-    width: 420px;
-    pointer-events: none;
-    background-size: 100% 100%;
-    filter: none;
-    border-radius: 10px;
-    box-shadow: 20px 20px 20px #ff000000;
+  
+  .home-banner-componente .home-banner-content .carousel-componente-overlay {
+    display: none;
   }
 }
