@@ -84,7 +84,7 @@
     .home-service {
         width: 100%;
         margin-bottom: 50px;
-        border-radius: 10px;
+       /* border-radius: 10px; */
         background: #10004f;
         color: #fff;
         padding: 64px 54px 80px 64px;
