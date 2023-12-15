@@ -78,7 +78,7 @@
     .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-links-container {
         display:     flex;
         align-items: center;
-        gap:         12px;
+        gap:         14px;
     }
 
     .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-links-container .app-navbar-content-links-item {
