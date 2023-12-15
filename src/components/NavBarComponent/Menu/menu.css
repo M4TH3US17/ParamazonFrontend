@@ -8,165 +8,165 @@ a {
 .bi.bi-star-fill,
 .bi.bi-telephone-fill {
     font-size: 20px;
-    color:   white;
+    color: white;
 }
 
 .bi.bi-list {
     font-size: 30px;
-    position:  absolute;
-    top:       0px;
+    position: absolute;
+    top: 0px;
 }
 
 .menu-item {
-    display:     flex;
+    display: flex;
     align-items: center;
     margin-left: 20px;
-    font-size:   0px;
+    font-size: 0px;
     font-weight: 400;
 }
 
 /* 1. MOBILE DESIGN - MENU MOBILE */
 .menu-mobile {
-    display:         flex !important;
+    display: flex !important;
     justify-content: space-around;
-    list-style:      none;
-    position:        absolute;
-    z-index:         3;
-    top:             100px;
-    right:           0;
-    width:           100vw;
-    padding:         0;
+    list-style: none;
+    position: absolute;
+    z-index: 3;
+    top: 100px;
+    right: 0;
+    width: 100vw;
+    padding: 0;
 
-    background:            #151515cc;
-    backdrop-filter:         blur(6.6px);
+    background: #151515cc;
+    backdrop-filter: blur(6.6px);
     -webkit-backdrop-filter: blur(6.6px);
-    border-left:             0.5px solid #3c3c3c;
-    border-bottom:           0.5px solid #3c3c3c;
+    border-left: 0.5px solid #3c3c3c;
+    border-bottom: 0.5px solid #3c3c3c;
 }
 
 .menu-item-mobile {
-    width:          100%;
-    padding-top:    8px;
+    width: 100%;
+    padding-top: 8px;
     padding-bottom: 8px;
-    font-size:      17px;
-    color:        white;
-    text-align:     center;
+    font-size: 17px;
+    color: white;
+    text-align: center;
 }
 
 .menu-item:hover {
-    cursor:        pointer;
+    cursor: pointer;
     border-bottom: 3px solid #1b1b1b;
-    color:       #1b1b1b;
+    color: #1b1b1b;
 }
 
 /* 2. MOBILE DESIGN - SIDEBAR MOBILE (CONTAINER) */
 .sidebar-mobile {
-    display:         flex;
-    flex-direction:  column;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
 
-    z-index:  3;
+    z-index: 3;
     position: fixed;
-    right:    0;
-    top:      0px;
+    right: 0;
+    top: 0px;
 
     height: 100%;
-    width:  90vw;
+    width: 90vw;
 
-    padding:      0px 15px 15px 15px;
+    padding: 0px 15px 15px 15px;
     background: #031d3d;
 }
 
 .sidebar-mobile-bg-effect {
     /* ADICIONA UMA COR ESCURA DE FUNDO AO ABRIR O MENU */
     position: fixed;
-    left:     0;
-    bottom:   0;
-    z-index:  2;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
 
     height: 100vh;
-    width:  100vw;
+    width: 100vw;
 
-    opacity:      0.5;
+    opacity: 0.5;
     background: black;
 }
 
 /* 2.1 MOBILE DESIGN - SIDEBAR MOBILE (HEADER) */
 .sidebar-mobile .sidebar-mobile-header-container {
-    display:         flex;
+    display: flex;
     justify-content: space-between;
-    align-items:     center;
-    padding-top:     20px;
-    padding-bottom:  20px;
-    border-bottom:   1.5px solid #062a57;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid #062a57;
 }
 
 .sidebar-mobile .sidebar-mobile-header-container .sidebar-mobile-header-title {
-    color:      white;
-    margin:       0;
+    color: white;
+    margin: 0;
     font-family: 'Public Sans', sans-serif;
 }
 
 .sidebar-mobile .sidebar-mobile-header-container .sidebar-mobile-close-icon {
-    color:    #fff;
+    color: #fff;
     margin-top: 2px;
     font-size: 18px;
 }
 
 /* 2.2 MOBILE DESIGN - SIDEBAR MOBILE (CONTENT -- LINKS TO PAGES) */
 .sidebar-mobile-item .sidebar-mobile-links-to-pages-container {
-    display:         flex;
-    flex-direction:  row;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    width:          100%;
-    padding-top:    20px;
+    width: 100%;
+    padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom:  1.5px solid #062a57;
+    border-bottom: 1.5px solid #062a57;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-pages-container .sidebar-mobile-link-to-page-link {
-    display:        flex;
+    display: flex;
     flex-direction: column;
-    color:       #d6d6ff;
+    color: #d6d6ff;
 }
 
 /* 2.3 MOBILE DESIGN - SIDEBAR MOBILE (CONTENT -- SOCIAL NETWORKS) */
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container {
-    display:         flex;
-    flex-direction:  row;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding-top:     20px;
-    padding-bottom:  20px;
-    border-bottom:   1.5px solid #062a57;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid #062a57;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer {
-    display:        flex;
+    display: flex;
     flex-direction: column;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer .sidebar-mobile-links-to-social-networks-link {
-    display:         flex;
-    flex-direction:  row;
+    display: flex;
+    flex-direction: row;
     justify-content: start;
-    align-items:     center;
-    color:         #d6d6ff;
+    align-items: center;
+    color: #d6d6ff;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer .sidebar-mobile-links-to-social-networks-link .sidebar-mobile-instagram-icon {
     font-size: 17px;
-    color:   white;
+    color: white;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer .sidebar-mobile-links-to-social-networks-link .sidebar-mobile-whatsapp-icon {
-    font-size:    17px;
+    font-size: 17px;
     margin-right: 22px;
-    color:       white;
+    color: white;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer .sidebar-mobile-links-to-social-networks-link .sidebar-mobile-facebook-icon {
     margin-top: -2px;
-    color:     white;
+    color: white;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer .sidebar-mobile-links-to-social-networks-link .sidebar-mobile-links-to-social-networks-link-text {
@@ -176,14 +176,14 @@ a {
 
 /* 2.4 MOBILE DESIGN - SIDEBAR MOBILE (CONTENT -- LOGIN PAGE LINK) */
 .sidebar-mobile-item .sidebar-mobile-link-to-login-page-container {
-    padding-top:     20px;
-    padding-bottom:  20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .sidebar-mobile-item .sidebar-mobile-link-to-login-page-container .sidebar-mobile-arrow-right-icon {
-    font-size:    17px;
+    font-size: 17px;
     margin-right: 4px;
-    color:       white;
+    color: white;
 }
 
 .sidebar-mobile-item .sidebar-mobile-link-to-login-page-container .sidebar-mobile-item-login-text {
@@ -196,34 +196,94 @@ a {
 }
 
 /* 3 DESKTOP DESIGN - MENU DESKTOP */
-.menu-desktop {
-    display:         flex;
-    justify-content: center;
-    align-items:     center;
-    gap:             20px;
-    list-style:      none;
-    font-size:       20px;
-    margin-right:    8px !important;
-    height:          100px;
-    margin:          0;
-    padding:         0;
-    cursor:          pointer;
+@media (min-width: 1000px) {
+    .menu-desktop {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 300px;
+        height: 100%;
+        margin-right: 60px;
+        padding: 15px 0px 0px 0px;
+        background: #010611;
+    }
+
+    .menu-desktop .menu-desktop-item {
+        display: flex;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 20px;
+    }
+
+    .menu-desktop .menu-desktop-item .menu-desktop-link {
+        color: #96a6b7;
+    }
+
+    .menu-desktop .menu-desktop-item:hover {}
+
+    .menu-desktop-link-icon {
+        margin-right: 10px;
+        font-size: 17px;
+    }
+
+    .menu-desktop-overlay {
+        top: 100px;
+        right: 0;
+        height: 100vh;
+        z-index: 5;
+        width: 100%;
+        width: calc(100% - 300px);
+        position: absolute;
+
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.8px);
+        -webkit-backdrop-filter: blur(1.8px);
+    }
+
 }
 
-.menu-desktop .menu-desktop-item {
-    display:         flex;
-    flex-direction:  column;
-    justify-content: center;
-    height:          100px;
-    color:         #f2f2f2;
-    position:        relative;
-}
+@media (min-width: 1280px) {
+    .menu-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        font-size: 20px;
+        margin-right: 8px !important;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        background: none;
+    }
 
-.menu-desktop .menu-desktop-item .menu-desktop-link {
-    font-weight: none;
-    color: #f2f2f2;
-}
+    .menu-desktop .menu-desktop-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+        color: #f2f2f2;
+        position: relative;
+    }
 
-.menu-desktop .menu-desktop-item:hover {
-    filter: opacity(0.9);
+    .menu-desktop .menu-desktop-item .menu-desktop-link {
+        font-weight: none;
+        color: #f2f2f2;
+    }
+
+    .menu-desktop .menu-desktop-item:hover {
+        filter: opacity(0.9);
+    }
+
+    .menu-desktop-link-icon {
+        display: none;
+    }
+
+    .menu-desktop-overlay {
+        display: none;
+    }
 }

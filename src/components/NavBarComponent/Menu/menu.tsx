@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import './menu.css';
 import { Link } from 'react-router-dom';
+import eventBus from '../../../utils/Events/EventBus';
+import { WIDTH_SCREEN } from '../../../utils/ScreenUtils/screen-measurements-data';
 
-const Menu = () => {
+const Menu: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isFixed, setIsFixed] = useState(false);
 
-    let ehTelaDesktop = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) > 730;
+    useEffect(() => {
+        const handleEvent = (newState: boolean) => setIsOpen(newState);
+        eventBus.on('toggleMenuHamburguerDesktop', handleEvent);
+        return () => {
+            eventBus.off('toggleMenuHamburguerDesktop', handleEvent);
+        };
+    }, []);
+
+    let ehTelaDesktop = WIDTH_SCREEN > 730;
 
     useEffect(() => {
         /*console.log(scrollPosition);*/
@@ -21,24 +31,47 @@ const Menu = () => {
 
     }, [setIsFixed, scrollPosition, setScrollPosition]);
 
+    const displayMenu = (): string => {
+        if (((WIDTH_SCREEN < 1280) && (WIDTH_SCREEN >= 1000)) && (isOpen == true)) {
+            document.documentElement.classList.add('overflow-hidden');
+            document.body.classList.add('overflow-hidden');
+        } else if (isOpen == false){
+            document.documentElement.classList.remove('overflow-hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        if (((WIDTH_SCREEN < 1280) && (WIDTH_SCREEN >= 1000)) && (isOpen == true)) return 'block';
+        else if (WIDTH_SCREEN >= 1280) return 'flex'
+        else return 'none';
+    }
+
     return (
         <>
             {
                 ehTelaDesktop ? (
-                    <ul className='menu-desktop'>
-                        <li className='menu-desktop-item'>
-                            <Link to={'/'} className='menu-desktop-link'>Home</Link>
-                        </li>
+                    <>
+                        <div className='menu-desktop-overlay' style={{ display: isOpen ? 'block' : 'none' }} />
+                        <ul className='menu-desktop' style={{ display: displayMenu() }}>
+                            <li className='menu-desktop-item'>
+                                <Link to={'/'} className='menu-desktop-link'>
+                                    <i className="bi bi-house-fill menu-desktop-link-icon" style={{ fontSize: '18px' }}></i> Home
+                                </Link>
+                            </li>
 
-                        <li className='menu-desktop-item'>
-                            <Link to={'/shows'} className='menu-desktop-link'>Shows</Link>
-                        </li>
+                            <li className='menu-desktop-item'>
+                                <Link to={'/shows'} className='menu-desktop-link'>
+                                    <i className="bi bi-star-fill menu-desktop-link-icon" style={{ fontSize: '17px', color: '#96a6b7' }}></i> Shows
+                                </Link>
+                            </li>
 
-                        <li className='menu-desktop-item'>
-                            <Link to={'/contato'} className='menu-desktop-link'>Contato</Link>
-                        </li>
+                            <li className='menu-desktop-item'>
+                                <Link to={'/contato'} className='menu-desktop-link'>
+                                    <i className="bi bi-telephone-forward-fill menu-desktop-link-icon" style={{ fontSize: '16px' }}></i> Contato
+                                </Link>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </>
                 ) : (
                     <div>
                         <ul className='menu-mobile' style={{ position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px' }}>

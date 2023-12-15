@@ -5,11 +5,11 @@ import HomeServicesComponent from './componentes/HomeServicesComponent/home-serv
 import FooterComponent from '../../components/FooterComponent/footer-component';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import HomeCardLinks from './componentes/HomeCardLink/home-card-link';
+import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
+import Menu from '../../components/NavBarComponent/Menu/menu';
 
 const Home = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
-
-    let ehTelaDesktop = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) > 730;
 
     useEffect(() => {
         const handleScroll = () => setScrollPosition(window.scrollY);
@@ -23,9 +23,10 @@ const Home = () => {
             <NavBarComponent />
 
             <div className='app-home-content'>
+            {WIDTH_SCREEN <= 1279 ? (<div className='app-navbar-content-item'><Menu /></div>) : (<></>)}
                 <div className='app-home-content-container'>
 
-                    {/*ehTelaDesktop ? (<></>) :*/ (<HomeBanner />)}
+                    <HomeBanner />
                     <HomeCardLinks />
                     <HomeServicesComponent />
                 </div>

@@ -42,6 +42,76 @@
     .app-navbar {
         width:         100vw;
         z-index:       1;
+        padding-right: 0px;
+        padding-left:  0px;
+        background: #0a0030;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item:first-of-type {
+        display:     flex;
+        align-items: center;
+        gap:         10px;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-list-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 15px;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-list-container .bi.bi-list {
+        color: white;
+        margin-top: 22px;
+        font-size: 40px;
+        margin-left: 5px;
+    }
+
+    /*.app-navbar .app-navbar-content {
+        margin: 0 auto;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item {
+        display:     flex;
+        align-items: center;
+    }*/
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container {
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container .app-navbar-logo {
+        height: 50px;
+        width:  93px;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container .app-navbar-logo-title {
+        font-size:  20px;
+        font-weight: 0;
+        margin-top: 15px;
+        margin-left: 10px;
+        color:     rgb(210, 210, 210);
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-links-container {
+        display:     flex;
+        align-items: center;
+        gap:         14px;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-links-container .app-navbar-content-links-item {
+        font-size: 19px;
+        font-weight: 0;
+        color:     #f2f2f2;
+    }
+}
+
+@media (min-width: 1280px) {
+    .app-navbar {
+        width:         100vw;
+        z-index:       1;
         padding-right: 50px;
         padding-left:  50px;
         background: #0a0030;
@@ -63,8 +133,8 @@
     }
 
     .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container .app-navbar-logo {
-        height: 67px;
-        width: 112px;
+        height: 55px;
+        width: 102px;
     }
 
     .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-logo-container .app-navbar-logo-title {
@@ -85,5 +155,9 @@
         font-size: 19px;
         font-weight: 0;
         color:     #f2f2f2;
+    }
+
+    .app-navbar .app-navbar-content .app-navbar-content-item .app-navbar-content-list-container {
+        display: none;
     }
 }

@@ -3,34 +3,23 @@ import './navbar-component.css';
 import Menu from './Menu/menu';
 import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
 import { Link } from 'react-router-dom';
+import eventBus from '../../utils/Events/EventBus';
 
-/*style={(window.innerWidth >= 1000) ? { 
-        position: isFixed ? 'fixed' : 'static', 
-        top: isFixed ?      '0px' : '100px'} 
-        : {}}
-            const [isFixed, setIsFixed] = useState(false);
-    const [scrollPosition, setScrollPosition] = useState(0);
 
-    useEffect(() => {
-        console.log(scrollPosition);
-        if (scrollPosition >= 100) setIsFixed(true);
-        else setIsFixed(false);
-
-        const handleScroll = () => setScrollPosition(window.scrollY);
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-        return () => window.removeEventListener('scroll', handleScroll);
-
-    }, [setIsFixed, scrollPosition, setScrollPosition]);
-        */
 const NavBarComponent = () => {
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenuHamburguerDesktop = () => {
+        setIsOpen(!isOpen);
+        eventBus.emit('toggleMenuHamburguerDesktop', !isOpen);
+    }
 
     let NavBarMobile = (
         <header className='app-navbar'>
             <div className='app-navbar-content'>
                 <div className='app-navbar-logo' />
-                <Menu />
+                <Menu/>
             </div>
         </header>);
 
@@ -39,15 +28,17 @@ const NavBarComponent = () => {
             <div className='app-navbar-content'>
 
                 <div className='app-navbar-content-item'>
+                    <div className='app-navbar-content-list-container'>
+                        <i className="bi bi-list" onClick={toggleMenuHamburguerDesktop}></i>
+                    </div>
+                    
                     <div className='app-navbar-content-logo-container'>
-                        <div className='app-navbar-logo' />
+                        <div className='app-navbar-logo' style={{display: WIDTH_SCREEN < 1280 ? 'none' : 'block'}}/>
                         <h2 className='app-navbar-logo-title'>Paramazon</h2>
                     </div>
                 </div>
 
-                <div className='app-navbar-content-item'>
-                    <Menu />
-                </div>
+                {(WIDTH_SCREEN >= 1280) ? (<div className='app-navbar-content-item'><Menu/></div>) : (<></>)}
 
                 <div className='app-navbar-content-item'>
                     <div className='app-navbar-content-links-container'>
