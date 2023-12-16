@@ -16,3 +16,12 @@
     z-index: -2;
     background: #fefefe;
 }
+
+@media screen {
+    .contact {
+        width:     90%;
+        max-width: 1100px;
+        margin:    0 auto;
+    }
+    
+}

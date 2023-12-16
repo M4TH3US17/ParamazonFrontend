@@ -2,6 +2,7 @@ import React from 'react';
 import './contact-page.css';
 import FaleConoscoComponent from './components/FaleConoscoComponent/fale-conosco-component';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
+import FooterComponent from '../../components/FooterComponent/footer-component';
 
 function ContactPage() {
   return (
@@ -14,6 +15,7 @@ function ContactPage() {
           <FaleConoscoComponent />
         </div>
       </main>
+      <FooterComponent />
     </>
   );
 }
