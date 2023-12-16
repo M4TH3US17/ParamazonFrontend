@@ -1,102 +1,216 @@
 /* 1. MOBILE DESIGN - LOGIN PAGE */
-.login-page {
+.login-page .login-page-content .login-page-content-container {
     margin-top: 15%;
 }
 
 /* 2. MOBILE DESIGN - FORM LOGIN */
-.login-page .login-page-form {
-    display:        flex;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content {
+    display: flex;
     flex-direction: column;
-    align-items:    center;
+    align-items: center;
 }
 
 /* 3. MOBILE DESIGN - FORM HEADER */
-.login-page .login-page-form .login-page-form-header {
+.login-page .login-page-form .login-page-form-content .login-page-form-header {
     width: 300px;
 }
 
-.login-page .login-page-form .login-page-form-header .login-page-header-item-logo {
-    padding:         35px 0px 70px 70px;
-    width:           200px;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-header .login-page-header-item-logo {
+    padding: 35px 0px 70px 70px;
+    width: 200px;
     background-size: 100% 100%;
     background-image: url('../../assets/images/paramazon.png');
-    margin:          0 auto;
+    margin: 0 auto;
 }
 
 /* 4. MOBILE DESIGN - FORM CONTAINER INPUTS */
-.login-page .login-page-form .login-page-form-item-container {
-    display:         flex;
-    flex-direction:  column;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom:   20px;
+    margin-bottom: 20px;
 }
 
-.login-page .login-page-form .login-page-form-item-container .login-page-form-input-container {
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-input-container {
     height: 40px;
 }
 
 /* 5. MOBILE DESIGN - INPUTS, LABELS AND BUTTONS */
-.login-page .login-page-form .login-page-form-item-container .login-page-form-item-label {
-    padding:       0px;
-    width:         300px;
-    background:    none;
-    border:        none;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-item-label {
+    padding: 0px;
+    width: 300px;
+    background: none;
+    border: none;
     margin-bottom: 4px;
-    font-family:   arial;
+    font-family: arial;
 }
 
-.login-page .login-page-form .login-page-form-item-container .login-page-form-item-input {
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-item-input {
     padding: 10px;
-    width:   300px;
+    width: 300px;
 }
 
-.login-page .login-page-form .login-page-form-item-btn-container {
-    display:         flex;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-btn-container {
+    display: flex;
     justify-content: center;
 }
 
-.login-page .login-page-form .login-page-form-item-btn-container .login-page-form-btn-acessar {
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-btn-container .login-page-form-btn-acessar {
     margin-top: 10px;
-    padding:    10px;
-    width:      300px;
+    padding: 10px;
+    width: 300px;
 }
 
 /* 6. MOBILE DESIGN - ICONS INPUTS */
-.login-page .login-page-form .login-page-form-item-container .login-page-form-input-container .login-dash-circle-icon {
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-input-container .login-dash-circle-icon {
     font-size: 18px;
-    top:      -37px;
+    top: -37px;
 }
 
-.login-page .login-page-form .login-page-form-item-container .login-page-form-input-container .login-person-icon, .login-dash-circle-icon {
-    position:  relative;
-    top:       -40px;
-    right:     -270px;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-input-container .login-person-icon,
+.login-dash-circle-icon {
+    position: relative;
+    top: -40px;
+    right: -270px;
     font-size: 23px;
-    opacity:   0.5;
+    opacity: 0.5;
 }
 
 /* 7. MOBILE DESIGN - DESCRIPTION 'OU' AT THE END OF THE FORM */
-.login-page .login-page-form .login-page-form-item-or-container {
-    display:    flex;
-    width:      300px;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-or-container {
+    display: flex;
+    width: 300px;
     margin-top: 10px;
 }
 
-.login-page .login-page-form .login-page-form-item-or-container .login-page-form-item-or-line {
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-or-container .login-page-form-item-or-line {
     width: 100%;
 }
 
-.login-page .login-page-form .login-page-form-item-or-container .login-page-form-item-or-text-title {
-    margin-top:   4px;
-    font-weight:  bold;
-    color:     #878787;
-    margin-left:  5px;
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-or-container .login-page-form-item-or-text-title {
+    margin-top: 4px;
+    font-weight: bold;
+    color: #878787;
+    margin-left: 5px;
     margin-right: 5px;
 }
 
 /* 8. MOBILE DESIGN - LINK */
-.login-page .login-page-form .login-page-form-item-link-container{}
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-link-container {}
 
-.login-page .login-page-form .login-page-form-item-link-container .login-page-form-item-register-link {
+.login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-link-container .login-page-form-item-register-link {
     font-weight: 500;
+}
+
+@media (min-width: 1000px) {
+    .login-page {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .login-page .login-page-content {
+        display: flex;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .login-page .login-page-content .login-page-content-container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-image {
+        padding: 20px;
+        width: 50vw;
+        padding-left: 50px;
+
+        background: #3114a5;
+        background-image: url('./../../assets/images/loginImages/login.svg');
+        background-size: 95% 100%;
+        background-repeat: no-repeat;
+        background-position: center -50px;
+        border-right: 2px solid #46438a;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50vw;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content {
+        margin-top: -130px;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container {
+        margin-bottom: 35px;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-item-label {}
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-item-input {
+        padding: 15px;
+        width: 25vw;
+        min-width: 350px;
+        max-width: 400px;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-btn-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-btn-container .login-page-form-btn-acessar {
+        width: 25vw;
+        min-width: 350px;
+        max-width: 400px;
+        padding: 15px;
+        background: #3f1dc9;
+        border: 1px solid #4e4b98;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-input-container .login-dash-circle-icon {
+        font-size: 22px;
+        top:      -37px;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-input-container .login-person-icon,
+    .login-dash-circle-icon {
+        position: relative;
+        right:    -90%;
+        font-size: 23px;
+        opacity:   0.5;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-input-container .login-person-icon {
+        top:      -49px;
+        font-size: 30px;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-container .login-page-form-input-container .login-dash-circle-icon {
+        top: -43px;
+        right: -91%;
+    }
+
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-or-container {
+        display: flex;
+        width: 25vw;
+        min-width: 350px;
+        max-width: 400px;
+        margin-top: 10px;
+    }
+    
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content .login-page-form-item-or-container .login-page-form-item-or-line {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .login-page .login-page-content .login-page-content-container .login-page-form .login-page-form-content {}
+
 }
