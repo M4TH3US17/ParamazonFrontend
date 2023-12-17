@@ -21,6 +21,8 @@ const ShowPageDashboardComponent = () => {
     return (
         <div className='show-page-dashboard-component'>
 
+            <div className='show-page-dashboard-image-bg' />
+
             <div className='show-page-dashboard-container'>
                 <div className='show-page-dashboard-text'>
                     <h2 className='show-page-dashboard-text-title'>Seleção de shows da próxima semana</h2>

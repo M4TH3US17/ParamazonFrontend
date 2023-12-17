@@ -57,10 +57,11 @@ const ShowPageVote = () => {
 
             </ul>
           </nav>
+
+          <ShowPageDashboardComponent />
         </div>
-        <ShowPageDashboardComponent />
-        <FooterComponent />
       </main>
+      <FooterComponent />
     </>
   );
 }
