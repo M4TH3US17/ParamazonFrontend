@@ -1,4 +1,10 @@
 <div>
+   <h2>BACKEND: </h2>
+   <p>Abaixo, o link da API REST:</p>
+   <a href="https://github.com/M4TH3US17/paramazon-backend"> Clique Aqui Para Acessar a API </a>
+</div>
+
+<div>
   <h2>▶ Ferramentas de Desenvolvimento:</h2>
   <div>
     <img align="center" alt="php" height="60" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"> •
