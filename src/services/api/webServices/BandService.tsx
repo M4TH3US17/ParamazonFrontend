@@ -17,7 +17,7 @@ export default class BandService extends ConnectionApi {
         }
     }
 
-    async getBandById(idBand: number): Promise<BandResponse> {
+    async getBandById(idBand: number): Promise<any> {
         try {
             const url = `/band/${idBand}`;
             const response = await this.get<BandResponse>(url);

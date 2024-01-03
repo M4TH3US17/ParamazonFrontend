@@ -1,5 +1,5 @@
 import { MediaResponse } from "../media/MediaResponse";
-import { BandMemberResponse } from "./band/BandMemberResponse";
+import { BandResponse } from "./band/BandResponse";
 
 
 export class ShowResponse {
@@ -14,6 +14,6 @@ export class PresentationResponse {
     startPresentation: string = '';
     endPresentation: string = '';
     description: string = '';
-    band: BandMemberResponse = new BandMemberResponse();
+    band: BandResponse = new BandResponse();
     photograph: MediaResponse = new MediaResponse();
 }
