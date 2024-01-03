@@ -3,21 +3,28 @@ import './show-page-vote.css';
 import ShowPageDashboardComponent from './components/ShowPageDashboardComponent/show-page-dashboard-component';
 import FooterComponent from '../../components/FooterComponent/footer-component';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
-import PresentationService from '../../services/api/webServices/PresentationService';
 import { PresentationVoteResponse } from '../../services/infrastructure/response/show/ShowVoteResponse';
+import ShowService from '../../services/api/webServices/ShowService';
+import { ShowResponse } from '../../services/infrastructure/response/show/ShowResponse';
 
-const service = new PresentationService();
+//const service = new PresentationService();
+const service = new ShowService();
 
 const ShowPageVote = () => {
   /* CARREGAMENTO DE DADOS*/
+  const [showVotes, setShowVotes] = useState<ShowResponse[]>([]);
   const [presentationVotes, setPresentationVotes] = useState<PresentationVoteResponse[]>([]);
 
   useEffect(() => {
-    service.getAllPresentationVotes().then(data => {
+    service.getAllShowVotes().then(data => {
       const response = data.data.data;
-      setPresentationVotes(response);
+
+      setShowVotes(response[1]);
+      setPresentationVotes(response[1].presentationVoteList);
     });
   }, []);
+
+  console.log(showVotes)
 
   /* PAGINACAO */
   const [paginaAtual, setPaginaAtual] = useState(1);
@@ -40,7 +47,7 @@ const ShowPageVote = () => {
   const indiceFim = paginaAtual * itensPorPagina;
 
   // Gerar botões de página numerados
-  const totalPaginas = Math.ceil(presentationVotes.length / itensPorPagina);
+  let totalPaginas = Math.ceil(presentationVotes.length / itensPorPagina);
 
   const renderizarBotoesPagina = () => {
     const botoesPagina = [];
@@ -72,15 +79,19 @@ const ShowPageVote = () => {
 
 
           <div className='show-page-vote-candidates-container'>
-            {presentationVotes.slice(indiceInicio, indiceFim).map((presentationCandidate) => (
-              <div key={presentationCandidate.idPresentationVote} className='show-page-vote-candidates-candidate-card'>
-                <div className='show-page-vote-candidates-candidate-card-title'>
-                  <div className='show-page-vote-candidates-candidate-card-name'>{presentationCandidate.votingPresentation.band.name}</div>
-                  <div className='show-page-vote-candidates-candidate-card-votes'>VOTOS: <span>{presentationCandidate.votes}</span></div>
+            {presentationVotes && Array.isArray(presentationVotes) ? (
+              presentationVotes.slice(indiceInicio, indiceFim).map((presentationCandidate) => (
+                <div key={presentationCandidate.idPresentationVote} className='show-page-vote-candidates-candidate-card'>
+                  <div className='show-page-vote-candidates-candidate-card-title'>
+                    <div className='show-page-vote-candidates-candidate-card-name'>{presentationCandidate.votingPresentation.band.name}</div>
+                    <div className='show-page-vote-candidates-candidate-card-votes'>VOTOS: <span>{presentationCandidate.votes}</span></div>
+                  </div>
+                  <div className='show-page-vote-candidates-candidate-card-img' />
                 </div>
-                <div className='show-page-vote-candidates-candidate-card-img' />
-              </div>
-            ))}
+              ))
+            ) : (
+              <p>Nenhum dado disponível</p>
+            )}
           </div>
 
           <nav aria-label="Page navigation example" className='show-page-pagination-container'>

@@ -105,6 +105,7 @@
 
     .show-page-vote .show-page-vote-container .show-page-vote-candidates-container {
         padding: 20px 0px 25px 0px;
+        min-height:     555px;
     }
 
     .show-page-vote .show-page-vote-container .show-page-vote-candidates-container .show-page-vote-candidates-candidate-card {
