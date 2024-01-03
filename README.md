@@ -5,7 +5,7 @@
 </div>
 
 <div>
-  <h2>▶ Ferramentas de Desenvolvimento:</h2>
+  <h2>Ferramentas de Desenvolvimento:</h2>
   <div>
     <img align="center" alt="php" height="60" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"> •
     <img align="center" alt="php" height="55" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"> •
@@ -27,7 +27,7 @@
 &nbsp
 
 <div>
-  <h2>▶ Sobre:</h2>
+  <h2>Sobre:</h2>
   <p>
     Design de um <strong>sistema web</strong> que permite a <strong>autenticação</strong> e cadastro de usuários, bem como a realização de <strong>operações de votação</strong> e 
     <strong>definição de preferências</strong>. No contexto das votações, os usuários têm a oportunidade de escolher quais shows (cantores ou bandas) desejam para 
@@ -38,7 +38,7 @@
 </div>
 &nbsp
 
-<h2>▶ Telas Mobile (📱):</h2>
+<h2>Telas Mobile (📱):</h2>
 <div>
 <details>
   <summary><h3>Login (clique aqui)</h3></summary>
@@ -83,7 +83,7 @@
 </div>
 &nbsp
 
-<h2>▶ Telas Desktop (🖥️🖱️):</h2>
+<h2>Telas Desktop (🖥️🖱️):</h2>
 <div>
 <details>
   <summary><h3>Login (clique aqui)</h3></summary>
