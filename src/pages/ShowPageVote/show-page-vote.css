@@ -10,7 +10,7 @@
     min-height: 540px;
 }
 
-.show-page-vote .show-page-vote-container .show-page-vote-title {
+.show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-title {
     margin-left:   10px;
     margin-top:    20px;
     font-size:     20px;
@@ -20,8 +20,34 @@
     font-family: 'Public Sans', sans-serif;
 }
 
+.show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates {
+    display:     flex;
+    margin-left: 10px;
+    gap:         10px;
+    font-weight: bold;
+    color: #4e4e4e;
+}
+
+.show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates .date-start-vote {
+    font-size: 12px;
+}
+
+.show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates .date-end-vote .date-text {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates .date-start-vote .date-text {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates .date-end-vote {
+    font-size: 12px;
+}
+
 @media (max-width: 400px) {
-    .show-page-vote .show-page-vote-container .show-page-vote-title {
+    .show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-title {
         font-size: 19px;
     }
 }
@@ -57,6 +83,7 @@
     margin:      0;
     color:     #031d3d;
     font-family: 'Public Sans', sans-serif;
+    margin-top: -15px;
 }
 
 .show-page-vote .show-page-vote-container .show-page-vote-candidates-container .show-page-vote-candidates-candidate-card .show-page-vote-candidates-candidate-card-title
@@ -104,7 +131,7 @@
     }
 
     .show-page-vote .show-page-vote-container .show-page-vote-candidates-container {
-        padding: 20px 0px 25px 0px;
+        padding: 10px 0px 25px 0px;
         min-height:     555px;
     }
 
@@ -120,15 +147,31 @@
         box-shadow: #dcdcdc 1px 2px 4px 0px;
     }
 
-    .show-page-vote .show-page-vote-container .show-page-vote-title {
+    .show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-title {
         font-size:     25px;
         margin-top:    0;
         margin-left:   0;
     }
 
+    .show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates {
+        flex-direction: column;
+        gap:            0px;
+        margin-left:    2px;
+        font-size:      15px;
+    }
+
+    .show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates .date-start-vote {
+        margin-top: 10px;
+    }
+    
+    .show-page-vote .show-page-vote-container .show-page-vote-text .show-page-vote-text-dates .date-end-vote {
+    
+    }
+
     .show-page-vote .show-page-vote-container .show-page-vote-candidates-container .show-page-vote-candidates-candidate-card .show-page-vote-candidates-candidate-card-title {
         font-weight: 400;
         font-size:   20px;
+        margin-top: -35px;
     }
 
     .show-page-vote .show-page-vote-container .show-page-vote-candidates-container .show-page-vote-candidates-candidate-card .show-page-vote-candidates-candidate-card-title 

@@ -11,7 +11,7 @@ const service = new ShowService();
 
 const ShowPageVote = () => {
   /* CARREGAMENTO DE DADOS*/
-  const [showVote, setShowVote] = useState<ShowVoteResponse>([]);
+  const [showVote, setShowVote] = useState<ShowVoteResponse>(new ShowVoteResponse());
   const [presentationVotes, setPresentationVotes] = useState<PresentationVoteResponse[]>([]);
 
   useEffect(() => {
@@ -64,7 +64,6 @@ const ShowPageVote = () => {
   // Função que verifica se pode ir para a próxima página
   const podeIrParaProxima = () => paginaAtual < totalPaginas;
 
-
   return (
     <>
       <NavBarComponent />
@@ -72,7 +71,14 @@ const ShowPageVote = () => {
       <main className='show-page-vote'>
 
         <div className='show-page-vote-container'>
-          <h2 className='show-page-vote-title'>Show ao vivo [empresa]: vote para ficar.</h2>
+          <div className='show-page-vote-text'>
+            <h2 className='show-page-vote-title'>Show ao vivo [empresa]: vote para ficar.</h2>
+
+            <div className='show-page-vote-text-dates'>
+              <div className='date-start-vote'><span className='date-text'>INICIO:</span> {new Date(showVote.startVoting).toLocaleDateString()}</div>
+              <div className='date-end-vote'><span className='date-text'>FIM:</span> {new Date(showVote.endVoting).toLocaleDateString()}</div>
+            </div>
+          </div>
 
 
           <div className='show-page-vote-candidates-container'>

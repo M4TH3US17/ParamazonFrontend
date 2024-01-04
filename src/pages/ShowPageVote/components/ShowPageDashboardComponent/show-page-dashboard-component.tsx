@@ -47,8 +47,6 @@ const ShowPageDashboardComponent: React.FC<ShowPageDashboardComponentProps> = ({
         } 
     }
 
-    console.log(data)
-
     return (
         <div className='show-page-dashboard-component'>
 
