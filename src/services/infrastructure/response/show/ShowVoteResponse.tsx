@@ -1,6 +1,6 @@
 import { PresentationResponse } from "./ShowResponse";
 
-export class ShowVoteDTO {
+export class ShowVoteResponse {
     idShowVote?: number;
     startVoting!: Date;
     endVoting!: Date;

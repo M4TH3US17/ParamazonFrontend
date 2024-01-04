@@ -1,22 +1,53 @@
 import React from 'react';
 import './show-page-dashboard-component.css';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import randomColor from 'randomcolor';
 import { Pie } from 'react-chartjs-2';
+import { PresentationVoteResponse } from '../../../../services/infrastructure/response/show/ShowVoteResponse';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const ShowPageDashboardComponent = () => {
+/* Graph */
+interface GraphData {
+    labels: string[];
+    datasets: [{
+        data: number[];
+        backgroundColor: string[];
+        hoverBackgroundColor: string[];
+    }];
+}
 
-    const data = {
-        labels: ['Candidato 1', 'Candidato 2', 'Candidato 3', 'Candidato 4'],
-        datasets: [
-            {
-                data: [25, 25, 25, 25], // valores dos dados
-                backgroundColor: ['#031d3d', '#4e4b98', '#00a4b2', '#4CAF50'], // cores das fatias
-                hoverBackgroundColor: ['#031d3d', '#4e4b98', '#00a4b2', '#4CAF50'], // cores do hover
-            },
-        ],
+/* PROPS */
+interface ShowPageDashboardComponentProps {
+    candidates: PresentationVoteResponse[];
+    totalVotes: number;
+}
+
+const ShowPageDashboardComponent: React.FC<ShowPageDashboardComponentProps> = ({ candidates, totalVotes }) => {
+    let data: GraphData = {
+        labels: [],
+        datasets: [{
+            data: [],
+            backgroundColor: ['#031d3d', '#4e4b98', '#00a4b2', '#4CAF50'],
+            hoverBackgroundColor: ['#031d3d', '#4e4b98', '#00a4b2', '#4CAF50']
+        }]
     };
+
+    for (let candidate of candidates) {
+        let candidateName = candidate.votingPresentation.band.name;
+        let votes = candidate.votes;
+
+        data.labels.push(candidateName)
+        data.datasets[0].data.push(votes)
+
+        if((candidates.length > 4) && (data.datasets[0].backgroundColor.length < data.labels.length)) {
+            let randomHexColor = randomColor();
+            data.datasets[0].backgroundColor.push(randomHexColor)
+            data.datasets[0].hoverBackgroundColor.push(randomHexColor)
+        } 
+    }
+
+    console.log(data)
 
     return (
         <div className='show-page-dashboard-component'>
@@ -35,7 +66,7 @@ const ShowPageDashboardComponent = () => {
 
                 <div className='show-page-dashboard-graphic-details-container'>
                     <div className='show-page-dashboard-graphic-details-item'>
-                        <span className='show-page-dashboard-graphic-details-text-votes'>votos:</span> 100
+                        <span className='show-page-dashboard-graphic-details-text-votes'>votos totais:</span> {totalVotes}
                     </div>
                 </div>
             </div>
@@ -43,6 +74,5 @@ const ShowPageDashboardComponent = () => {
         </div>
     );
 }
-
 
 export default ShowPageDashboardComponent;

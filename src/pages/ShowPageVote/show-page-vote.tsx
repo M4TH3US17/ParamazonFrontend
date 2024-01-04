@@ -3,28 +3,25 @@ import './show-page-vote.css';
 import ShowPageDashboardComponent from './components/ShowPageDashboardComponent/show-page-dashboard-component';
 import FooterComponent from '../../components/FooterComponent/footer-component';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
-import { PresentationVoteResponse } from '../../services/infrastructure/response/show/ShowVoteResponse';
+import { PresentationVoteResponse, ShowVoteResponse } from '../../services/infrastructure/response/show/ShowVoteResponse';
 import ShowService from '../../services/api/webServices/ShowService';
-import { ShowResponse } from '../../services/infrastructure/response/show/ShowResponse';
 
 //const service = new PresentationService();
 const service = new ShowService();
 
 const ShowPageVote = () => {
   /* CARREGAMENTO DE DADOS*/
-  const [showVotes, setShowVotes] = useState<ShowResponse[]>([]);
+  const [showVote, setShowVote] = useState<ShowVoteResponse>([]);
   const [presentationVotes, setPresentationVotes] = useState<PresentationVoteResponse[]>([]);
 
   useEffect(() => {
     service.getAllShowVotes().then(data => {
       const response = data.data.data;
 
-      setShowVotes(response[1]);
+      setShowVote(response[1]);
       setPresentationVotes(response[1].presentationVoteList);
     });
   }, []);
-
-  console.log(showVotes)
 
   /* PAGINACAO */
   const [paginaAtual, setPaginaAtual] = useState(1);
@@ -33,13 +30,13 @@ const ShowPageVote = () => {
   const previous = () => {
     let indice = paginaAtual - 1;
     setPaginaAtual(indice);
-    console.log(`PREVIOUS: ${paginaAtual}`);
+    //console.log(`PREVIOUS: ${paginaAtual}`);
   };
 
   const next = () => {
     let indice = paginaAtual + 1;
     setPaginaAtual(indice);
-    console.log(`NEXT: ${paginaAtual}`);
+    //console.log(`NEXT: ${paginaAtual}`);
   };
 
   // Calcular índices de início e fim com base na página atual
@@ -110,7 +107,10 @@ const ShowPageVote = () => {
             </ul>
           </nav>
 
-          <ShowPageDashboardComponent />
+          <ShowPageDashboardComponent 
+          candidates={presentationVotes} 
+          totalVotes={showVote.totalVotes == undefined ? 0 : showVote.totalVotes}
+          />
         </div>
       </main>
       <FooterComponent />
