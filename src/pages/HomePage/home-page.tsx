@@ -7,9 +7,11 @@ import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import HomeCardLinks from './componentes/HomeCardLink/home-card-link';
 import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
 import Menu from '../../components/NavBarComponent/Menu/menu';
+import { LoadingPageComponent } from '../../components/LoadingPageComponent/loading-page-component';
 
 const Home = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [loadingVisible, setLoadingVisible] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => setScrollPosition(window.scrollY);
@@ -18,8 +20,21 @@ const Home = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [scrollPosition, setScrollPosition]);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoadingVisible(false);
+        }, 2500); // 5000ms = 5s
+
+        // Clean up the timer if the component is unmounted before the timer completes
+        return () => clearTimeout(timer);
+    }, []);
+
+
     return (
-        <main className='app-home'>
+        <>
+         {loadingVisible && <LoadingPageComponent />}
+
+         <main className='app-home'>
             <NavBarComponent />
 
             <div className='app-home-content'>
@@ -33,6 +48,7 @@ const Home = () => {
             </div>
             <FooterComponent />
         </main>
+        </>
     );
 };
 
