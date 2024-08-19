@@ -2,7 +2,7 @@
 
 @media (max-width: 700px) {
     .home-service {
-        height: 300px;
+        height: 350px;
         width:  100vw;
 
         display:         flex;
@@ -12,15 +12,25 @@
         background: #10004f;
     }
 
-    .home-service .home-service-content {}
-
-    .home-service .home-service-content .home-service-content-text {
-        display: none;
+    .home-service .home-service-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .home-service .home-service-content .home-service-content-text .home-service-content-text-title {}
+    .home-service .home-service-content .home-service-content-text {
+        color: #fff;
+        margin-left: 24px;
+        /* display: none; */
+    }
 
-    .home-service .home-service-content .home-service-content-text .home-service-content-text-subtitle {}
+    .home-service .home-service-content .home-service-content-text .home-service-content-text-title {
+        font-size: 13px;
+    }
+
+    .home-service .home-service-content .home-service-content-text .home-service-content-text-subtitle {
+        display: none;
+    }
 
     .home-service .home-service-content .home-service-content-slide {}
 
@@ -40,7 +50,7 @@
         width:  100%;
 
         transform: scale(0.95);
-        filter: opacity(0.3);
+        /* filter: opacity(0.3); */
         border-radius:    3px;
         background-size:  100% 100%;
         /*background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');*/
@@ -57,8 +67,8 @@
     }
 
     .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .swiper-slide-active .home-service-content-slide-image {
-        transform: scale(1);
-        filter:    opacity(1);
+        /* transform: scale(1);
+        filter:    opacity(1); */
     }
 
     .home-service .home-service-content .home-service-content-slide .home-service-content-slide-buttons {
@@ -167,7 +177,7 @@
     }
 
     .home-service .home-service-content .swiper-pagination .swiper-pagination-bullet-active {
-        transform: scale(1.2);
+        /* transform: scale(1.2); */
         color: #d6d6ff;
     }
 }
