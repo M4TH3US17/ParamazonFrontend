@@ -8,6 +8,7 @@ import HomeCardLinks from './componentes/HomeCardLink/home-card-link';
 import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
 import Menu from '../../components/NavBarComponent/Menu/menu';
 import { LoadingPageComponent } from '../../components/LoadingPageComponent/loading-page-component';
+import { HomeLocaleComponent } from './componentes/HomeLocaleComponent/home-locale-component';
 
 const Home = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -44,6 +45,7 @@ const Home = () => {
                     <HomeBanner />
                     <HomeCardLinks />
                     <HomeServicesComponent />
+                    <HomeLocaleComponent />
                 </div>
             </div>
             <FooterComponent />

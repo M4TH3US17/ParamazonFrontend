@@ -43,7 +43,8 @@
         filter: opacity(0.3);
         border-radius:    3px;
         background-size:  100% 100%;
-        background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+        /*background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');*/
+        background: #eaeaea;
     }
 
     .home-service .home-service-content .home-service-content-slide .home-service-content-slide-container .swiper-slide-next {
@@ -138,7 +139,8 @@
 
         border-radius:    3px;
         background-size:  100% 100%;
-        background-image: url('https://spassodourado.com.br/wp-content/uploads/2015/01/default-placeholder.png');
+        /*background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.techilife.com%2Fhow-to-fix-if-facebook-pictures-not-loading%2F&psig=AOvVaw2FAyIbPVllo70_aTLSGhuN&ust=1724122727785000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJD_uJX6_4cDFQAAAAAdAAAAABAR');*/
+        background: #eaeaea;
     }
 
     .home-service .home-service-content .swiper-button-prev {

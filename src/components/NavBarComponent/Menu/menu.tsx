@@ -85,7 +85,7 @@ const Menu: React.FC = () => {
 
                         <nav className={`sidebar-mobile animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: isOpen ? 'block' : 'none' }}>
                             <div className='sidebar-mobile-item sidebar-mobile-header-container'>
-                                <h5 className='sidebar-mobile-header-title'>EMPRESA</h5>
+                                <h5 className='sidebar-mobile-header-title'>Paramazon</h5>
                                 <i className="bi bi-x-lg sidebar-mobile-close-icon" onClick={() => setIsOpen(false)}></i>
                             </div>
 

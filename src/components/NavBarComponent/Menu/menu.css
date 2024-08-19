@@ -74,7 +74,8 @@ a {
     width: 90vw;
 
     padding: 0px 15px 15px 15px;
-    background: #031d3d;
+    /* background: #031d3d; */
+    background: #151d27;
 }
 
 .sidebar-mobile-bg-effect {
@@ -98,7 +99,7 @@ a {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1.5px solid #062a57;
+    border-bottom: 1.5px solid #252525;
 }
 
 .sidebar-mobile .sidebar-mobile-header-container .sidebar-mobile-header-title {
@@ -121,13 +122,13 @@ a {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1.5px solid #062a57;
+    border-bottom: 1.5px solid #252525;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-pages-container .sidebar-mobile-link-to-page-link {
     display: flex;
     flex-direction: column;
-    color: #d6d6ff;
+    color: #fff;
 }
 
 /* 2.3 MOBILE DESIGN - SIDEBAR MOBILE (CONTENT -- SOCIAL NETWORKS) */
@@ -137,7 +138,7 @@ a {
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1.5px solid #062a57;
+    border-bottom: 1.5px solid #252525;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer {
@@ -150,7 +151,7 @@ a {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    color: #d6d6ff;
+    color: #fff;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer .sidebar-mobile-links-to-social-networks-link .sidebar-mobile-instagram-icon {
@@ -187,7 +188,7 @@ a {
 }
 
 .sidebar-mobile-item .sidebar-mobile-link-to-login-page-container .sidebar-mobile-item-login-text {
-    color: #d6d6ff;
+    color: #fff;
 }
 
 /* SIDEBAR MOBILE ANIMATIONS */
