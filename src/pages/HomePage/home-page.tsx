@@ -12,7 +12,6 @@ import { HomeLocaleComponent } from './componentes/HomeLocaleComponent/home-loca
 
 const Home = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [loadingVisible, setLoadingVisible] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => setScrollPosition(window.scrollY);
@@ -21,20 +20,9 @@ const Home = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [scrollPosition, setScrollPosition]);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoadingVisible(false);
-        }, 2500); // 5000ms = 5s
-
-        // Clean up the timer if the component is unmounted before the timer completes
-        return () => clearTimeout(timer);
-    }, []);
-
 
     return (
         <>
-         {loadingVisible && <LoadingPageComponent />}
-
          <main className='app-home'>
             <NavBarComponent />
 
