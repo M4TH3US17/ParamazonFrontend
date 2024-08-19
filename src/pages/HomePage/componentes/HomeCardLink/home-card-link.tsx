@@ -15,7 +15,7 @@ const HomeCardLinks = () => {
             <HomeCardLinkComponent
                 url={"/contato"}
                 title={WIDTH_SCREEN <= 700 ? "Precisando falar conosco?" : "Falar Conosco"}
-                linkDescription={WIDTH_SCREEN <= 700 ? "Entrar em contato com [empresa]" : "Entrar em contato"}
+                linkDescription={WIDTH_SCREEN <= 700 ? "Entrar em contato com Paramazon" : "Entrar em contato"}
                 tagIcone={<i className="bi bi-chat-left-dots home-card-link-icon"></i>}
             />
 

@@ -57,8 +57,8 @@ function FooterComponent() {
             </div>
 
             <div className='footer-component-credits-content-item'>
-              <p className='footer-component-credits-item'>[empresa] - CNPJ 00.000.000/0000-00</p>
-              <p className='footer-component-credits-item'>Av. xxxxxxx, 02 - Jorge Teixeira, Manaus - AM, 00000-000</p>
+              <p className='footer-component-credits-item'>Paramazon - CNPJ 00.000.000/0000-00</p>
+              <p className='footer-component-credits-item'>Av. Tambaqui, 02 - Jorge Teixeira, Manaus - AM, 00000-000</p>
             </div>
 
           </div>
