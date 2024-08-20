@@ -15,37 +15,37 @@ const HomeCardLinks = () => {
                         desc='Que tal escolher o show da próxima semana ou, quem sabe, entrar em contato conosco?'
                     />
 
-<div className='home-card-links'>
-            <HomeCardLinkComponent
-                url={"/shows/selecao"}
-                title={""}
-                linkDescription={WIDTH_SCREEN <= 700 ? "Realizar minha votação" : "Fazer votação"}
-                tagIcone={<i className="bi bi-envelope home-card-link-icon" style={{top: "6px"}}></i>}
-            />
+                    <div className='home-card-links'>
+                        <HomeCardLinkComponent
+                            url={"/shows/selecao"}
+                            title={""}
+                            linkDescription={WIDTH_SCREEN <= 700 ? "Realizar minha votação" : "Fazer votação"}
+                            tagIcone={<i className="bi bi-envelope home-card-link-icon" style={{ top: "6px" }}></i>}
+                        />
 
-            <HomeCardLinkComponent
-                url={"/contato"}
-                title={""}
-                linkDescription={WIDTH_SCREEN <= 700 ? "Entrar em contato com Paramazon" : "Entrar em contato"}
-                tagIcone={<i className="bi bi-chat-left-dots home-card-link-icon"></i>}
-            />
+                        <HomeCardLinkComponent
+                            url={"/contato"}
+                            title={""}
+                            linkDescription={WIDTH_SCREEN <= 700 ? "Entrar em contato com Paramazon" : "Entrar em contato"}
+                            tagIcone={<i className="bi bi-chat-left-dots home-card-link-icon"></i>}
+                        />
 
-            {(WIDTH_SCREEN >= 1000) ? (<>
-                <HomeCardLinkComponent
-                    url={"/login"}
-                    title={"Fazer Login"}
-                    linkDescription={"Criar minha conta"}
-                    tagIcone={<i className="bi bi-person home-card-link-icon" style={{top: "4px", left: "8.7px", fontSize: '23px'}}></i>}
-                />
+                        {(WIDTH_SCREEN >= 1000) ? (<>
+                            <HomeCardLinkComponent
+                                url={"/login"}
+                                title={"Fazer Login"}
+                                linkDescription={"Criar minha conta"}
+                                tagIcone={<i className="bi bi-person home-card-link-icon" style={{ top: "4px", left: "8.7px", fontSize: '23px' }}></i>}
+                            />
 
-                <HomeCardLinkComponent
-                    url={"#"}
-                    title={"Cantores/shows"}
-                    linkDescription={"Receber alertas"}
-                    tagIcone={<i className="bi bi-exclamation-triangle home-card-link-icon" style={{top: "6px", left: "10.5px", fontSize: '18px'}}></i>}
-                />
-            </>) : (<></>)}
-        </div>
+                            <HomeCardLinkComponent
+                                url={"#"}
+                                title={"Cantores/shows"}
+                                linkDescription={"Receber alertas"}
+                                tagIcone={<i className="bi bi-exclamation-triangle home-card-link-icon" style={{ top: "6px", left: "10.5px", fontSize: '18px' }}></i>}
+                            />
+                        </>) : (<></>)}
+                    </div>
                 </>
             )}
         />
