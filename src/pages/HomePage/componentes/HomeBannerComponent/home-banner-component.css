@@ -12,7 +12,6 @@
   font-weight: 500 !important;
 }
 
-
 .hero-section-subtitle {
   font-weight: 400 !important;
   font-family: "Rubik", sans-serif;
@@ -21,7 +20,7 @@
 
 .img-fluid {
   max-width: 100%;
-  height: auto
+  height: auto;
 }
 
 .home-img {
@@ -54,4 +53,21 @@
   font-family: "Rubik", sans-serif !important;
   font-weight: 500 !important;
   background: #34d1bf !important;
+}
+
+/* ONDA BOTTOM */
+.onda {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -100px;
+}
+.onda-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  fill: #f5f2f2;
 }

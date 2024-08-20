@@ -21,7 +21,7 @@ const HomeBannerComponent = () => {
                             <Button variant="contained" color="primary" className='btn-locale' component={Link} to="#" sx={{ mt: 2, mr: 2 }}>
                                 Localização
                             </Button>
-                            <Button variant="contained" color="success" component={Link}  className='btn btn-faleconosco' to="#" sx={{ mt: 2, ml: 1 }}>
+                            <Button variant="contained" color="success" component={Link} className='btn btn-faleconosco' to="#" sx={{ mt: 2, ml: 1 }}>
                                 Fale Conosco
                             </Button>
                         </div>
@@ -34,6 +34,12 @@ const HomeBannerComponent = () => {
                 </Grid>
             </Grid>
         </Container>
+
+        <div className="onda">
+            <svg className='onda-svg' viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,30 C150,100 350,0 600,30 C850,60 1050,0 1200,30 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
     </section>)
 
     return bannerHTML;
