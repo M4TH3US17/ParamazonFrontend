@@ -10,7 +10,7 @@ export const HomeLocaleComponent = () => {
                 <>
                     <SectionTitle
                         title='Localização'
-                        subtitle='Legenda da etapa de localização'
+                        subtitle='Onde nós estamos?'
                         desc='Aqui é só você, a galera e aquela resenha no estilo mais desenrolado que você já viu.'
                     />
 

@@ -41,8 +41,8 @@ const HomeServicesComponent: React.FC = () => {
         <>
           <SectionTitle
             title='SERVIÇOS'
-            subtitle='Serviços que oferecemos'
-            desc='descr'
+            subtitle='Veja aqui nossos Serviços'
+            desc='service description, service description, service description, service description,...'
           />
 
           <Swiper

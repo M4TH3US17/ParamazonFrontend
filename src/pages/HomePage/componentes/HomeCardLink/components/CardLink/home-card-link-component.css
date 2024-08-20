@@ -15,7 +15,7 @@
 .home-card-link-component .home-card-link-component-text-container .home-card-link-component-text-title {
     font-size:  20px;
     text-align: left;
-    color:   #031d3d;
+    color:   rgb(160, 169, 177);
     margin:     0;
 }
 
@@ -26,7 +26,7 @@
     justify-content: space-between;
     align-items:     center;
     padding:         20px;
-    border:          0.25px solid #4e4c9a;
+    border:          0.25px solid rgb(47, 85, 212);
     border-radius:   2px;
     background:   #fff;
     cursor:          pointer;
@@ -34,7 +34,7 @@
 
 .home-card-link-component .home-card-link-component-link-container .home-card-link-component-link-icon-arrow {
     height: 19px;
-    color:  #4e4b98;
+    color:  rgb(47, 85, 212);
 }
 
 /* 2.1 DESIGN MOBILE - LINK IMAGE */
@@ -50,7 +50,7 @@
 
 .home-card-link-component .home-card-link-component-link-container .home-card-link-component-link-image-container .home-card-link-component-link-image-bg {
     padding:       20px;
-    background: #eeedf9;
+    background: rgba(47, 85, 212, 0.1);
     border-radius: 50%;
     margin-right:  10px;
 }
@@ -60,7 +60,7 @@
     left:      11px;
     position:  absolute;
     font-size: 18px;
-    color:   #4e4b98;
+    color:   rgb(47, 85, 212);
 }
 
 /* 2.2 DESIGN MOBILE - LINK TITLE */
@@ -111,6 +111,6 @@
 
     .home-card-link-component .home-card-link-component-link-container .home-card-link-component-link-icon-arrow {
         height: 15px;
-        color: rgba(78, 76, 154, 0.4);
+        color: rgb(47, 85, 212);
     }
 }

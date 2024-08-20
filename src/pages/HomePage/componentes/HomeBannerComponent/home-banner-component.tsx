@@ -27,7 +27,7 @@ const HomeBannerComponent = () => {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={6} xs={12}>
+                <Grid item lg={6} xs={12} className='grid-img'>
                     <div className="home-img mt-5 mt-lg-0">
                         <img src={homeImg} alt="Descrição da Imagem" className="img-fluid mx-auto d-block" />
                     </div>
