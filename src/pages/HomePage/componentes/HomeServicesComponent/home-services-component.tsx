@@ -76,6 +76,8 @@ const HomeServicesComponent: React.FC = () => {
               <span ref={progressContent}></span>
             </div>
           </Swiper>
+
+          <div style={{padding: `20px`}}/>
         </>
       )}
     />

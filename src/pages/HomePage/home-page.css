@@ -7,6 +7,16 @@
     overflow-x: hidden;
 }
 
+@media (max-width: 780px) {
+
+    .app-home .app-home-content .app-home-content-container > :nth-child(2) {
+        top: -30px;
+        position: relative;
+        
+    }
+
+}
+
 @media (min-width: 1000px) { 
     .app-home .app-home-content .app-home-content-container {
         width:     90%; 
