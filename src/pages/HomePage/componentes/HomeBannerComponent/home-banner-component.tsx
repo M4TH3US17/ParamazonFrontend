@@ -18,10 +18,10 @@ const HomeBannerComponent = () => {
                             Aqui a resenha flui tão natural quanto o encontro das águas
                         </Typography>
                         <div className="mt-4">
-                            <Button variant="contained" color="primary" component={Link} to="#" sx={{ mt: 2, mr: 2 }}>
+                            <Button variant="contained" color="primary" className='btn-locale' component={Link} to="#" sx={{ mt: 2, mr: 2 }}>
                                 Localização
                             </Button>
-                            <Button variant="contained" color="success" component={Link} to="#" sx={{ mt: 2, ml: 1 }}>
+                            <Button variant="contained" color="success" component={Link}  className='btn btn-faleconosco' to="#" sx={{ mt: 2, ml: 1 }}>
                                 Fale Conosco
                             </Button>
                         </div>
