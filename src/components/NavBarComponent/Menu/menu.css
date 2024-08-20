@@ -105,7 +105,8 @@ a {
 .sidebar-mobile .sidebar-mobile-header-container .sidebar-mobile-header-title {
     color: white;
     margin: 0;
-    font-family: 'Public Sans', sans-serif;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
 }
 
 .sidebar-mobile .sidebar-mobile-header-container .sidebar-mobile-close-icon {
@@ -129,6 +130,9 @@ a {
     display: flex;
     flex-direction: column;
     color: #fff;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 /* 2.3 MOBILE DESIGN - SIDEBAR MOBILE (CONTENT -- SOCIAL NETWORKS) */
@@ -139,6 +143,9 @@ a {
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1.5px solid #252525;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .sidebar-mobile-item .sidebar-mobile-links-to-social-networks-container .sidebar-mobile-links-to-social-networks-subcontainer {
@@ -189,6 +196,9 @@ a {
 
 .sidebar-mobile-item .sidebar-mobile-link-to-login-page-container .sidebar-mobile-item-login-text {
     color: #fff;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 /* SIDEBAR MOBILE ANIMATIONS */

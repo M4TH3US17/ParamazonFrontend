@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './menu.css';
 import { Link } from 'react-router-dom';
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import eventBus from '../../../utils/Events/EventBus';
 import { WIDTH_SCREEN } from '../../../utils/ScreenUtils/screen-measurements-data';
+import { Box } from '@mui/material';
 
 const Menu: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +41,7 @@ const Menu: React.FC = () => {
         if (((WIDTH_SCREEN < 1280) && (WIDTH_SCREEN >= 1000)) && (isOpen == true)) {
             document.documentElement.classList.add('overflow-hidden');
             document.body.classList.add('overflow-hidden');
-        } else if (isOpen == false){
+        } else if (isOpen == false) {
             document.documentElement.classList.remove('overflow-hidden');
             document.body.classList.remove('overflow-hidden');
         }
@@ -73,7 +79,7 @@ const Menu: React.FC = () => {
                         </ul>
                     </>
                 ) : (
-                    <div>
+<div>
                         <ul className='menu-mobile' style={{ position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px' }}>
                             <li className='menu-item-mobile'><Link to={'/'}><i className="bi bi-house-door-fill"></i></Link></li>
                             <li className='menu-item-mobile'><Link to={'/shows'}><i className="bi bi-star-fill"></i></Link></li>
@@ -92,13 +98,13 @@ const Menu: React.FC = () => {
                             <div className='sidebar-mobile-item'>
                                 <div className='sidebar-mobile-links-to-pages-container'>
                                     <div className='sidebar-mobile-link-to-pages-item'>
-                                        <Link to={'/'} className='sidebar-mobile-link-to-page-link mb-3'>Home</Link>
-                                        <Link to={'/shows'} className='sidebar-mobile-link-to-page-link mb-3'>Show Page</Link>
-                                        <Link to={'/shows/selecao'} className='sidebar-mobile-link-to-page-link'>Votação</Link>
+                                        <Link to={'/'} className='sidebar-mobile-link-to-page-link mb-3'>PAG. INICIAL</Link>
+                                        <Link to={'/shows'} className='sidebar-mobile-link-to-page-link mb-3'>SOM AO VIVO</Link>
+                                        <Link to={'/shows/selecao'} className='sidebar-mobile-link-to-page-link'>VOTAÇÃO</Link>
                                     </div>
 
                                     <div className='sidebar-mobile-link-to-pages-item'>
-                                        <Link to={'/contato'} className='sidebar-mobile-link-to-page-link'>Fale Conosco</Link>
+                                        <Link to={'/contato'} className='sidebar-mobile-link-to-page-link'>FALE CONOSCO</Link>
                                     </div>
                                 </div>
                             </div>
@@ -108,19 +114,19 @@ const Menu: React.FC = () => {
                                     <div className='sidebar-mobile-links-to-social-networks-subcontainer'>
                                         <a href='https://www.instagram.com/boteco_paramazon/' target='_blank' className='sidebar-mobile-links-to-social-networks-link mb-3'>
                                             <i className="bi bi-instagram sidebar-mobile-instagram-icon" style={{ marginRight: '20px' }}></i>
-                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>Instagram</span>
+                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>INSTAGRAM</span>
                                         </a>
 
                                         <a href='https://www.facebook.com/botecoparamazon' target='_blank' className='sidebar-mobile-links-to-social-networks-link'>
                                             <i className="bi bi-facebook sidebar-mobile-facebook-icon" style={{ marginRight: '20px' }}></i>
-                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>Facebook</span>
+                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>FACEBOOK</span>
                                         </a>
                                     </div>
 
                                     <div className='sidebar-mobile-links-to-social-networks-subcontainer'>
                                         <a href='#' className='sidebar-mobile-links-to-social-networks-link'>
                                             <i className="bi bi-whatsapp sidebar-mobile-whatsapp-icon" style={{ marginRight: '20px' }}></i>
-                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>Whatsapp</span>
+                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>WHATSAPP</span>
                                         </a>
                                     </div>
                                 </div>
@@ -129,7 +135,7 @@ const Menu: React.FC = () => {
                                     <div className='sidebar-mobile-link-to-login-page-container'>
                                         <Link to={'/login'} className='sidebar-mobile-item-login-item'>
                                             <i className="bi bi-box-arrow-right sidebar-mobile-arrow-right-icon"></i>
-                                            <span className='sidebar-mobile-item-login-text'>Login</span>
+                                            <span className='sidebar-mobile-item-login-text'>LOGIN</span>
                                         </Link>
                                     </div>
                                 </div>
