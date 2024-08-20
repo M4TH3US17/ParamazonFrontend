@@ -1,47 +1,85 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, } from 'swiper/modules';
-import './home-services-component.css';
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import 'swiper/swiper-bundle.css';
-import { WIDTH_SCREEN } from '../../../../utils/ScreenUtils/screen-measurements-data';
+
+import { SectionTitle } from '../HomeSectionTitle/home-section-title';
+import { Section } from '../HomeSection/home-section';
+
+import './home-services-component.css';
 
 const servicos = [
-    { id: 0, name: 'Entretenimento' }, { id: 1, name: 'Comidas' },
-    { id: 2, name: 'Som ao vivo' },
-    { id: 3, name: 'Card 4' },
-    { id: 4, name: 'Card 5' },
+  { id: 0, name: 'Entretenimento' }, { id: 1, name: 'Comidas' },
+  { id: 2, name: 'Som ao vivo' },
+  { id: 3, name: 'Card 4' },
+  { id: 4, name: 'Card 5' },
 ];
 
-const HomeServicesComponent = () => {
-    const [isMobileScreen, setMobileScreen] = useState<boolean>(WIDTH_SCREEN <= 700);
+const HomeServicesComponent: React.FC = () => {
+  const progressCircle = useRef<SVGSVGElement>(null);
+  const progressContent = useRef<HTMLSpanElement>(null);
 
-    return (
-        <div className='home-service'>
-            <div className='home-service-content'>
+  const onAutoplayTimeLeft = (s: any, time: number, progress: number) => {
+    if (progressCircle.current) {
+      progressCircle.current.style.setProperty('--progress', String(1 - progress));
+    }
 
-                <div className='home-service-content-text'>
-                    <h2 className='home-service-content-text-title'>CONHEÇA NOSSOS SERVIÇOS</h2>
-                    <h3 className='home-service-content-text-subtitle'>[Uma breve descriçao sobre a qualidade do serviço prestado.]</h3>
-                </div>
+    if (progressContent.current) {
+      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+  };
 
-                <div className='home-service-content-slide'>
-                    <Swiper
-                        autoplay={{ delay: 3000, disableOnInteraction: false, }}
-                        slidesPerView={isMobileScreen ? 3 : 2}
-                        spaceBetween={isMobileScreen ? 0 : 0}
-                        pagination={{ clickable: true, }}
-                        modules={[Autoplay, Navigation, Pagination]}
-                        navigation={isMobileScreen ? {nextEl: 'swiper-button-next', prevEl: 'swiper-button-prev'} : {}}
-                        className="home-service-content-slide-container">
+  return (
+    <Section
+      hasPrimaryBg={true}
+      content={(
+        <>
+          <SectionTitle
+            title='SERVIÇOS'
+            subtitle='Serviços que oferecemos'
+            desc='descr'
+          />
 
-                        {servicos.map((x, index) => <SwiperSlide key={index} className='home-service-content-slide-item'><div className='home-service-content-slide-image' /></SwiperSlide>)}
-                    </Swiper>
-                </div>
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            className="mySwiper"
+          >
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span ref={progressContent}></span>
             </div>
-        </div>
-    );
+          </Swiper>
+        </>
+      )}
+    />
+  );
 };
 
 export default HomeServicesComponent;

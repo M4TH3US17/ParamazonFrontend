@@ -1,14 +1,19 @@
-.map-container .map {
+/*.map-container {
+    background: rgb(248, 250, 254);
+    padding: 50px 10px 50px 10px;
+}*/
+
+#map {
     height: 370px;
 }
 
 
 @media (min-width: 1000px) {
     .map-container {
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
 
-    .map-container .map {
+    .map-container #map {
         height: 450px;
     }
 }

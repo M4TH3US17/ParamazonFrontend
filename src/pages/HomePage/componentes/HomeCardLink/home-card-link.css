@@ -1,5 +1,7 @@
 .home-card-links {
-    padding-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 }
 
 @media (min-width: 1000px) {

@@ -29,11 +29,12 @@ const Home = () => {
             <div className='app-home-content'>
             {WIDTH_SCREEN <= 1279 ? (<div className='app-navbar-content-item'><Menu /></div>) : (<></>)}
                 <div className='app-home-content-container'>
-
+                    
                     <HomeBanner />
-                    <HomeCardLinks />
-                    <HomeServicesComponent />
                     <HomeLocaleComponent />
+                    <HomeServicesComponent />
+                    <HomeCardLinks />
+
                 </div>
             </div>
             <FooterComponent />
