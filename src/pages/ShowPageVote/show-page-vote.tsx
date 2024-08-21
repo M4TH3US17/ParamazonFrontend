@@ -5,6 +5,7 @@ import FooterComponent from '../../components/FooterComponent/footer-component';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import { PresentationVoteResponse, ShowVoteResponse } from '../../services/infrastructure/response/show/ShowVoteResponse';
 import ShowService from '../../services/api/webServices/ShowService';
+import { Box, Paper, Typography } from '@mui/material';
 
 //const service = new PresentationService();
 const service = new ShowService();
@@ -68,59 +69,79 @@ const ShowPageVote = () => {
     <>
       <NavBarComponent />
 
-      <main className='show-page-vote'>
-
-        <div className='show-page-vote-container'>
-          <div className='show-page-vote-text'>
-            <h2 className='show-page-vote-title'>Show ao vivo [empresa]: vote para ficar.</h2>
-
-            <div className='show-page-vote-text-dates'>
-              <div className='date-start-vote'><span className='date-text'>INICIO:</span> {new Date(showVote.startVoting).toLocaleDateString()}</div>
-              <div className='date-end-vote'><span className='date-text'>FIM:</span> {new Date(showVote.endVoting).toLocaleDateString()}</div>
-            </div>
-          </div>
-
-
-          <div className='show-page-vote-candidates-container'>
-            {presentationVotes && Array.isArray(presentationVotes) ? (
-              presentationVotes.slice(indiceInicio, indiceFim).map((presentationCandidate) => (
-                <div key={presentationCandidate.idPresentationVote} className='show-page-vote-candidates-candidate-card'>
-                  <div className='show-page-vote-candidates-candidate-card-title'>
-                    <div className='show-page-vote-candidates-candidate-card-name'>{presentationCandidate.votingPresentation.band.name}</div>
-                    <div className='show-page-vote-candidates-candidate-card-votes'>VOTOS: <span>{presentationCandidate.votes}</span></div>
-                  </div>
-                  <div className='show-page-vote-candidates-candidate-card-img' />
-                </div>
-              ))
-            ) : (
-              <p>Nenhum dado disponível</p>
-            )}
-          </div>
-
-          <nav aria-label="Page navigation example" className='show-page-pagination-container'>
-            <ul className="pagination show-page-pagination-list">
-              <li className="page-item show-page-pagination-list-item" onClick={podeIrParaAnterior() ? previous : undefined}>
-                <a className="page-link show-page-pagination-list-link show-page-pagination-list-btn-previous" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              {renderizarBotoesPagina()}
-              <li className="page-item show-page-pagination-list-item" onClick={podeIrParaProxima() ? next : undefined}>
-                <a className="page-link show-page-pagination-list-link show-page-pagination-list-btn-next" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <ShowPageDashboardComponent 
-          candidates={presentationVotes} 
-          totalVotes={showVote.totalVotes == undefined ? 0 : showVote.totalVotes}
-          />
-        </div>
-      </main>
-      <FooterComponent />
+      <Box className='showpage-content' sx={{marginTop: '25px'}}>
+        <Paper
+          elevation={3}
+          sx={{
+            padding: 4,
+            textAlign: 'center'
+          }}
+        >
+          <Typography variant="h5" component="h1" gutterBottom>
+            🚧 Página em Desenvolvimento 🚧
+          </Typography>
+          <Typography variant="body1">
+            Esta página está atualmente em desenvolvimento. Por favor, volte mais tarde. (20/08/24)
+          </Typography>
+        </Paper>
+      </Box>
     </>
+    // {<>
+    //   <NavBarComponent />
+
+    //   <main className='show-page-vote'>
+
+    //     <div className='show-page-vote-container'>
+    //       <div className='show-page-vote-text'>
+    //         <h2 className='show-page-vote-title'>Show ao vivo [empresa]: vote para ficar.</h2>
+
+    //         <div className='show-page-vote-text-dates'>
+    //           <div className='date-start-vote'><span className='date-text'>INICIO:</span> {new Date(showVote.startVoting).toLocaleDateString()}</div>
+    //           <div className='date-end-vote'><span className='date-text'>FIM:</span> {new Date(showVote.endVoting).toLocaleDateString()}</div>
+    //         </div>
+    //       </div>
+
+
+    //       <div className='show-page-vote-candidates-container'>
+    //         {presentationVotes && Array.isArray(presentationVotes) ? (
+    //           presentationVotes.slice(indiceInicio, indiceFim).map((presentationCandidate) => (
+    //             <div key={presentationCandidate.idPresentationVote} className='show-page-vote-candidates-candidate-card'>
+    //               <div className='show-page-vote-candidates-candidate-card-title'>
+    //                 <div className='show-page-vote-candidates-candidate-card-name'>{presentationCandidate.votingPresentation.band.name}</div>
+    //                 <div className='show-page-vote-candidates-candidate-card-votes'>VOTOS: <span>{presentationCandidate.votes}</span></div>
+    //               </div>
+    //               <div className='show-page-vote-candidates-candidate-card-img' />
+    //             </div>
+    //           ))
+    //         ) : (
+    //           <p>Nenhum dado disponível</p>
+    //         )}
+    //       </div>
+
+    //       <nav aria-label="Page navigation example" className='show-page-pagination-container'>
+    //         <ul className="pagination show-page-pagination-list">
+    //           <li className="page-item show-page-pagination-list-item" onClick={podeIrParaAnterior() ? previous : undefined}>
+    //             <a className="page-link show-page-pagination-list-link show-page-pagination-list-btn-previous" href="#" aria-label="Previous">
+    //               <span aria-hidden="true">&laquo;</span>
+    //             </a>
+    //           </li>
+    //           {renderizarBotoesPagina()}
+    //           <li className="page-item show-page-pagination-list-item" onClick={podeIrParaProxima() ? next : undefined}>
+    //             <a className="page-link show-page-pagination-list-link show-page-pagination-list-btn-next" href="#" aria-label="Next">
+    //               <span aria-hidden="true">&raquo;</span>
+    //             </a>
+    //           </li>
+    //         </ul>
+    //       </nav>
+
+    //       <ShowPageDashboardComponent 
+    //       candidates={presentationVotes} 
+    //       totalVotes={showVote.totalVotes == undefined ? 0 : showVote.totalVotes}
+    //       />
+    //     </div>
+    //   </main>
+    //   <FooterComponent />
+    // </>}
   );
 }
 

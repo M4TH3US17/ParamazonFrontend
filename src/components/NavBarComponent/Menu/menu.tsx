@@ -79,7 +79,7 @@ const Menu: React.FC = () => {
                         </ul>
                     </>
                 ) : (
-<div>
+                    <div>
                         <ul className='menu-mobile' style={{ position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px' }}>
                             <li className='menu-item-mobile'><Link to={'/'}><i className="bi bi-house-door-fill"></i></Link></li>
                             <li className='menu-item-mobile'><Link to={'/shows'}><i className="bi bi-star-fill"></i></Link></li>
