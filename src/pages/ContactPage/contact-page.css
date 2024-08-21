@@ -1,7 +1,6 @@
 .contact {
-    margin-top: 47px;
-    padding-top: 10px;
     min-height: 80vh;
+    padding: 50px 10px 55px 10px;
 }
 
 .contact .contact-container {
@@ -15,13 +14,4 @@
     height: 100%;
     z-index: -2;
     background: #fefefe;
-}
-
-@media screen {
-    .contact {
-        width:     90%;
-        max-width: 1100px;
-        margin:    0 auto;
-    }
-    
 }
