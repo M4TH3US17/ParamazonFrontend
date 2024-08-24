@@ -4,6 +4,10 @@ a {
     text-decoration: none !important;
 }
 
+.divider-bottom {
+    border-bottom: 0.25px solid #d5d5d5;
+}
+
 .bi.bi-house-door-fill,
 .bi.bi-star-fill,
 .bi.bi-telephone-fill {
