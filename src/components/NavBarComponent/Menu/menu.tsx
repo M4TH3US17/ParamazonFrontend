@@ -116,26 +116,26 @@ const Menu: React.FC = () => {
 
                                 <List  className='divider-bottom' sx={{ width: '100%', padding: '20px 0 20px 0'}}>
                                     <Link to={'/'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='PAG. INICIAL' subtitle='subtitulo' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='PAG. INICIAL' subtitle='Acessar a pag. inicial' />
                                     </Link>
 
                                     <Link to={'/shows'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='SOM AO VIVO' subtitle='subtitulo' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='SOM AO VIVO' subtitle='Ver o prox. som ao vivo' />
                                     </Link>
 
                                     <Link to={'/contato'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='FALE CONOSCO' subtitle='subtitulo' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='FALE CONOSCO' subtitle='Deseja contatar nos?' />
                                     </Link>
 
                                     <Link to={'/shows/selecao'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='VOTAÇÃO' subtitle='subtitulo' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='VOTAÇÃO' subtitle='Escolha o Som ao Vivo da prox. semana' />
                                     </Link>
                                 </List>
 
                                 <Box className='' sx={{ width: '100%', padding: '20px 0 20px 0' }}>
                                     <nav aria-label="main mailbox folders">
                                         <Link to={'/login'}>
-                                            <SidebarMoreItem icon={<ExitToAppIcon />} title='Logout' />
+                                            <SidebarMoreItem icon={<ExitToAppIcon />} title='Login' />
                                         </Link>
 
                                         <Link to={'#'}>
@@ -155,7 +155,7 @@ const Menu: React.FC = () => {
 /* LIST ITENS*/
 const SidebarPageItem: React.FC<{ icon?: JSX.Element, title?: string, subtitle?: string }> = ({ icon = <ImageIcon />, title = 'Title', subtitle = 'Subtitle' }) => {
     return <ListItem sx={{ padding: '0' }}>
-        <ListItemButton sx={{ padding: '0' }}>
+        <ListItemButton sx={{ padding: '0' }} className='sidebar-page-item'>
             <ListItemAvatar>
                 <Avatar>
                     {icon}
@@ -169,7 +169,7 @@ const SidebarPageItem: React.FC<{ icon?: JSX.Element, title?: string, subtitle?:
 
 const SidebarMoreItem: React.FC<{ icon?: JSX.Element, title?: string }> = ({ icon = <ImageIcon />, title = 'Title' }) => {
     return <ListItem disablePadding>
-        <ListItemButton sx={{ paddingLeft: '0' }}>
+        <ListItemButton sx={{ paddingLeft: '0' }} className='sidebar-more-item'>
             <ListItemIcon>
                 {icon}
             </ListItemIcon>
