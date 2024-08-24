@@ -75,7 +75,7 @@ a {
 
     padding: 0px 15px 15px 15px;
     /* background: #031d3d; */
-    background: #151d27;
+    background: #F5F7F8;
 }
 
 .sidebar-mobile-bg-effect {
@@ -99,18 +99,17 @@ a {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1.5px solid #252525;
 }
 
 .sidebar-mobile .sidebar-mobile-header-container .sidebar-mobile-header-title {
-    color: white;
+    color: black;
     margin: 0;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
 }
 
 .sidebar-mobile .sidebar-mobile-header-container .sidebar-mobile-close-icon {
-    color: #fff;
+    color: black;
     margin-top: 2px;
     font-size: 18px;
 }

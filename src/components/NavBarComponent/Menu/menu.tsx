@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import './menu.css';
 import { Link } from 'react-router-dom';
-import Accordion from '@mui/material/Accordion';
-import AccordionActions from '@mui/material/AccordionActions';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import { Box, Divider, ListItemButton, ListItemIcon } from '@mui/material';
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import ImageIcon from '@mui/icons-material/Image';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+
 import eventBus from '../../../utils/Events/EventBus';
 import { WIDTH_SCREEN } from '../../../utils/ScreenUtils/screen-measurements-data';
-import { Box } from '@mui/material';
+import './menu.css';
+
 
 const Menu: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -51,10 +58,22 @@ const Menu: React.FC = () => {
         else return 'none';
     }
 
-    return (
-        <>
+
+    // NOVO TOGGLE
+    const [clicked, setClicked] = useState<boolean | undefined>(false);
+    const [show, setShow] = useState(false);
+
+    const handleClick = () => {
+        setShow((prev) => !prev);
+        if (!clicked)
+            setClicked((prev) => !prev);
+        else
+            setTimeout(() => setClicked((prev) => !prev), 1000);
+    }
+
+    return (<>
             {
-                ehTelaDesktop ? (
+                ehTelaDesktop ?
                     <>
                         <div className='menu-desktop-overlay' style={{ display: isOpen ? 'block' : 'none' }} />
                         <ul className='menu-desktop' style={{ display: displayMenu() }}>
@@ -78,74 +97,85 @@ const Menu: React.FC = () => {
 
                         </ul>
                     </>
-                ) : (
-                    <div>
-                        <ul className='menu-mobile' style={{ position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px' }}>
-                            <li className='menu-item-mobile'><Link to={'/'}><i className="bi bi-house-door-fill"></i></Link></li>
-                            <li className='menu-item-mobile'><Link to={'/shows'}><i className="bi bi-star-fill"></i></Link></li>
-                            <li className='menu-item-mobile'><i className="bi bi-list" onClick={() => setIsOpen(true)}></i></li>
-                        </ul>
+                    :
+                    <>
+                        <Box>
+                            <ul className='menu-mobile' style={{ position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px' }}>
+                                <li className='menu-item-mobile'><Link to={'/'}><i className="bi bi-house-door-fill"></i></Link></li>
+                                <li className='menu-item-mobile'><Link to={'/shows'}><i className="bi bi-star-fill"></i></Link></li>
+                                <li className='menu-item-mobile'><i className="bi bi-list" onClick={handleClick}></i></li>
+                            </ul>
 
+                            <div className='sidebar-mobile-bg-effect' style={{ display: show ? 'block' : 'none' }} onClick={handleClick}/>
 
-                        <div className='sidebar-mobile-bg-effect' style={{ display: isOpen ? 'block' : 'none' }} />
+                            <nav className={`sidebar-mobile animate__animated ${show ? 'animate__slideInRight' : 'animate__slideOutRight'}`}>
+                                <Box className='sidebar-mobile-item sidebar-mobile-header-container'>
+                                    <h5 className='sidebar-mobile-header-title'>Paramazon</h5>
+                                    <i className="bi bi-x-lg sidebar-mobile-close-icon" onClick={handleClick}></i>
+                                </Box>
 
-                        <nav className={`sidebar-mobile animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: isOpen ? 'block' : 'none' }}>
-                            <div className='sidebar-mobile-item sidebar-mobile-header-container'>
-                                <h5 className='sidebar-mobile-header-title'>Paramazon</h5>
-                                <i className="bi bi-x-lg sidebar-mobile-close-icon" onClick={() => setIsOpen(false)}></i>
-                            </div>
+                                <List sx={{ width: '100%', padding: '0' }}>
+                                    <Link to={'/'}>
+                                        <SidebarPageItem icon={<ImageIcon />} title='PAG. INICIAL' subtitle='subtitulo' />
+                                    </Link>
 
-                            <div className='sidebar-mobile-item'>
-                                <div className='sidebar-mobile-links-to-pages-container'>
-                                    <div className='sidebar-mobile-link-to-pages-item'>
-                                        <Link to={'/'} className='sidebar-mobile-link-to-page-link mb-3'>PAG. INICIAL</Link>
-                                        <Link to={'/shows'} className='sidebar-mobile-link-to-page-link mb-3'>SOM AO VIVO</Link>
-                                        <Link to={'/shows/selecao'} className='sidebar-mobile-link-to-page-link'>VOTAÇÃO</Link>
-                                    </div>
+                                    <Link to={'/shows'}>
+                                        <SidebarPageItem icon={<ImageIcon />} title='SOM AO VIVO' subtitle='subtitulo' />
+                                    </Link>
 
-                                    <div className='sidebar-mobile-link-to-pages-item'>
-                                        <Link to={'/contato'} className='sidebar-mobile-link-to-page-link'>FALE CONOSCO</Link>
-                                    </div>
-                                </div>
-                            </div>
+                                    <Link to={'/contato'}>
+                                        <SidebarPageItem icon={<ImageIcon />} title='FALE CONOSCO' subtitle='subtitulo' />
+                                    </Link>
 
-                            <div className='sidebar-mobile-item'>
-                                <div className='sidebar-mobile-links-to-social-networks-container'>
-                                    <div className='sidebar-mobile-links-to-social-networks-subcontainer'>
-                                        <a href='https://www.instagram.com/boteco_paramazon/' target='_blank' className='sidebar-mobile-links-to-social-networks-link mb-3'>
-                                            <i className="bi bi-instagram sidebar-mobile-instagram-icon" style={{ marginRight: '20px' }}></i>
-                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>INSTAGRAM</span>
-                                        </a>
+                                    <Link to={'/shows/selecao'}>
+                                        <SidebarPageItem icon={<ImageIcon />} title='VOTAÇÃO' subtitle='subtitulo' />
+                                    </Link>
+                                </List>
 
-                                        <a href='https://www.facebook.com/botecoparamazon' target='_blank' className='sidebar-mobile-links-to-social-networks-link'>
-                                            <i className="bi bi-facebook sidebar-mobile-facebook-icon" style={{ marginRight: '20px' }}></i>
-                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>FACEBOOK</span>
-                                        </a>
-                                    </div>
-
-                                    <div className='sidebar-mobile-links-to-social-networks-subcontainer'>
-                                        <a href='#' className='sidebar-mobile-links-to-social-networks-link'>
-                                            <i className="bi bi-whatsapp sidebar-mobile-whatsapp-icon" style={{ marginRight: '20px' }}></i>
-                                            <span className='sidebar-mobile-links-to-social-networks-link-text'>WHATSAPP</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className='sidebar-mobile-item'>
-                                    <div className='sidebar-mobile-link-to-login-page-container'>
-                                        <Link to={'/login'} className='sidebar-mobile-item-login-item'>
-                                            <i className="bi bi-box-arrow-right sidebar-mobile-arrow-right-icon"></i>
-                                            <span className='sidebar-mobile-item-login-text'>LOGIN</span>
+                                <Box sx={{ width: '100%', padding: '0' }}>
+                                    <nav aria-label="main mailbox folders">
+                                        <Link to={'/login'}>
+                                            <SidebarMoreItem icon={<ExitToAppIcon />} title='Logout' />
                                         </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                )
+
+                                        <Link to={'#'}>
+                                            <SidebarMoreItem icon={<SettingsIcon />} title='Configurações' />
+                                        </Link>
+                                    </nav>
+                                </Box>
+                            </nav>
+                        </Box>
+                    </>
             }
         </>
     );
+};
+
+
+/* LIST ITENS*/
+const SidebarPageItem: React.FC<{ icon?: JSX.Element, title?: string, subtitle?: string }> = ({ icon = <ImageIcon />, title = 'Title', subtitle = 'Subtitle' }) => {
+    return <ListItem sx={{ padding: '0' }}>
+        <ListItemButton sx={{ padding: '0' }}>
+            <ListItemAvatar>
+                <Avatar>
+                    {icon}
+                </Avatar>
+            </ListItemAvatar>
+
+            <ListItemText primary={title} secondary={subtitle} />
+        </ListItemButton>
+    </ListItem>
+};
+
+const SidebarMoreItem: React.FC<{ icon?: JSX.Element, title?: string }> = ({ icon = <ImageIcon />, title = 'Title' }) => {
+    return <ListItem disablePadding>
+        <ListItemButton sx={{ paddingLeft: '0' }}>
+            <ListItemIcon>
+                {icon}
+            </ListItemIcon>
+            <ListItemText primary={title} />
+        </ListItemButton>
+    </ListItem>
 };
 
 export default Menu;
