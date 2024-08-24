@@ -14,6 +14,7 @@
     "@types/node": "^16.18.65",
     "@types/react": "^18.2.39",
     "@types/react-dom": "^18.2.17",
+    "@types/swiper": "^6.0.0",
     "axios": "^1.6.3",
     "chart.js": "^4.4.0",
     "eventemitter3": "^5.0.1",
@@ -25,6 +26,7 @@
     "react-flickity-component": "^4.0.7",
     "react-router-dom": "^6.20.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.77.8",
     "swiper": "^11.0.5",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"

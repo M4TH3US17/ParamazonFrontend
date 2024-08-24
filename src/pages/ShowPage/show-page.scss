@@ -1,0 +1,40 @@
+.showpage {}
+
+.event-text {
+  padding: 0 10px 0 10px;
+}
+
+.showpage .showpage-content {
+  margin-top: 56px;
+  padding: 32px 0px 0px 0px;
+
+  .events {
+    background: #2f55d4;
+    padding: 50px 10px 55px 10px;
+    margin-top: 40px;
+  }
+
+  /* SWIPER */
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+};
