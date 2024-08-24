@@ -103,7 +103,7 @@ const Menu: React.FC = () => {
                             <ul className='menu-mobile' style={{ position: isFixed ? 'fixed' : 'absolute', top: isFixed ? '0px' : '100px' }}>
                                 <li className='menu-item-mobile'><Link to={'/'}><i className="bi bi-house-door-fill"></i></Link></li>
                                 <li className='menu-item-mobile'><Link to={'/shows'}><i className="bi bi-star-fill"></i></Link></li>
-                                <li className='menu-item-mobile'><i className="bi bi-list" onClick={handleClick}></i></li>
+                                <li className='menu-item-mobile' onClick={handleClick}><i className="bi bi-list"></i></li>
                             </ul>
 
                             <div className='sidebar-mobile-bg-effect' style={{ display: show ? 'block' : 'none' }} onClick={handleClick}/>
@@ -116,19 +116,19 @@ const Menu: React.FC = () => {
 
                                 <List  className='divider-bottom' sx={{ width: '100%', padding: '20px 0 20px 0'}}>
                                     <Link to={'/'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='PAG. INICIAL' subtitle='Acessar a pag. inicial' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='PAG. INICIAL' subtitle='Acessar a pág. inicial' />
                                     </Link>
 
                                     <Link to={'/shows'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='SOM AO VIVO' subtitle='Ver o prox. som ao vivo' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='SOM AO VIVO' subtitle='Ver o próx. som ao vivo' />
                                     </Link>
 
                                     <Link to={'/contato'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='FALE CONOSCO' subtitle='Deseja contatar nos?' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='FALE CONOSCO' subtitle='Deseja contatar nós?' />
                                     </Link>
 
                                     <Link to={'/shows/selecao'}>
-                                        <SidebarPageItem icon={<ImageIcon />} title='VOTAÇÃO' subtitle='Escolha o Som ao Vivo da prox. semana' />
+                                        <SidebarPageItem icon={<ImageIcon />} title='VOTAÇÃO' subtitle='Decidir um som ao vivo' />
                                     </Link>
                                 </List>
 
