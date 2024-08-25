@@ -1,47 +1,78 @@
 import React from 'react';
-import './fale-conosco-component.css';
+import './fale-conosco-component.scss';
 import { Box, Button, TextField, Typography } from '@mui/material';
 
 function FaleConoscoComponent() {
   return (
     <Box className='faleconosco'>
+      <Box className='faleconosco-form'>
 
-      <Box className='faleconosco-text'>
-        <Typography className='faleconosco-text-title'> Fale Conosco </Typography>
-        <Typography className='faleconosco-text-subtitle'> Se tiver dúvidas ou precisar de assistência, entre em contato conosco. Estamos aqui para ajudar! </Typography>
-      </Box>
+        <Box className='faleconosco-form-text'>
+          <Typography className='faleconosco-form-title'> Fale Conosco </Typography>
+          <Typography className='faleconosco-form-subtitle'> Estamos felizes em responder a qualquer dúvida que você possa ter e ajudar a determinar qual dos nossos serviços melhor atende às suas necessidades. </Typography>
+        </Box>
 
-      <TextField
-        required
-        id="outlined-required"
-        label="Qual seu nome?"
-        defaultValue="Hello World"
-      />
+        <div className="work-area">
+          <h5 className="box-title mb-30 text-white">Como nos Trabalhamos?</h5>
+          <div className="work-item_wrapper">
+            <div className="work-item">
+              <span className="work-item_number">01</span>
+              <p className="work-text">Descricao Descricao Descricao</p>
+            </div>
+            <div className="work-item">
+              <span className="work-item_number">02</span>
+              <p className="work-text">Descricao Descricao Descricao</p>
+            </div>
+            <div className="work-item">
+              <span className="work-item_number">03</span>
+              <p className="work-text">Descricao Descricao Descricao</p>
+            </div>
+          </div>
+        </div>
 
-      <TextField
-        required
-        id="outlined-required"
-        label="Qual seu telefone?"
-        defaultValue="Hello World"
-      />
+        <Box className='faleconosco-form-field'>
 
-      <TextField
-        required
-        id="outlined-required"
-        label="Qual seu email?"
-        defaultValue="Hello World"
-      />
+          <Box className='faleconosco-form-desc'>
+            <Typography className='form-description'> Preencha as informações abaixo </Typography>
+          </Box>
 
-      <TextField
-        label="Como podemos te ajudar?"
-        multiline
-        rows={4}
-        variant="outlined"
-        fullWidth
-      />
+          <Box className='faleconosco-form-field-container'>
+            <TextField
+              required
+              id="outlined-required"
+              label="Qual seu nome?"
+              className='faleconosco-form-field-item'
+            />
 
-      <Box component='div' className='faleconosco-btn-section' sx={{ marginTop: '15px', display: 'flex', justifyContent: 'right' }}>
-        <Button variant="contained" className='btn' color="success" sx={{ width: '170px', height: '40px' }}> ENVIAR </Button>
+            <TextField
+              required
+              id="outlined-required"
+              label="Qual seu telefone?"
+              className='faleconosco-form-field-item'
+            />
+
+            <TextField
+              required
+              id="outlined-required"
+              label="Qual seu email?"
+              className='faleconosco-form-field-item'
+            />
+
+            <TextField
+              label="Como podemos te ajudar?"
+              multiline
+              rows={4}
+              variant="outlined"
+              fullWidth
+              className='faleconosco-form-field-item'
+            />
+
+            <Box component='div' className='faleconosco-form-button-container'>
+              <Button variant="contained" className='faleconosco-form-button'> ENVIAR MENSAGEM </Button>
+            </Box>
+          </Box>
+        </Box>
+
       </Box>
 
     </Box>

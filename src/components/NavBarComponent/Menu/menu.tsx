@@ -23,11 +23,11 @@ const Menu: React.FC = () => {
     const [isFixed, setIsFixed] = useState(false);
 
     useEffect(() => {
-        const handleEvent = (newState: boolean) => setIsOpen(newState);
+        /*const handleEvent = (newState: boolean) => setIsOpen(newState);
         eventBus.on('toggleMenuHamburguerDesktop', handleEvent);
         return () => {
             eventBus.off('toggleMenuHamburguerDesktop', handleEvent);
-        };
+        };*/
     }, []);
 
     let ehTelaDesktop = WIDTH_SCREEN > 730;
