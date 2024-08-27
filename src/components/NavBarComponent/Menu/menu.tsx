@@ -108,7 +108,7 @@ const Menu: React.FC = () => {
 
                             <div className='sidebar-mobile-bg-effect' style={{ display: show ? 'block' : 'none' }} onClick={handleClick}/>
 
-                            <nav className={`sidebar-mobile animate__animated ${show ? 'animate__slideInRight' : 'animate__slideOutRight'}`}>
+                            <nav className={`sidebar-mobile animate__animated ${show ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: show ? 'block' : 'none' }}>
                                 <Box className='sidebar-mobile-item sidebar-mobile-header-container divider-bottom'>
                                     <h5 className='sidebar-mobile-header-title'>Paramazon</h5>
                                     <i className="bi bi-x-lg sidebar-mobile-close-icon" onClick={handleClick}></i>
