@@ -1,60 +1,79 @@
 import React, { useEffect, useState } from 'react';
-import './navbar-component.css';
-import Menu from './Menu/menu';
-import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
-import { Link } from 'react-router-dom';
-import eventBus from '../../utils/Events/EventBus';
 
+import AppBar from '@mui/material/AppBar';
+import { Avatar, Box, Menu as NavBar } from '@mui/material';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import AdbIcon from '@mui/icons-material/Adb';
+
+import Menu from './Menu/menu';
+
+import './navbar-component.css';
+
+const pages = ['Products', 'Pricing', 'Blog'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBarComponent = () => {
+    const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+    const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+    const [isOpenSidebar, setIsOpenSidebar] = useState<boolean>(false);
 
-    const [isOpen, setIsOpen] = useState(false);
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorElNav(event.currentTarget);
+    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorElUser(event.currentTarget);
+    const handleCloseNavMenu = () => setAnchorElNav(null);
+    const handleCloseUserMenu = () => setAnchorElUser(null);
+    const handleOpenSidebar = () => setIsOpenSidebar(!isOpenSidebar);
 
-    const toggleMenuHamburguerDesktop = () => {
-        setIsOpen(!isOpen);
-        eventBus.emit('toggleMenuHamburguerDesktop', !isOpen);
-    }
+    useEffect(() => {
+        console.log('teste 1 ', isOpenSidebar)
+    }, [isOpenSidebar])
 
-    let NavBarMobile = (
-        <header className='app-navbar'>
-            <div className='app-navbar-content'>
-                <div className='app-navbar-logo' />
-                <Menu/>
-            </div>
-        </header>);
+    return <AppBar position="static" className='app-bar'>
+            <Container maxWidth="xl">
+                <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
-    let NavBarDesktop = (
-        <header className='app-navbar'>
-            <div className='app-navbar-content'>
+                    <Box sx={{ flexGrow: 0 }}>
+                        <Tooltip title="Open settings">
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                            </IconButton>
+                        </Tooltip>
 
-                <div className='app-navbar-content-item'>
-                    <div className='app-navbar-content-list-container'>
-                        <i className="bi bi-list" onClick={toggleMenuHamburguerDesktop}></i>
-                    </div>
+                        <NavBar sx={{ mt: '45px' }} id="menu-appbar" anchorEl={anchorElUser} anchorOrigin={{ vertical: 'top', horizontal: 'right', }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'right', }} open={Boolean(anchorElUser)} onClose={handleCloseUserMenu}>
+                            {settings.map((setting) => (
+                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                    <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                                </MenuItem>
+                            ))}
+                        </NavBar>
+                    </Box>
                     
-                    <div className='app-navbar-content-logo-container'>
-                        <div className='app-navbar-logo' style={{display: WIDTH_SCREEN < 1280 ? 'none' : 'block'}}/>
-                        <h2 className='app-navbar-logo-title'>Paramazon</h2>
-                    </div>
-                </div>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, maxWidth: '48px' }}>
+                        <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
+                            <MenuIcon onClick={handleOpenSidebar}/>
+                        </IconButton>
 
-                {(WIDTH_SCREEN >= 1280) ? (<div className='app-navbar-content-item'><Menu/></div>) : (<></>)}
+                        <Menu isOpenSidebar={isOpenSidebar} />
+                    </Box>
 
-                <div className='app-navbar-content-item'>
-                    <div className='app-navbar-content-links-container'>
-                        <a href='https://www.facebook.com/botecoparamazon' target='_blank'><i className="bi bi-facebook app-navbar-content-links-item"></i></a>
-                        <a href='https://www.instagram.com/boteco_paramazon/' target='_blank'><i className="bi bi-instagram app-navbar-content-links-item"></i></a>
-                        <a href='#'><i className="bi bi-whatsapp app-navbar-content-links-item"></i></a>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {pages.map((page) => (
+                            <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} >
+                                {page}
+                            </Button>
+                        ))}
+                    </Box>
 
-                        <span className='app-navbar-content-links-item' style={{ fontSize: '30px' }}>l</span>
-                        <Link to={'/login'} className='app-navbar-content-links-item'>LOGIN</Link>
-                    </div>
-                </div>
-
-            </div>
-        </header>);
-
-    return (WIDTH_SCREEN <= 700) ? NavBarMobile : NavBarDesktop;
+                </Toolbar>
+            </Container>
+        </AppBar>
 };
 
 export default NavBarComponent;
