@@ -49,12 +49,20 @@ const ShowPage = () => {
         </div>
       </Grid>
 
-      <Swiper spaceBetween={30} centeredSlides={true} autoplay={{ delay: 2500, disableOnInteraction: false, }} pagination={{ clickable: true, }} navigation={true} modules={[Autoplay, Pagination, Navigation]} onAutoplayTimeLeft={onAutoplayTimeLeft} className="events">
+      <Box className='events'>
+        <EventCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
+      </Box>
+
+      {/* {<Swiper spaceBetween={30} centeredSlides={true} autoplay={{ delay: 2500, disableOnInteraction: false, }} pagination={{ clickable: true, }} navigation={true} modules={[Autoplay, Pagination, Navigation]} onAutoplayTimeLeft={onAutoplayTimeLeft} className="events">
         <SwiperSlide> <EventCard /> </SwiperSlide>
         <SwiperSlide> <EventCard /> </SwiperSlide>
         <SwiperSlide> <EventCard /> </SwiperSlide>
         <SwiperSlide> <EventCard /> </SwiperSlide>
-      </Swiper>
+      </Swiper>} */}
 
       <FooterComponent />
     </Box>

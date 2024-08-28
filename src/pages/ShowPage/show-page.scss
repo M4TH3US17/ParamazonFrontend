@@ -9,7 +9,9 @@
   padding: 27px 0px 0px 0px;
 
   .events {
-    background: #2f55d4;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
     padding: 50px 10px 55px 10px;
     margin-top: 40px;
   }
