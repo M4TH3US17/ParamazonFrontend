@@ -18,6 +18,7 @@ import 'swiper/css/pagination';
 
 import './show-page.scss';
 import '../../pages/HomePage/componentes/HomeServicesComponent/home-services-component.css'
+import FooterComponent from '../../components/FooterComponent/footer-component';
 
 const ShowPage = () => {
   const progressCircle = useRef<SVGSVGElement>(null);
@@ -55,6 +56,7 @@ const ShowPage = () => {
         <SwiperSlide> <EventCard /> </SwiperSlide>
       </Swiper>
 
+      <FooterComponent />
     </Box>
   </Box>
 }
