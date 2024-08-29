@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import { EventCard } from './components/EventCard';
@@ -25,6 +25,7 @@ const ShowPage = () => {
   const progressCircle = useRef<SVGSVGElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);
   const parallaxImg = useRef<HTMLDivElement>(null);
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
   const onAutoplayTimeLeft = (s: any, time: number, progress: number) => {
     if (progressCircle.current)
@@ -34,12 +35,28 @@ const ShowPage = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
 
+
   useEffect(() => {
     const handleScroll = () => {
       if (parallaxImg.current) {
         const scrollY = window.scrollY;
-        // Ajuste o valor para modificar o efeito de parallax
-        parallaxImg.current.style.transform = `translateY(${scrollY * 0.5}px)`;
+        const threshold = 279; // Posição da rolagem para iniciar o efeito
+        const estaDescendo = prevScrollY < scrollY;
+        
+        // Determine a direção do scroll
+        const isScrollingDown = scrollY > prevScrollY;
+        //console.log('Scroll Y:', scrollY, 'Previous Scroll Y:', prevScrollY, 'Scrolling Down:', isScrollingDown);
+
+        if (scrollY > threshold) {
+          // Ajuste o valor para modificar o efeito de parallax
+          parallaxImg.current.style.transform = `translateY(${(scrollY - threshold) * 0.5}px)`;
+        } else {
+          // Reseta a transformação se a rolagem estiver acima do limite
+          parallaxImg.current.style.transform = 'translateY(0px)';
+        }
+
+        // Atualiza a posição de rolagem anterior
+        setPrevScrollY(scrollY);
       }
     };
 
@@ -48,7 +65,7 @@ const ShowPage = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prevScrollY]);
 
   return <Box className='showpage'>
     <NavBarComponent />
@@ -65,9 +82,9 @@ const ShowPage = () => {
             Explore nossa programação e fique por dentro de todas as atrações e novidades.
           </Typography>
 
-          <div className='parallax-img' ref={parallaxImg}/>
+          <div className='parallax-img' ref={parallaxImg} />
         </div>
-      
+
       </Grid>
 
       <Box className='events'>
@@ -82,7 +99,7 @@ const ShowPage = () => {
 }
 
 
-      {/* {<Swiper spaceBetween={30} centeredSlides={true} autoplay={{ delay: 2500, disableOnInteraction: false, }} pagination={{ clickable: true, }} navigation={true} modules={[Autoplay, Pagination, Navigation]} onAutoplayTimeLeft={onAutoplayTimeLeft} className="events">
+{/* {<Swiper spaceBetween={30} centeredSlides={true} autoplay={{ delay: 2500, disableOnInteraction: false, }} pagination={{ clickable: true, }} navigation={true} modules={[Autoplay, Pagination, Navigation]} onAutoplayTimeLeft={onAutoplayTimeLeft} className="events">
         <SwiperSlide> <EventCard /> </SwiperSlide>
         <SwiperSlide> <EventCard /> </SwiperSlide>
         <SwiperSlide> <EventCard /> </SwiperSlide>
