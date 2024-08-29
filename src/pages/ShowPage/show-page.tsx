@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import { EventCard } from './components/EventCard';
@@ -21,8 +21,10 @@ import '../../pages/HomePage/componentes/HomeServicesComponent/home-services-com
 import FooterComponent from '../../components/FooterComponent/footer-component';
 
 const ShowPage = () => {
+  /* PARALLAX EFFECT */
   const progressCircle = useRef<SVGSVGElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);
+  const parallaxImg = useRef<HTMLDivElement>(null);
 
   const onAutoplayTimeLeft = (s: any, time: number, progress: number) => {
     if (progressCircle.current)
@@ -31,6 +33,22 @@ const ShowPage = () => {
     if (progressContent.current)
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxImg.current) {
+        const scrollY = window.scrollY;
+        // Ajuste o valor para modificar o efeito de parallax
+        parallaxImg.current.style.transform = `translateY(${scrollY * 0.5}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return <Box className='showpage'>
     <NavBarComponent />
@@ -46,16 +64,23 @@ const ShowPage = () => {
           <Typography variant="body1" className='hero-section-subtitle'>
             Explore nossa programação e fique por dentro de todas as atrações e novidades.
           </Typography>
+
+          <div className='parallax-img' ref={parallaxImg}/>
         </div>
+      
       </Grid>
 
       <Box className='events'>
         <EventCard />
         <EventCard />
         <EventCard />
-        <EventCard />
-        <EventCard />
       </Box>
+
+      <FooterComponent />
+    </Box>
+  </Box>
+}
+
 
       {/* {<Swiper spaceBetween={30} centeredSlides={true} autoplay={{ delay: 2500, disableOnInteraction: false, }} pagination={{ clickable: true, }} navigation={true} modules={[Autoplay, Pagination, Navigation]} onAutoplayTimeLeft={onAutoplayTimeLeft} className="events">
         <SwiperSlide> <EventCard /> </SwiperSlide>
@@ -63,11 +88,5 @@ const ShowPage = () => {
         <SwiperSlide> <EventCard /> </SwiperSlide>
         <SwiperSlide> <EventCard /> </SwiperSlide>
       </Swiper>} */}
-
-      <FooterComponent />
-    </Box>
-  </Box>
-}
-
 
 export default ShowPage;

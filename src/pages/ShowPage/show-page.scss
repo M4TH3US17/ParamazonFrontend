@@ -5,17 +5,52 @@
 }
 
 .showpage .showpage-content {
-  margin-top: 15px;
-  padding: 27px 0px 0px 0px;
 
+  .hero-wrapper {
+    position: relative;
+    padding: 35px 10px 300px 10px;
+    background-size: 100% 100%;
+    background-image: url('../../assets/images/bg-som-ao-vivo.jpg');
+    height: 650px; /* Ajuste a altura conforme necessário */
+  }
+  
+  .hero-section-title {
+    position: absolute;
+    z-index: 2;
+    top: 20px; /* Ajuste conforme necessário */
+    left: 10px;
+  }
+  
+  .hero-section-subtitle {
+    position: absolute;
+    z-index: 2;
+    top: 120px;
+    width: 95%;
+    margin: 0 auto;
+    left: 10px; /* Ajuste conforme necessário */
+  }
+  
+  .parallax-img {
+    position: absolute;
+    top: 220px; /* Ajuste conforme necessário */
+    height: 197px;
+    width: 350px;
+    background-size: cover;
+    background-image: url('../../assets/images/paramazon.png');
+    opacity: 0.8;
+    z-index: 1; /* A imagem parallax deve estar atrás da seção de eventos */
+  }
+  
   .events {
     display: flex;
     gap: 40px;
     flex-direction: column;
+    position: relative; /* Mantém o fluxo normal do documento */
+    z-index: 2; /* Deve ser maior que o z-index da imagem parallax */
     padding: 50px 10px 55px 10px;
-    margin-top: 40px;
+    margin-top: -150px; /* Ajuste este valor conforme necessário para sobreposição */
+    background: #fff;
   }
-
   /* SWIPER */
   .swiper {
     width: 100%;

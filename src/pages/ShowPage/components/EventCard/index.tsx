@@ -20,7 +20,7 @@ export const EventCard: React.FC<{}> = ({ }) => {
     };
 
     return (
-        <Box sx={{ maxWidth: 400 }} className='card'>
+        <Box sx={{ /*maxWidth: 400*/ }} className='card'>
             <img
                 src='https://pbs.twimg.com/media/FLrT7QiVQAIivpt.jpg:large'
                 className='card-media'
