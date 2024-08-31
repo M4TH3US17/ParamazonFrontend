@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
 import './index.scss';
 
@@ -21,10 +21,15 @@ export const EventCard: React.FC<{}> = ({ }) => {
 
     return (
         <Box sx={{ /*maxWidth: 400*/ }} className='card'>
-            <img
-                src='https://pbs.twimg.com/media/FLrT7QiVQAIivpt.jpg:large'
-                className='card-media'
-            />
+
+            <Box className='scene'>
+                <Box className='scene-flip'>
+                    <Box className='flip-front'></Box>
+                    <Box className='flip-back'>
+                        <Button variant="outlined" className='btn'> BOTAO </Button>
+                    </Box>
+                </Box>
+            </Box>
 
             <Box className='card-text'>
                 <Typography component='span'>
