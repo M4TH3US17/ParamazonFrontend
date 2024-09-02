@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
 import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import { EventCard } from './components/EventCard';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, } from 'swiper/modules';
+import srcLogo from '../../assets/images/paramazon.png';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -71,21 +69,25 @@ const ShowPage = () => {
     <NavBarComponent />
 
     <Box className='showpage-content'>
+      
+      <Box className='showpage-banner'>
+        <Box className='banner-content'>
+          <div className='banner-content-item' id='logo-container'> 
+            <img src={srcLogo} id='logo'/> 
+          </div>
 
-      <Grid item lg={6} xs={12}>
-        <div className="hero-wrapper event-text">
-          <Typography variant="h1" component="h1" className='hero-section-title' sx={{ mb: 4 }}>
-            Descubra nossos eventos incríveis!
-          </Typography>
+          <div className='banner-content-item' id='text-container'> 
+            <h2 id='text'> Paramazon - Som ao Vivo & <br/> Descricao Descricao Descricao </h2> 
+          </div>
 
-          <Typography variant="body1" className='hero-section-subtitle'>
-            Explore nossa programação e fique por dentro de todas as atrações e novidades.
-          </Typography>
-
-          <div className='parallax-img' ref={parallaxImg} />
-        </div>
-
-      </Grid>
+          <div className='banner-content-item'>
+            <div id='button-container'>
+              <Button id='button' className='btn-viewDemo'>VIEW DEMO</Button>
+              <Button id='button' sx={{color: 'black'}} className='btn-two'>PURCHASE NOW</Button>
+            </div>
+          </div>
+        </Box>
+      </Box>
 
       <Box className='events'>
         <EventCard />
