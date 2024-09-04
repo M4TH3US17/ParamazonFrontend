@@ -3,7 +3,7 @@ import { ILoginPageProps } from './types/interfaces';
 
 import './login-page.css';
 
-export const LoginPage: React.FC<ILoginPageProps> = ({}:ILoginPageProps) => {
+export const LoginPage: React.FC<ILoginPageProps> = ({}:ILoginPageProps): JSX.Element => {
     return (
         <main className='login-page'>
             <div className='login-page-content'>

@@ -4,7 +4,7 @@ import { IHomeSectionProps } from '../../types/interfaces';
 
 import './home-section.css'
 
-export const Section: React.FC<IHomeSectionProps> = ({ content, hasPrimaryBg = false }: IHomeSectionProps) => {
+export const Section: React.FC<IHomeSectionProps> = ({ content, hasPrimaryBg = false }: IHomeSectionProps): JSX.Element => {
 
     const sectionStyle: SxProps<Theme> = {
         backgroundColor: (hasPrimaryBg) ? 'rgb(248, 250, 254)' : 'none',

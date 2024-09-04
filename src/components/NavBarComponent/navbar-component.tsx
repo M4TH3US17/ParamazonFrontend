@@ -19,7 +19,7 @@ import './navbar-component.css';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const NavBarComponent = () => {
+export const NavBarComponent: React.FC<{}> = ({}: {}): JSX.Element => {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
     const [isOpenSidebar, setIsOpenSidebar] = useState<boolean>(false);
@@ -75,5 +75,3 @@ const NavBarComponent = () => {
             </Container>
         </AppBar>
 };
-
-export default NavBarComponent;

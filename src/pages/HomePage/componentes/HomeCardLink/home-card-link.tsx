@@ -6,7 +6,7 @@ import HomeCardLinkComponent from "./components/CardLink/home-card-link-componen
 
 import "./home-card-link.css"
 
-export const HomeCardLinks: React.FC<IHomeCardLinkProps> = ({}: IHomeCardLinkProps) => {
+export const HomeCardLinks: React.FC<IHomeCardLinkProps> = ({}: IHomeCardLinkProps): JSX.Element => {
     return (
         <Section
             content={(

@@ -5,7 +5,7 @@ import homeImg from '../../../../assets/images/paramazon.png';
 import { Button, Container, Typography, Grid } from '@mui/material';
 import { IHomeBannerProps } from '../../types/interfaces';
 
-export const HomeBannerComponent: React.FC<IHomeBannerProps> = ({}: IHomeBannerProps) => {
+export const HomeBannerComponent: React.FC<IHomeBannerProps> = ({}: IHomeBannerProps): JSX.Element => {
 
     let bannerHTML = (<section className="hero-section" id="home">
         <Container>

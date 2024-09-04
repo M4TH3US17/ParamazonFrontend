@@ -3,7 +3,7 @@ import './fale-conosco-component.scss';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { IFaleConoscoProps } from '../../types/interface';
 
-export const FaleConoscoComponent: React.FC<IFaleConoscoProps> = ({}: IFaleConoscoProps) => {
+export const FaleConoscoComponent: React.FC<IFaleConoscoProps> = ({}: IFaleConoscoProps): JSX.Element => {
   return (
     <Box className='faleconosco'>
       <Box className='faleconosco-form'>

@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import { EventCard } from './components/EventCard';
 import srcLogo from '../../assets/images/paramazon.png';
 
-import FooterComponent from '../../components/FooterComponent/footer-component';
 import { IShowPageProps } from './types/interfaces';
 
 // Import Swiper styles
@@ -19,8 +17,10 @@ import 'swiper/css/pagination';
 
 import './show-page.scss';
 import '../../pages/HomePage/componentes/HomeServicesComponent/home-services-component.css'
+import { NavBarComponent } from '../../components/NavBarComponent/navbar-component';
+import { FooterComponent } from '../../components/FooterComponent/footer-component';
 
-export const ShowPage: React.FC<IShowPageProps> = ({}: IShowPageProps) => {
+export const ShowPage: React.FC<IShowPageProps> = ({}: IShowPageProps): JSX.Element => {
   /* PARALLAX EFFECT */
   const progressCircle = useRef<SVGSVGElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);

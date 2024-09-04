@@ -12,7 +12,7 @@ interface HomeCardLinkProps {
 
 //animate__animated animate__fadeInLeft
 
-const HomeCardLinkComponent: React.FC<HomeCardLinkProps> = ({ url, title, linkDescription, tagIcone }) => {
+const HomeCardLinkComponent: React.FC<HomeCardLinkProps> = ({ url, title, linkDescription, tagIcone }: HomeCardLinkProps): JSX.Element => {
 
     return (
         <div className='home-card-link-component'>

@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBarComponent from '../../components/NavBarComponent/navbar-component';
-import FooterComponent from '../../components/FooterComponent/footer-component';
 import { FaleConoscoComponent } from './components/FaleConoscoComponent/fale-conosco-component';
 import { IContactPageProps } from './types/interface';
 
 import './contact-page.css';
+import { FooterComponent } from '../../components/FooterComponent/footer-component';
+import { NavBarComponent } from '../../components/NavBarComponent/navbar-component';
 
-export const ContactPage: React.FC<IContactPageProps> = ({ }: IContactPageProps) => {
+export const ContactPage: React.FC<IContactPageProps> = ({ }: IContactPageProps): JSX.Element => {
   return (
     <>
       <NavBarComponent />

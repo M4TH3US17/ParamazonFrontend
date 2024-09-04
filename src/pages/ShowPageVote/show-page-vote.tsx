@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './show-page-vote.css';
-import ShowPageDashboardComponent from './components/ShowPageDashboardComponent/show-page-dashboard-component';
-import FooterComponent from '../../components/FooterComponent/footer-component';
-import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import { PresentationVoteResponse, ShowVoteResponse } from '../../services/infrastructure/response/show/ShowVoteResponse';
 import ShowService from '../../services/api/webServices/ShowService';
 import { Box, Paper, Typography } from '@mui/material';
+import { NavBarComponent } from '../../components/NavBarComponent/navbar-component';
 
 //const service = new PresentationService();
 const service = new ShowService();
 
-const ShowPageVote = () => {
+const ShowPageVote: React.FC<{}> = ({}:{}): JSX.Element => {
   /* CARREGAMENTO DE DADOS*/
   const [showVote, setShowVote] = useState<ShowVoteResponse>(new ShowVoteResponse());
   const [presentationVotes, setPresentationVotes] = useState<PresentationVoteResponse[]>([]);

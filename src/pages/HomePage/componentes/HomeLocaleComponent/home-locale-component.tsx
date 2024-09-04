@@ -5,7 +5,7 @@ import { IHomeLocaleProps } from '../../types/interfaces';
 
 import './home-locale-component.css';
 
-export const HomeLocaleComponent: React.FC<IHomeLocaleProps> = ({}: IHomeLocaleProps) => {
+export const HomeLocaleComponent: React.FC<IHomeLocaleProps> = ({}: IHomeLocaleProps): JSX.Element => {
     return (
         <Section
             content={(

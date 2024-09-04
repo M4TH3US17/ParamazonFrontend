@@ -20,7 +20,7 @@ const servicos = [
   { id: 4, name: 'Card 5' },
 ];
 
-const HomeServicesComponent: React.FC<IHomeServicesProps> = ({}:IHomeServicesProps) => {
+const HomeServicesComponent: React.FC<IHomeServicesProps> = ({}:IHomeServicesProps): JSX.Element => {
   const progressCircle = useRef<SVGSVGElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);
 

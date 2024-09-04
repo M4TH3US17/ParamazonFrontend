@@ -3,7 +3,7 @@ import { IHomeSectionTitleProps } from "../../types/interfaces";
 
 import './home-section-title.css';
 
-export const SectionTitle: React.FC<IHomeSectionTitleProps> = ({ title, subtitle, desc }: IHomeSectionTitleProps) => {
+export const SectionTitle: React.FC<IHomeSectionTitleProps> = ({ title, subtitle, desc }: IHomeSectionTitleProps): JSX.Element => {
     return (
       <Box id="section-title-container">
         <div className='title'>{title.toUpperCase()}</div>

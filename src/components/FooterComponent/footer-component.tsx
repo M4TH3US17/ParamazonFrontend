@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer-component.css';
 
-function FooterComponent() {
+export const FooterComponent: React.FC<{}> = ({}: {}): JSX.Element => {
   return (
     <div className='footer-component'>
       <div className='footer-component-content'>
@@ -66,6 +66,4 @@ function FooterComponent() {
       </div>
     </div>
   );
-}
-
-export default FooterComponent;
+};

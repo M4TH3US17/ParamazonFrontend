@@ -13,7 +13,7 @@ interface ExpandMoreProps extends IconButtonProps {
     expand: boolean;
 }
 
-export const EventCard: React.FC<IEventCardProps> = ({ }: IEventCardProps) => {
+export const EventCard: React.FC<IEventCardProps> = ({ }: IEventCardProps): JSX.Element => {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
