@@ -3,7 +3,7 @@ import { SectionTitle } from '../HomeSectionTitle/home-section-title';
 import { Section } from '../HomeSection/home-section';
 import { IHomeLocaleProps } from '../../types/interfaces';
 
-import './home-locale-component.css';
+import './home-locale-component.scss';
 
 export const HomeLocaleComponent: React.FC<IHomeLocaleProps> = ({}: IHomeLocaleProps): JSX.Element => {
     return (

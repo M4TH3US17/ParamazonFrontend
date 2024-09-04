@@ -16,7 +16,7 @@ import 'swiper/css/pagination';
 //import 'swiper/swiper-bundle.min.css'; 
 
 import './show-page.scss';
-import '../../pages/HomePage/componentes/HomeServicesComponent/home-services-component.css'
+import '../../pages/HomePage/componentes/HomeServicesComponent/home-services-component.scss'
 import { NavBarComponent } from '../../components/NavBarComponent/navbar-component';
 import { FooterComponent } from '../../components/FooterComponent/footer-component';
 

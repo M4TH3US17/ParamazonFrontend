@@ -7,9 +7,10 @@ import Menu from '../../components/NavBarComponent/Menu/menu';
 import { HomeLocaleComponent } from './componentes/HomeLocaleComponent/home-locale-component';
 import { IHomePageProps } from './types/interfaces';
 
-import './home-page.css';
 import { FooterComponent } from '../../components/FooterComponent/footer-component';
 import { NavBarComponent } from '../../components/NavBarComponent/navbar-component';
+
+import './home-page.scss';
 
 export const Home: React.FC<IHomePageProps> = ({}:IHomePageProps): JSX.Element => {
     const [scrollPosition, setScrollPosition] = useState(0);

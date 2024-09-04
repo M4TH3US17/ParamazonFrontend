@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ILoginPageProps } from './types/interfaces';
 
-import './login-page.css';
+import './login-page.scss';
 
 export const LoginPage: React.FC<ILoginPageProps> = ({}:ILoginPageProps): JSX.Element => {
     return (

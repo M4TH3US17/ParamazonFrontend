@@ -11,7 +11,8 @@ import { Section } from '../HomeSection/home-section';
 import { SectionTitle } from '../HomeSectionTitle/home-section-title';
 
 import { IHomeServicesProps } from '../../types/interfaces';
-import './home-services-component.css';
+
+import './home-services-component.scss';
 
 const servicos = [
   { id: 0, name: 'Entretenimento' }, { id: 1, name: 'Comidas' },

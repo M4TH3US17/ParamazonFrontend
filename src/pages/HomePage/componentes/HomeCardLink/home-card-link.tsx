@@ -4,7 +4,7 @@ import { Section } from "../HomeSection/home-section";
 import { SectionTitle } from "../HomeSectionTitle/home-section-title";
 import HomeCardLinkComponent from "./components/CardLink/home-card-link-component";
 
-import "./home-card-link.css"
+import "./home-card-link.scss"
 
 export const HomeCardLinks: React.FC<IHomeCardLinkProps> = ({}: IHomeCardLinkProps): JSX.Element => {
     return (
