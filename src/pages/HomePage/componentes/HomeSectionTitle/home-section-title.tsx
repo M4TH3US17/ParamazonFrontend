@@ -1,13 +1,9 @@
 import { Box } from "@mui/material";
+import { IHomeSectionTitleProps } from "../../types/interfaces";
+
 import './home-section-title.css';
 
-interface SectionTitleProps {
-    title:    string;
-    subtitle: string;
-    desc:     string;
-  }
-
-export const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle, desc }) => {
+export const SectionTitle: React.FC<IHomeSectionTitleProps> = ({ title, subtitle, desc }: IHomeSectionTitleProps) => {
     return (
       <Box id="section-title-container">
         <div className='title'>{title.toUpperCase()}</div>

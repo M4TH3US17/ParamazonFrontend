@@ -1,8 +1,9 @@
 import React from 'react';
 import './fale-conosco-component.scss';
 import { Box, Button, TextField, Typography } from '@mui/material';
+import { IFaleConoscoProps } from '../../types/interface';
 
-function FaleConoscoComponent() {
+export const FaleConoscoComponent: React.FC<IFaleConoscoProps> = ({}: IFaleConoscoProps) => {
   return (
     <Box className='faleconosco'>
       <Box className='faleconosco-form'>
@@ -77,6 +78,4 @@ function FaleConoscoComponent() {
 
     </Box>
   );
-}
-
-export default FaleConoscoComponent;
+};

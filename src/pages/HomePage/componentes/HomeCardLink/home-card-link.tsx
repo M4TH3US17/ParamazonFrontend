@@ -1,10 +1,12 @@
 import { WIDTH_SCREEN } from "../../../../utils/ScreenUtils/screen-measurements-data";
+import { IHomeCardLinkProps } from "../../types/interfaces";
 import { Section } from "../HomeSection/home-section";
 import { SectionTitle } from "../HomeSectionTitle/home-section-title";
 import HomeCardLinkComponent from "./components/CardLink/home-card-link-component";
+
 import "./home-card-link.css"
 
-const HomeCardLinks = () => {
+export const HomeCardLinks: React.FC<IHomeCardLinkProps> = ({}: IHomeCardLinkProps) => {
     return (
         <Section
             content={(

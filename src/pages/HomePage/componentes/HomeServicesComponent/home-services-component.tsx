@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/swiper-bundle.css';
 
-import { SectionTitle } from '../HomeSectionTitle/home-section-title';
 import { Section } from '../HomeSection/home-section';
+import { SectionTitle } from '../HomeSectionTitle/home-section-title';
 
+import { IHomeServicesProps } from '../../types/interfaces';
 import './home-services-component.css';
 
 const servicos = [
@@ -20,7 +20,7 @@ const servicos = [
   { id: 4, name: 'Card 5' },
 ];
 
-const HomeServicesComponent: React.FC = () => {
+const HomeServicesComponent: React.FC<IHomeServicesProps> = ({}:IHomeServicesProps) => {
   const progressCircle = useRef<SVGSVGElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);
 

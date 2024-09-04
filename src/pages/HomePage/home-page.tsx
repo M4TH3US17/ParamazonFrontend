@@ -1,5 +1,4 @@
 import React, { useEffect, useContext, useState } from 'react';
-import './home-page.css';
 import HomeBanner from './componentes/HomeBannerComponent/home-banner-component';
 import HomeServicesComponent from './componentes/HomeServicesComponent/home-services-component';
 import FooterComponent from '../../components/FooterComponent/footer-component';
@@ -7,10 +6,12 @@ import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import HomeCardLinks from './componentes/HomeCardLink/home-card-link';
 import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
 import Menu from '../../components/NavBarComponent/Menu/menu';
-import { LoadingPageComponent } from '../../components/LoadingPageComponent/loading-page-component';
 import { HomeLocaleComponent } from './componentes/HomeLocaleComponent/home-locale-component';
+import { IHomePageProps } from './types/interfaces';
 
-const Home = () => {
+import './home-page.css';
+
+export const Home: React.FC<IHomePageProps> = ({}:IHomePageProps) => {
     const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {

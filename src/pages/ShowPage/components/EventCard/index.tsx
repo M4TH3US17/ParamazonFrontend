@@ -7,12 +7,13 @@ import Typography from '@mui/material/Typography';
 import { Box, Button } from '@mui/material';
 
 import './index.scss';
+import { IEventCardProps } from '../../types/interfaces';
 
 interface ExpandMoreProps extends IconButtonProps {
     expand: boolean;
 }
 
-export const EventCard: React.FC<{}> = ({ }) => {
+export const EventCard: React.FC<IEventCardProps> = ({ }: IEventCardProps) => {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {

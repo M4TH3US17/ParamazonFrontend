@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import { ILoginPageProps } from './types/interfaces';
+
 import './login-page.css';
 
-const LoginPage = () => {
+export const LoginPage: React.FC<ILoginPageProps> = ({}:ILoginPageProps) => {
     return (
         <main className='login-page'>
             <div className='login-page-content'>
@@ -53,6 +55,4 @@ const LoginPage = () => {
             </div>
         </main>
     );
-}
-
-export default LoginPage;
+};

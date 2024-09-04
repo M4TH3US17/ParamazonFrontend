@@ -3,8 +3,9 @@ import './home-banner-component.css';
 import { Link } from 'react-router-dom';
 import homeImg from '../../../../assets/images/paramazon.png';
 import { Button, Container, Typography, Grid } from '@mui/material';
+import { IHomeBannerProps } from '../../types/interfaces';
 
-const HomeBannerComponent = () => {
+export const HomeBannerComponent: React.FC<IHomeBannerProps> = ({}: IHomeBannerProps) => {
 
     let bannerHTML = (<section className="hero-section" id="home">
         <Container>

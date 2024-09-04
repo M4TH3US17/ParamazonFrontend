@@ -4,6 +4,9 @@ import NavBarComponent from '../../components/NavBarComponent/navbar-component';
 import { EventCard } from './components/EventCard';
 import srcLogo from '../../assets/images/paramazon.png';
 
+import FooterComponent from '../../components/FooterComponent/footer-component';
+import { IShowPageProps } from './types/interfaces';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -16,9 +19,8 @@ import 'swiper/css/pagination';
 
 import './show-page.scss';
 import '../../pages/HomePage/componentes/HomeServicesComponent/home-services-component.css'
-import FooterComponent from '../../components/FooterComponent/footer-component';
 
-const ShowPage = () => {
+export const ShowPage: React.FC<IShowPageProps> = ({}: IShowPageProps) => {
   /* PARALLAX EFFECT */
   const progressCircle = useRef<SVGSVGElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);
@@ -107,5 +109,3 @@ const ShowPage = () => {
         <SwiperSlide> <EventCard /> </SwiperSlide>
         <SwiperSlide> <EventCard /> </SwiperSlide>
       </Swiper>} */}
-
-export default ShowPage;

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
 import Home from './pages/HomePage/home-page';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ShowPage from './pages/ShowPage/show-page';
-import LoginPage from './pages/LoginPage/login-page';
-import ContactPage from './pages/ContactPage/contact-page';
 import ShowPageVote from './pages/ShowPageVote/show-page-vote';
 import { LoadingPageComponent } from './components/LoadingPageComponent/loading-page-component';
+import { ShowPage } from './pages/ShowPage/show-page';
+import { LoginPage } from './pages/LoginPage/login-page';
+import { ContactPage } from './pages/ContactPage/contact-page';
+
+import './App.css';
 
 function App() {
   const [loadingVisible, setLoadingVisible] = useState(true);

@@ -1,13 +1,10 @@
 import { Box, SxProps } from '@mui/material';
-import './home-section.css'
 import { Theme } from '@emotion/react';
+import { IHomeSectionProps } from '../../types/interfaces';
 
-interface SectionProps {
-    content: JSX.Element;
-    hasPrimaryBg?: boolean;
-}
+import './home-section.css'
 
-export const Section: React.FC<SectionProps> = ({ content, hasPrimaryBg = false }) => {
+export const Section: React.FC<IHomeSectionProps> = ({ content, hasPrimaryBg = false }: IHomeSectionProps) => {
 
     const sectionStyle: SxProps<Theme> = {
         backgroundColor: (hasPrimaryBg) ? 'rgb(248, 250, 254)' : 'none',
