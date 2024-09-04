@@ -14,7 +14,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 
 import Menu from './Menu/menu';
 
-import './navbar-component.css';
+import './navbar-component.scss';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];

@@ -1,0 +1,42 @@
+.app-bar {
+    background: #f6f5f5;
+    background-color: #2f55d4 !important;
+    box-shadow: 0px 0px 4px #2c2c2c;
+    padding: 5px 0 5px 0;
+
+    .app-navbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .app-navbar-logo {
+            height: 70px;
+            width: 112px;
+            background-size: 100% 100%;
+            background-image: url('../../assets/images/paramazon.png');
+            cursor: pointer;
+
+            @media (max-width: 500px) {
+                height: 58px;
+                width: 90px;
+                background-size: 100% 100%;
+                background-image: url('../../assets/images/paramazon.png');
+                cursor: pointer;
+            }
+        }
+
+        @media (max-width: 500px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+}
+
+@media (min-width: 1000px) {}

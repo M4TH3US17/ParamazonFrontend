@@ -11,8 +11,9 @@ import { FooterComponent } from '../../components/FooterComponent/footer-compone
 import { NavBarComponent } from '../../components/NavBarComponent/navbar-component';
 
 import './home-page.scss';
+import { Box } from '@mui/material';
 
-export const Home: React.FC<IHomePageProps> = ({}:IHomePageProps): JSX.Element => {
+export const HomePage: React.FC<IHomePageProps> = ({}:IHomePageProps): JSX.Element => {
     const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
@@ -28,21 +29,20 @@ export const Home: React.FC<IHomePageProps> = ({}:IHomePageProps): JSX.Element =
          <main className='app-home'>
             <NavBarComponent />
 
-            <div className='app-home-content'>
-            {WIDTH_SCREEN <= 1279 ? (<div className='app-navbar-content-item'><Menu /></div>) : (<></>)}
-                <div className='app-home-content-container'>
+            <Box className='app-home-content'>
+            { (WIDTH_SCREEN <= 1279) && <Box className='app-navbar-content-item'><Menu /></Box> }
+                <Box className='app-home-content-container'>
                     
                     <HomeBanner />
                     <HomeLocaleComponent />
                     <HomeServicesComponent />
                     <HomeCardLinks />
 
-                </div>
-            </div>
+                </Box>
+            </Box>
+
             <FooterComponent />
         </main>
         </>
     );
 };
-
-export default Home;
