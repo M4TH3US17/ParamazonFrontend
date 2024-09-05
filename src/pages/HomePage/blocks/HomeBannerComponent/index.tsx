@@ -4,7 +4,7 @@ import homeImg from '../../../../assets/images/paramazon.png';
 import { Button, Container, Typography, Grid } from '@mui/material';
 import { IHomeBannerProps } from '../../types/interfaces';
 
-import './home-banner-component.scss';
+import './index.scss';
 
 export const HomeBannerComponent: React.FC<IHomeBannerProps> = ({}: IHomeBannerProps): JSX.Element => {
 

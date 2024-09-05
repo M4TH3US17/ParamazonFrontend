@@ -1,9 +1,9 @@
 import { Box } from '@mui/material';
-import { SectionTitle } from '../HomeSectionTitle/home-section-title';
-import { Section } from '../HomeSection/home-section';
+import { SectionTitle } from '../HomeSectionTitle';
+import { Section } from '../HomeSection';
 import { IHomeLocaleProps } from '../../types/interfaces';
 
-import './home-locale-component.scss';
+import './index.scss';
 
 export const HomeLocaleComponent: React.FC<IHomeLocaleProps> = ({}: IHomeLocaleProps): JSX.Element => {
     return (

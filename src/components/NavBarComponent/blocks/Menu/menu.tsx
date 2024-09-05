@@ -12,7 +12,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
-import './menu.css';
+import './menu.scss';
 
 
 const Menu: React.FC<{ isOpenSidebar?: boolean }> = ({ isOpenSidebar = false }) => {
@@ -34,12 +34,12 @@ const Menu: React.FC<{ isOpenSidebar?: boolean }> = ({ isOpenSidebar = false }) 
 
     return <>
         <Box>
-            <div className='sidebar-mobile-bg-effect' style={{ display: show ? 'block' : 'none' }} onClick={handleClick} />
+            <div className='sidebar-bg-effect' style={{ display: show ? 'block' : 'none' }} onClick={handleClick} />
 
-            <nav className={`sidebar-mobile animate__animated ${clicked ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: show ? 'block' : 'none' }}>
-                <Box className='sidebar-mobile-item sidebar-mobile-header-container divider-bottom'>
-                    <h5 className='sidebar-mobile-header-title'>Paramazon</h5>
-                    <i className="bi bi-x-lg sidebar-mobile-close-icon" onClick={handleClick}></i>
+            <nav className={`sidebar animate__animated ${clicked ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: show ? 'block' : 'none' }}>
+                <Box className='sidebar-header divider-bottom'>
+                    <h5 className='sidebar-header-title'>Paramazon</h5>
+                    <i className="bi bi-x-lg sidebar-closeIcon" onClick={handleClick}></i>
                 </Box>
 
                 <List className='divider-bottom' sx={{ width: '100%', padding: '20px 0 20px 0' }}>

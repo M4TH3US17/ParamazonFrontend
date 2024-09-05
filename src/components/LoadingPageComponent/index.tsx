@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import './loading-page-component.css';
 import logoSRC from '../../assets/images/paramazon.png';
+
+import './index.css';
 
 export const LoadingPageComponent: React.FC<{}> = ({}: {}): JSX.Element => {
 

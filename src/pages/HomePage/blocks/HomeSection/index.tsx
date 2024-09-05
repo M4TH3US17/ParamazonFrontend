@@ -2,7 +2,7 @@ import { Box, SxProps } from '@mui/material';
 import { Theme } from '@emotion/react';
 import { IHomeSectionProps } from '../../types/interfaces';
 
-import './home-section.scss'
+import './index.scss'
 
 export const Section: React.FC<IHomeSectionProps> = ({ content, hasPrimaryBg = false }: IHomeSectionProps): JSX.Element => {
 

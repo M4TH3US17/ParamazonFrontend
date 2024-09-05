@@ -3,15 +3,17 @@ import HomeBanner from './blocks/HomeBannerComponent';
 import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
 import Menu from '../../components/NavBarComponent/blocks/Menu/menu';
 import { IHomePageProps } from './types/interfaces';
-import { HomeLocaleComponent } from './blocks/HomeLocaleComponent';
-import HomeServicesComponent from './blocks/HomeServicesComponent';
-import HomeCardLinks from './blocks/HomeCardLink';
 
 import { FooterComponent } from '../../components/FooterComponent';
 import { NavBarComponent } from '../../components/NavBarComponent';
 
-import './home-page.scss';
 import { Box } from '@mui/material';
+
+import { HomeLocaleComponent } from './blocks/HomeLocaleComponent';
+import HomeServicesComponent from './blocks/HomeServicesComponent';
+import HomeCardLinks from './blocks/HomeCardLink';
+
+import './index.scss';
 
 export const HomePage: React.FC<IHomePageProps> = ({}:IHomePageProps): JSX.Element => {
     const [scrollPosition, setScrollPosition] = useState(0);

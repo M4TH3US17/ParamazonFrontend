@@ -1,7 +1,8 @@
 import React from 'react';
-import './fale-conosco-component.scss';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { IFaleConoscoProps } from '../../types/interface';
+
+import './index.scss';
 
 export const FaleConoscoComponent: React.FC<IFaleConoscoProps> = ({}: IFaleConoscoProps): JSX.Element => {
   return (

@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { IHomeSectionTitleProps } from "../../types/interfaces";
 
-import './home-section-title.scss';
+import './index.scss';
 
 export const SectionTitle: React.FC<IHomeSectionTitleProps> = ({ title, subtitle, desc }: IHomeSectionTitleProps): JSX.Element => {
     return (

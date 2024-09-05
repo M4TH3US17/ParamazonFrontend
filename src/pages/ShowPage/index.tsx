@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Box, Button, Grid, Typography } from '@mui/material';
-import { EventCard } from './components/EventCard';
+import { Box, Button, } from '@mui/material';
+import { EventCard } from './blocks/EventCard';
 import srcLogo from '../../assets/images/paramazon.png';
 
 import { IShowPageProps } from './types/interfaces';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -15,10 +14,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 //import 'swiper/swiper-bundle.min.css'; 
 
-import './show-page.scss';
-import '../../pages/HomePage/componentes/HomeServicesComponent/home-services-component.scss'
-import { NavBarComponent } from '../../components/NavBarComponent/navbar-component';
-import { FooterComponent } from '../../components/FooterComponent/footer-component';
+import { NavBarComponent } from '../../components/NavBarComponent';
+import { FooterComponent } from '../../components/FooterComponent';
+
+import './index.scss';
 
 export const ShowPage: React.FC<IShowPageProps> = ({}: IShowPageProps): JSX.Element => {
   /* PARALLAX EFFECT */

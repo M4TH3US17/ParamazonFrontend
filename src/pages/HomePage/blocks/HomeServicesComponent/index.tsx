@@ -7,12 +7,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/swiper-bundle.css';
 
-import { Section } from '../HomeSection/home-section';
-import { SectionTitle } from '../HomeSectionTitle/home-section-title';
+import { Section } from '../HomeSection';
+import { SectionTitle } from '../HomeSectionTitle';
 
 import { IHomeServicesProps } from '../../types/interfaces';
 
-import './home-services-component.scss';
+import './index.scss';
 
 const servicos = [
   { id: 0, name: 'Entretenimento' }, { id: 1, name: 'Comidas' },

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { HomePage } from './pages/HomePage/home-page';
-import { ShowPage } from './pages/ShowPage/show-page';
-import { LoginPage } from './pages/LoginPage/login-page';
-import { ContactPage } from './pages/ContactPage/contact-page';
+import { HomePage } from './pages/HomePage';
+import { ShowPage } from './pages/ShowPage';
+import { LoginPage } from './pages/LoginPage';
+import { ContactPage } from './pages/ContactPage';
 
-import { LoadingPageComponent } from './components/LoadingPageComponent/loading-page-component';
+import { LoadingPageComponent } from './components/LoadingPageComponent';
 
 import './App.css';
 

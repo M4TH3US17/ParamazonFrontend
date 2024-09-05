@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer-component.css';
+import './index.css';
 
 export const FooterComponent: React.FC<{}> = ({}: {}): JSX.Element => {
   return (
