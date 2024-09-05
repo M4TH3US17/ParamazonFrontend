@@ -8,9 +8,8 @@ import 'swiper/css/navigation';
 import 'swiper/swiper-bundle.css';
 
 import { Section } from '../HomeSection';
-import { SectionTitle } from '../HomeSectionTitle';
 
-import { IHomeServicesProps } from '../../types/interfaces';
+import { IHomeSectionTitleProps, IHomeServicesProps } from '../../types/interfaces';
 
 import './index.scss';
 
@@ -20,6 +19,12 @@ const servicos = [
   { id: 3, name: 'Card 4' },
   { id: 4, name: 'Card 5' },
 ];
+
+const headerSection: IHomeSectionTitleProps = {
+  title: "SERVIÇOS", 
+  subtitle: "Veja aqui nossos Serviços", 
+  desc: "service description, service description, service description, service description,..."
+};
 
 const HomeServicesComponent: React.FC<IHomeServicesProps> = ({}:IHomeServicesProps): JSX.Element => {
   const progressCircle = useRef<SVGSVGElement>(null);
@@ -38,14 +43,9 @@ const HomeServicesComponent: React.FC<IHomeServicesProps> = ({}:IHomeServicesPro
   return (
     <Section
       hasPrimaryBg={true}
+      header={headerSection}
       content={(
         <>
-          <SectionTitle
-            title='SERVIÇOS'
-            subtitle='Veja aqui nossos Serviços'
-            desc='service description, service description, service description, service description,...'
-          />
-
           <Swiper
             spaceBetween={30}
             centeredSlides={true}

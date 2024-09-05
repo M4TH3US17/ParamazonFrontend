@@ -1,18 +1,9 @@
-import './home-card-link-component.css'
+import { IHomeCardLinkProps } from '../../../../types/interfaces';
 import { Link } from 'react-router-dom';
 
-interface HomeCardLinkProps {
-    url: string;
-    title: string;
-    linkDescription: string;
-    tagIcone: React.ReactNode;
+import './home-card-link-component.css'
 
-    style?: React.CSSProperties;
-}
-
-//animate__animated animate__fadeInLeft
-
-const HomeCardLinkComponent: React.FC<HomeCardLinkProps> = ({ url, title, linkDescription, tagIcone }: HomeCardLinkProps): JSX.Element => {
+const HomeCardLinkComponent: React.FC<IHomeCardLinkProps> = ({ url, title = "", description, icon }: IHomeCardLinkProps): JSX.Element => {
 
     return (
         <div className='home-card-link-component'>
@@ -24,10 +15,10 @@ const HomeCardLinkComponent: React.FC<HomeCardLinkProps> = ({ url, title, linkDe
                 <div className='home-card-link-component-link-image-container'>
                     <div className='home-card-link-component-link-image-container'>
                         <div className='home-card-link-component-link-image-bg' />
-                        { tagIcone }
+                        { icon }
                     </div>
 
-                    <span className='home-card-link-component-link-text-title animate__animated'>{ linkDescription }</span>
+                    <span className='home-card-link-component-link-text-title animate__animated'>{ description }</span>
                 </div>
 
                 <svg className='home-card-link-component-link-icon-arrow' xmlns="http://www.w3.org/2000/svg" fill="none" focusable="false" viewBox="0 0 32 32">

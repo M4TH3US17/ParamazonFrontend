@@ -1,17 +1,17 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HomeBanner from './blocks/HomeBannerComponent';
 import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
 import Menu from '../../components/NavBarComponent/blocks/Menu/menu';
 import { IHomePageProps } from './types/interfaces';
 
-import { FooterComponent } from '../../components/FooterComponent';
-import { NavBarComponent } from '../../components/NavBarComponent';
-
 import { Box } from '@mui/material';
 
+import { HomeCardLinks } from './blocks/HomeCardLink';
 import { HomeLocaleComponent } from './blocks/HomeLocaleComponent';
 import HomeServicesComponent from './blocks/HomeServicesComponent';
-import HomeCardLinks from './blocks/HomeCardLink';
+
+import { FooterComponent } from '../../components/FooterComponent';
+import { NavBarComponent } from '../../components/NavBarComponent';
 
 import './index.scss';
 
