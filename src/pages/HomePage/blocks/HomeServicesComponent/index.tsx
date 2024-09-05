@@ -12,6 +12,7 @@ import { Section } from '../HomeSection';
 import { IHomeSectionTitleProps, IHomeServicesProps } from '../../types/interfaces';
 
 import './index.scss';
+import { Box } from '@mui/material';
 
 const servicos = [
   { id: 0, name: 'Entretenimento' }, { id: 1, name: 'Comidas' },
@@ -45,7 +46,7 @@ const HomeServicesComponent: React.FC<IHomeServicesProps> = ({}:IHomeServicesPro
       hasPrimaryBg={true}
       header={headerSection}
       content={(
-        <>
+        <Box sx={{paddingBottom: '20px'}}>
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -77,9 +78,7 @@ const HomeServicesComponent: React.FC<IHomeServicesProps> = ({}:IHomeServicesPro
               <span ref={progressContent}></span>
             </div>
           </Swiper>
-
-          <div style={{padding: `20px`}}/>
-        </>
+        </Box>
       )}
     />
   );

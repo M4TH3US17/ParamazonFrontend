@@ -23,13 +23,11 @@ export const HomeCardLinks: React.FC<IHomeCardLinksProps> = ({}: IHomeCardLinksP
     return (
         <Section
             header={headerSection}
-            content={(<>
+            content={(
                     <Box className='home-card-links'>
                         { cardLinkList.map(card => <HomeCardLinkComponent url={card.url} title={card.title} description={card.description} icon={card.icon} />) }
                     </Box>
-
-                    <div style={{padding: `20px`}}/>
-                </>)}
+                )}
         />
     );
 }
