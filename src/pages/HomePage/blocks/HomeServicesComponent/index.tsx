@@ -11,15 +11,9 @@ import { Section } from '../HomeSection';
 
 import { IHomeSectionTitleProps, IHomeServicesProps } from '../../types/interfaces';
 
-import './index.scss';
 import { Box } from '@mui/material';
 
-const servicos = [
-  { id: 0, name: 'Entretenimento' }, { id: 1, name: 'Comidas' },
-  { id: 2, name: 'Som ao vivo' },
-  { id: 3, name: 'Card 4' },
-  { id: 4, name: 'Card 5' },
-];
+import './index.scss';
 
 const headerSection: IHomeSectionTitleProps = {
   title: "SERVIÇOS", 

@@ -27,24 +27,19 @@ export const HomePage: React.FC<IHomePageProps> = ({}:IHomePageProps): JSX.Eleme
 
 
     return (
-        <>
          <main className='app-home'>
             <NavBarComponent />
 
             <Box className='app-home-content'>
-            { (WIDTH_SCREEN <= 1279) && <Box className='app-navbar-content-item'><Menu /></Box> }
                 <Box className='app-home-content-container'>
-                    
                     <HomeBanner />
                     <HomeLocaleComponent />
                     <HomeServicesComponent />
                     <HomeCardLinks />
-
                 </Box>
             </Box>
 
             <FooterComponent />
         </main>
-        </>
     );
 };

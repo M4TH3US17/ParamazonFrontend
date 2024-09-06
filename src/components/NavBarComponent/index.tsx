@@ -35,14 +35,13 @@ export const NavBarComponent: React.FC<{}> = ({}: {}): JSX.Element => {
     const handleOpenSidebar = () => setIsOpenSidebar(!isOpenSidebar);
     const handleNavigate = (route: string) => navigate(route);
 
-    useEffect(() => {
+   /* useEffect(() => {
         console.log('teste 1 ', isOpenSidebar)
-    }, [isOpenSidebar])
+    }, [isOpenSidebar])*/
 
     return <AppBar position="static" className='app-bar'>
             <Container maxWidth="xl" className='app-bar-container'>
                 <Toolbar disableGutters sx={{ justifyContent: 'space-between' }} className='toolbar'>
-                   {/* { <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />} */}
 
                     <Box sx={{ flexGrow: 0 }} className="toolbar-box">
                         <Tooltip title="Open settings">

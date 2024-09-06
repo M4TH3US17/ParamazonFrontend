@@ -1,3 +1,4 @@
+import { PositionOfElementsInTheSection } from "./enums";
 
 export interface IHomePageProps {};
 export interface IHomeBannerProps {};
@@ -22,6 +23,7 @@ export interface IHomeSectionProps {
     content: JSX.Element;
     header?: IHomeSectionTitleProps;
     hasPrimaryBg?: boolean;
+    positionOfElements?: PositionOfElementsInTheSection;
 };
 
 export interface IHomeSectionTitleProps {

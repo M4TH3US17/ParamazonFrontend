@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
+
+/* 1. DESIGN MOBILE - TITULO OU SUBTITULO DO HOME CARD (FALE CONOSCO) COMPONENT */
+.card-link-item {
+    display:        flex;
+    flex-direction: column;
+    font-family:    'Public Sans', sans-serif;
+
+    .text-container {
+        width:      90%;
+        margin:     0 auto;
+    }
+
+    .text-container {
+        .text-title {
+            font-size:  20px;
+            text-align: left;
+            color:   rgb(160, 169, 177);
+            margin:     0;
+        }
+    }
+
+    .link-container {
+        display:         flex;
+        flex-direction:  row;
+        justify-content: space-between;
+        align-items:     center;
+        padding:         20px;
+        border:          0.25px solid rgb(47, 85, 212);
+        border-radius:   2px;
+        background:   #fff;
+        cursor:          pointer;
+
+        .link-icon-arrow {
+            height: 19px;
+            color:  rgb(47, 85, 212);
+        }
+
+        .image-container {
+            display:        flex;
+            flex-direction: row;
+            align-items:    center;
+            position: relative;
+
+            .link-image-bg {
+                padding:       20px;
+                background: rgba(47, 85, 212, 0.1);
+                border-radius: 50%;
+                margin-right:  10px;
+            }
+
+            .card-link-icon {
+                top:       8px;
+                left:      11px;
+                position:  absolute;
+                font-size: 18px;
+                color:   rgb(47, 85, 212);
+            }
+            
+            .text-title {
+                color:      #031d3d;
+                margin-top: 1px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .card-link-item {
+        position: relative;
+        height:   100%;
+
+        .text-container {
+            margin:        0;
+            width:         100%;
+            margin-bottom: 15px;
+            position:      absolute;
+            bottom:        75px;
+
+            .text-title {
+                white-space: nowrap;
+                font-size:   17px;
+                bottom:      0px;
+            }
+        }
+
+        .link-container {
+            margin:   0;
+            height:   80px;
+            width:    100%;
+            position: absolute;
+            bottom:   0;
+            padding:  1vmax 1vmax 1vmax 1vmax;
+            border:   1px solid rgba(78, 76, 154, 0.4);
+
+            .home-card-link-component-link-icon-arrow {
+                height: 15px;
+                color: rgb(47, 85, 212);
+            }
+        }
+
+        .image-container {
+            .text-title {
+                white-space: nowrap;
+                font-size:   15px;
+                font-weight: 100;
+            }
+        }
+    
+    }
+}

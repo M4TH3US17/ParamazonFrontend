@@ -6,7 +6,13 @@
 }
 
 @media (min-width: 1000px) {
-    .home-card-links {
+    #section {
+        .home-card-links  {
+            width: 60%;
+            gap: 8vmax;
+        }
+    }
+    /*.home-card-links {
         display:            flex;
         align-items:        center;
         gap:                10px;
@@ -17,5 +23,5 @@
 
     .home-card-links > div {
         width: 25%;
-    }
+    }*/
 }

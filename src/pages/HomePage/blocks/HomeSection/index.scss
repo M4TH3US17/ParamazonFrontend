@@ -7,3 +7,16 @@
         padding: 7vmax 5vmax 6vmax 5vmax;
     }
 };
+
+.horizontal {
+    display: flex;
+}
+
+.horizontal-inverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.vertical {
+
+}
