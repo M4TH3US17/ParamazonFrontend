@@ -17,13 +17,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .autoplay-progress {
@@ -38,22 +38,22 @@
     justify-content: center;
     font-weight: bold;
     color: var(--swiper-theme-color);
-}
 
-.autoplay-progress svg {
-    --progress: 0;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
-    fill: none;
-    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
+    svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+    }
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -65,4 +65,7 @@
     background-position: center; /* Centraliza a imagem no slide */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-image: url('../../../../assets/images/notFound2.jpg');
+
+    @media (min-width: 1000px) {
+    }
 }
