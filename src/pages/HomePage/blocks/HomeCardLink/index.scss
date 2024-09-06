@@ -1,0 +1,27 @@
+.home-card-links {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+}
+
+@media (min-width: 1000px) {
+    #section {
+        .home-card-links  {
+            width: 60%;
+            gap: 8vmax;
+        }
+    }
+    /*.home-card-links {
+        display:            flex;
+        align-items:        center;
+        gap:                10px;
+        padding-top:        0;
+        padding-bottom:     55px;
+        height:             200px;
+    }
+
+    .home-card-links > div {
+        width: 25%;
+    }*/
+}

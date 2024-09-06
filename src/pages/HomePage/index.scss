@@ -1,0 +1,39 @@
+.app-home {
+    background: #ffffff;
+
+    .app-home-content {
+        padding: 0px;
+        overflow-x: hidden;
+
+        .app-home-content-container {
+            width: 100vw;
+
+            .app-home-content-card-container {
+                @media (min-width: 1280px) {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    padding-top: 20px;
+                    padding-bottom: 80px;
+                }
+
+                & > div {
+                    width: 25%;
+                    height: 100px;
+                }
+            }
+
+            @media (max-width: 780px) {
+                &> :nth-child(2) {
+                    top: -30px;
+                    position: relative;
+                }
+            }
+
+        }
+
+        @media (min-width: 1000px) {
+            display: flex;
+        }
+    }
+}
