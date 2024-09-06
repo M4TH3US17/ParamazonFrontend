@@ -1,104 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap');
 
-/* 1. DESIGN MOBILE - TITULO OU SUBTITULO DO HOME CARD (FALE CONOSCO) COMPONENT */
 .card-link-item {
-    display:        flex;
-    flex-direction: column;
-    font-family:    'Public Sans', sans-serif;
+    width: 100%;
+    padding: 8px 0 8px 0;
+    cursor: pointer;
+    border: 0.1px solid #bdbdfa;
+    background: #FFFFFF;
 
-    .text-container {
-        width:      90%;
-        margin:     0 auto;
-    }
+    .text {
+        span {
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            color: rgb(47, 85, 212);
+            font-family:  'Public Sans', sans-serif;
+        }
 
-    .text-container {
-        .text-title {
-            font-size:  20px;
-            text-align: left;
-            color:   rgb(160, 169, 177);
-            margin:     0;
+        p {
+            text-transform: lowercase;
         }
     }
 
-    .link-container {
-        display:         flex;
-        flex-direction:  row;
-        justify-content: space-between;
-        align-items:     center;
-        padding:         20px;
-        border:          0.25px solid rgb(47, 85, 212);
-        border-radius:   2px;
-        background:   #fff;
-        cursor:          pointer;
-
-        .link-icon-arrow {
-            height: 19px;
-            color:  rgb(47, 85, 212);
-        }
-
-        .image-container {
-            display:        flex;
-            gap: 10px;
-            flex-direction: row;
-            align-items:    center;
-            position: relative;
-
-            .link-image-bg {
-            }
-
-            .card-link-icon {
-                top:       8px;
-                left:      11px;
-                position:  absolute;
-                font-size: 18px;
-                color:   rgb(47, 85, 212);
-            }
-            
-            .text-title {
-                color:      #031d3d;
-                margin-top: 1px;
-            }
-        }
+    .icon {
+        font-size: 16px;
+        color: #bdbdfa;
     }
-}
 
-@media (min-width: 1000px) {
-    .card-link-item {
-        position: relative;
-
-        .text-container {
-            margin:        0;
-            width:         100%;
-            position:      absolute;
-
-            .text-title {
-                white-space: nowrap;
-                font-size:   1.1vmax;
-                bottom:      0;
-            }
-        }
-
-        .link-container {
-            margin:   0;
-            height:   6vmax;
-            padding:  1vmax 1vmax 1vmax 1vmax;
-            border:   1px solid rgba(78, 76, 154, 0.4);
-            width: 35vmax;
-
-            .home-card-link-component-link-icon-arrow {
-                height: 15px;
-                color: rgb(47, 85, 212);
-            }
-        }
-
-        .image-container {
-            gap: 0.5vmax !important;
-            .text-title {
-                white-space: nowrap;
-                font-size:   1.1vmax;
-                font-weight: 100;
-            }
-        }
-    
+    @media (min-width: 1000px) {
+        max-width: 400px;
     }
 }

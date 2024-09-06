@@ -20,10 +20,10 @@ const headerDetails: IHomeSectionTitleProps = {
 };
 
 const cardLinkList: IHomeCardLinkProps[] = [
-    { url: "/shows/selecao", description: "Realizar minha votação", icon: <SendIcon/> },
-    { url: "/contato", description: "Entrar em contato com Paramazon", icon: <MailOutlineIcon/> },
-    { url: "/login", description: "Criar minha conta", icon: <PersonOutlineOutlinedIcon/> },
-    { url: "#", description: "Receber alertas", icon: <ReportProblemOutlinedIcon/> },
+    { url: "/shows/selecao", title: "Realizar Votação", description: "Realizar minha votação", icon: <SendIcon className="sendIcon"/> },
+    { url: "/contato", title: "Fale Conosco", description: "Entrar em contato com Paramazon", icon: <MailOutlineIcon/> },
+    { url: "/login", title: "Criar uma conta", description: "Criar minha conta", icon: <PersonOutlineOutlinedIcon/> },
+    { url: "#", title: "Seus cantores/bandas", description: "Definir minhas preferencias", icon: <ReportProblemOutlinedIcon/> },
 ];
 
 export const HomeCardLinks: React.FC<IHomeCardLinksProps> = ({ }: IHomeCardLinksProps): JSX.Element => {
