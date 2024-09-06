@@ -38,15 +38,12 @@
 
         .image-container {
             display:        flex;
+            gap: 10px;
             flex-direction: row;
             align-items:    center;
             position: relative;
 
             .link-image-bg {
-                padding:       20px;
-                background: rgba(47, 85, 212, 0.1);
-                border-radius: 50%;
-                margin-right:  10px;
             }
 
             .card-link-icon {
@@ -68,30 +65,25 @@
 @media (min-width: 1000px) {
     .card-link-item {
         position: relative;
-        height:   100%;
 
         .text-container {
             margin:        0;
             width:         100%;
-            margin-bottom: 15px;
             position:      absolute;
-            bottom:        75px;
 
             .text-title {
                 white-space: nowrap;
-                font-size:   17px;
-                bottom:      0px;
+                font-size:   1.1vmax;
+                bottom:      0;
             }
         }
 
         .link-container {
             margin:   0;
-            height:   80px;
-            width:    100%;
-            position: absolute;
-            bottom:   0;
+            height:   6vmax;
             padding:  1vmax 1vmax 1vmax 1vmax;
             border:   1px solid rgba(78, 76, 154, 0.4);
+            width: 35vmax;
 
             .home-card-link-component-link-icon-arrow {
                 height: 15px;
@@ -100,9 +92,10 @@
         }
 
         .image-container {
+            gap: 0.5vmax !important;
             .text-title {
                 white-space: nowrap;
-                font-size:   15px;
+                font-size:   1.1vmax;
                 font-weight: 100;
             }
         }

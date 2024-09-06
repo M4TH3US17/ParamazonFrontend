@@ -7,21 +7,16 @@
 
 @media (min-width: 1000px) {
     #section {
-        .home-card-links  {
+        &:first-child {
+            margin-bottom: 0;
+        }
+
+        .home-card-links {
             width: 60%;
-            gap: 8vmax;
+            gap: 1vmax;
+            align-items: end;
+            padding: 0;
+            position: relative;
         }
     }
-    /*.home-card-links {
-        display:            flex;
-        align-items:        center;
-        gap:                10px;
-        padding-top:        0;
-        padding-bottom:     55px;
-        height:             200px;
-    }
-
-    .home-card-links > div {
-        width: 25%;
-    }*/
 }
