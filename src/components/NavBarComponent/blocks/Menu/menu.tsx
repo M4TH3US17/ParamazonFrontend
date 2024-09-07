@@ -14,32 +14,22 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 import './menu.scss';
 
+interface IMenuProps {
+    isOpen: boolean;
+    closeSidebar: () => void;
+}
 
-const Menu: React.FC<{ isOpenSidebar?: boolean }> = ({ isOpenSidebar = false }) => {
-    const [clicked, setClicked] = useState<boolean>(false);
-    const [show, setShow] = useState(false);
-
-    const handleClick = () => {
-        setShow((prev) => !prev);
-        if (!clicked)
-            setClicked((prev) => !prev);
-        else
-            setTimeout(() => setClicked((prev) => !prev), 1000);
-    }
-
-    useEffect(() => {
-        handleClick()
-        console.log('teste 2 ', clicked)
-    }, [isOpenSidebar])
+const Menu: React.FC<IMenuProps> = ({ isOpen, closeSidebar }) => {
+    if (!isOpen) return null;
 
     return <>
         <Box>
-            <div className='sidebar-bg-effect' style={{ display: show ? 'block' : 'none' }} onClick={handleClick} />
+            <div className='sidebar-bg-effect' onClick={closeSidebar} style={{ display: isOpen ? 'block' : 'none' }} />
 
-            <nav className={`sidebar animate__animated ${clicked ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: show ? 'block' : 'none' }}>
+            <nav className={`sidebar animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: isOpen ? 'block' : 'none' }}>
                 <Box className='sidebar-header divider-bottom'>
                     <h5 className='sidebar-header-title'>Paramazon</h5>
-                    <i className="bi bi-x-lg sidebar-closeIcon" onClick={handleClick}></i>
+                    <i className="bi bi-x-lg sidebar-closeIcon" onClick={closeSidebar}></i>
                 </Box>
 
                 <List className='divider-bottom' sx={{ width: '100%', padding: '20px 0 20px 0' }}>

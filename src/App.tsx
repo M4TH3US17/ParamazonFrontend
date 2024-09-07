@@ -19,7 +19,7 @@ export const App: React.FC<{}> = ({}: {}): JSX.Element => {
   }, []);
 
   return (<>
-      {loadingVisible && <LoadingPageComponent />}
+      {/*loadingVisible && <LoadingPageComponent />*/}
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
