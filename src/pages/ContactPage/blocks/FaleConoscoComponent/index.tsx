@@ -4,33 +4,39 @@ import { IFaleConoscoProps } from '../../types/interface';
 
 import './index.scss';
 
-export const FaleConoscoComponent: React.FC<IFaleConoscoProps> = ({}: IFaleConoscoProps): JSX.Element => {
+export const FaleConoscoComponent: React.FC<IFaleConoscoProps> = ({ }: IFaleConoscoProps): JSX.Element => {
   return (
     <Box className='faleconosco'>
       <Box className='faleconosco-form'>
 
-        <Box className='faleconosco-form-text'>
-          <Typography className='faleconosco-form-title'> Fale Conosco </Typography>
-          <Typography className='faleconosco-form-subtitle'> Estamos felizes em responder a qualquer dúvida que você possa ter e ajudar a determinar qual dos nossos serviços melhor atende às suas necessidades. </Typography>
-        </Box>
+        <Box className='faleconosco-form-text-container'>
+          <Box className='faleconosco-form-text'>
+            <Typography className='faleconosco-form-title'> Fale Conosco </Typography>
+            <Typography className='faleconosco-form-subtitle'> Estamos felizes em responder a qualquer dúvida que você possa ter e ajudar a
+              determinar qual dos nossos serviços melhor atende às suas necessidades. </Typography>
+          </Box>
 
-        <div className="work-area">
-          <h5 className="box-title mb-30 text-white">Como nos Trabalhamos?</h5>
-          <div className="work-item_wrapper">
-            <div className="work-item">
-              <span className="work-item_number">01</span>
-              <p className="work-text">Descricao Descricao Descricao</p>
-            </div>
-            <div className="work-item">
-              <span className="work-item_number">02</span>
-              <p className="work-text">Descricao Descricao Descricao</p>
-            </div>
-            <div className="work-item">
-              <span className="work-item_number">03</span>
-              <p className="work-text">Descricao Descricao Descricao</p>
-            </div>
-          </div>
-        </div>
+          <Box className="work-area">
+            <Typography component='h5' className="box-title mb-30 text-white">Como nos Trabalhamos?</Typography>
+
+            <Box className="work-item_wrapper">
+              <Box className="work-item">
+                <Typography component='span' className="work-item_number">01</Typography>
+                <Typography component='p' className="work-text">Descricao Descricao Descricao</Typography>
+              </Box>
+
+              <Box className="work-item">
+                <Typography component='span' className="work-item_number">02</Typography>
+                <Typography component='p' className="work-text">Descricao Descricao Descricao</Typography>
+              </Box>
+
+              <Box className="work-item">
+                <Typography component='span' className="work-item_number">03</Typography>
+                <Typography component='p' className="work-text">Descricao Descricao Descricao</Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
 
         <Box className='faleconosco-form-field'>
 

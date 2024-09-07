@@ -7,113 +7,137 @@
     padding: 35px 10px 70px 10px;
     background: #1E2A5E;
 
+    @media (min-width: 1000px) {
+        padding: 6vmax 5vmax 11vmax 5vmax;
+    }
+
     .faleconosco-form {
 
-        .faleconosco-form-text {
-            margin-bottom: 30px;
-
-            .faleconosco-form-title {
-                font-size: calc(1.375rem + 1.5vw);
-                color: #fff;
-                font-family: "Rubik", sans-serif;
-                font-weight: 500;
-                margin-bottom: 7px;
-            };
-
-            .faleconosco-form-subtitle {
-                font-family: "Rubik", sans-serif;
-                color: #9ea6bc;
-                margin-bottom: 20px;
-            };
-
-        }
-
-        .work-area {
-            margin-bottom: 40px;
-
-            .box-title {
-                margin-bottom: 30px;
-            }
-
-            .work-item_wrapper {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-
-        .work-item {
-            position: relative;
+        @media (min-width: 1000px) {
             display: flex;
-            gap: 20px;
-        
-            &:first-child {
-                max-width: 290px;
-        
-                &:before {
-                    right: -15px;
+            justify-content: space-between;
+        }
+
+        .faleconosco-form-text-container {
+            @media (min-width: 1000px) {
+                width: 50%;
+            }
+
+            .faleconosco-form-text {
+                margin-bottom: 30px;
+    
+                .faleconosco-form-title {
+                    font-size: calc(1.375rem + 1.5vw);
+                    color: #fff;
+                    font-family: "Rubik", sans-serif;
+                    font-weight: 500;
+                    margin-bottom: 7px;
+
+                    @media (min-width: 1000px) {
+                        font-size: 2.9vmax;
+                    }
+                };
+    
+                .faleconosco-form-subtitle {
+                    font-family: "Rubik", sans-serif;
+                    color: #9ea6bc;
+                    margin-bottom: 20px;
+                };
+    
+            }
+    
+            .work-area {
+                margin-bottom: 40px;
+    
+                .box-title {
+                    margin-bottom: 30px;
+                }
+    
+                .work-item_wrapper {
+                    display: flex;
+                    flex-direction: column;
                 }
             }
-        
-        
-            &:before {
-                content: url("data:image/svg+xml,%3Csvg width='20' height='37' viewBox='0 0 20 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18.5L0 0L10.6446 18.5L0 37L20 18.5Z' fill='%233E66F3'/%3E%3C/svg%3E%0A");
-                position: absolute;
-                top: 0px;
-                right: -40px;
-                //font-family: $icon-font;
-                width: 20px;
-                height: 37px;
-                text-align: center;
-                border-radius: 50%;
-                display: inline-block;
-                font-size: 1em;
-                line-height: 1;
-                color: white;
-                font-weight: 900;
-                transition: 0.3s ease-in-out;
-        
-            }
-        
-            &:last-child {
-                &:before {
-                    display: none;
-                }
-            }
-        
-            &_wrapper {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+    
+            .work-item {
+                position: relative;
+                display: flex;
                 gap: 20px;
-            }
-        
-            &_number {
-                min-width: 40px;
-                height: 40px;
-                line-height: 40px;
-                text-align: center;
-                border-radius: 50%;
-                font-size: 16px;
-                font-weight: 600;
-                letter-spacing: -0.32px;
-                display: block;
-                background-color: #55679C;
-                color: #fff;
-                border: 1px solid rgba(255, 255, 255, 0.10);
-            }
-        
-        
-            .work-text {
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                color: #e8eefd;
-            }
-        }        
+            
+                &:first-child {
+                    max-width: 290px;
+            
+                    &:before {
+                        right: -15px;
+                    }
+                }
+            
+            
+                &:before {
+                    content: url("data:image/svg+xml,%3Csvg width='20' height='37' viewBox='0 0 20 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18.5L0 0L10.6446 18.5L0 37L20 18.5Z' fill='%233E66F3'/%3E%3C/svg%3E%0A");
+                    position: absolute;
+                    top: 0px;
+                    right: -40px;
+                    //font-family: $icon-font;
+                    width: 20px;
+                    height: 37px;
+                    text-align: center;
+                    border-radius: 50%;
+                    display: inline-block;
+                    font-size: 1em;
+                    line-height: 1;
+                    color: white;
+                    font-weight: 900;
+                    transition: 0.3s ease-in-out;
+            
+                }
+            
+                &:last-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+            
+                &_wrapper {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                }
+            
+                &_number {
+                    min-width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 16px;
+                    font-weight: 600;
+                    letter-spacing: -0.32px;
+                    display: block;
+                    background-color: #55679C;
+                    color: #fff;
+                    border: 1px solid rgba(255, 255, 255, 0.10);
+                }
+            
+            
+                .work-text {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #e8eefd;
+                }
+            }     
+        }   
 
         .faleconosco-form-field {
             background: #fff;
             border-radius: 30px;
             border: 1px solid rgba(255, 255, 255, 0.05);
+
+            @media (min-width: 1000px) {
+                min-width: 350px;
+            }
+
 
             .faleconosco-form-desc {
                 border-bottom: 0.25px solid #d2d2d2;
