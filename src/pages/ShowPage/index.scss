@@ -16,13 +16,37 @@
     overflow: hidden;
     background: #153448;
 
+    @media (min-width: 1000px) {
+      min-height: 570px;
+      padding-top: 0;
+    }
+
     .banner-content {
       height: 350px;
       //background: blue;
+      
+      @media (min-width: 1000px) {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        position: relative;
+        padding: 14vmax 0vmax 10vmax 0vmax;
+      }
 
       .banner-content-item {
         height: 116.6px;
-        //border: 1px solid black;
+
+        @media (min-width: 1000px) {
+          height: auto;
+
+          &:first-child {
+            position: absolute;
+            top: 11vmax;
+            right: 0;
+            //background: red;
+          }
+        }
       };
 
       #logo-container {
@@ -31,6 +55,11 @@
 
         #logo {
           height: 116.6px;
+
+          @media (min-width: 1000px) {
+            height: auto;
+            width: 37vmax;
+          }
         };
       };
 
@@ -38,6 +67,11 @@
         display: flex;
         padding-top: 14px; /* distancia entre o texto e o icone */
         justify-content: center;
+
+        @media (min-width: 1000px) {
+          display: block;
+          padding-top: 0;
+        }
 
         #text {
           width: 95%;
@@ -56,6 +90,13 @@
           @media (max-width: 480px) {
               font-size: 6vw;
           }
+
+          @media (min-width: 1000px) {
+            text-align: left;
+            font-size: 2.4vmax;
+            line-height: 3.3vmax;
+            margin-bottom: 6vmax;
+          }
         };
       };
 
@@ -67,12 +108,25 @@
         gap: 20px;
         margin: 0 auto;
         //background: red;
+
+        @media (min-width: 1000px) {
+          width: 100%;
+        }
+
     
         #button {
           width: 100%;
           height: 52px;
           //font-size: 12px;
           font-size: calc(0.4em + 1.8vw);
+
+          @media (min-width: 1000px) {
+            height: 3.1vmax;
+            width: 10vmax;
+            font-size: 0.9vmax;
+            line-height: normal;
+            font-family:  "Rubik", sans-serif;
+          }
         }
 
         .btn-viewDemo {

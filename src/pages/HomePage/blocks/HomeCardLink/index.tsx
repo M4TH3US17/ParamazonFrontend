@@ -35,7 +35,7 @@ export const HomeCardLinks: React.FC<IHomeCardLinksProps> = ({ }: IHomeCardLinks
             positionOfElements={isMobileScreen ? PositionOfElementsInTheSection.VERTICAL : PositionOfElementsInTheSection.HORIZONTAL}
             content={
                 <Box className='home-card-links'>
-                    {cardLinkList.map(card => <HomeCardLinkComponent url={card.url} title={card.title} description={card.description} icon={card.icon} />)}
+                    {cardLinkList.map((card, index) => <HomeCardLinkComponent key={index} url={card.url} title={card.title} description={card.description} icon={card.icon} />)}
                 </Box>}
         />
     );
