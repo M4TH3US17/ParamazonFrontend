@@ -51,11 +51,8 @@
 
 .swiper-slide {
     background-size: cover;
-    /* Ajusta a imagem para cobrir o slide */
     background-position: center;
-    /* Centraliza a imagem no slide */
     background-repeat: no-repeat;
-    /* Impede que a imagem se repita */
     background-image: url('../../../../assets/images/notFound2.jpg');
 
     @media (min-width: 1000px) {}

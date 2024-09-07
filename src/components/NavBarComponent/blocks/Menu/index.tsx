@@ -12,18 +12,25 @@ import ImageIcon from '@mui/icons-material/Image';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
-import './menu.scss';
+import { NavbarPage as MenuPage } from '../../types/objects';
 
-interface IMenuProps {
-    isOpen: boolean;
-    closeSidebar: () => void;
-}
+import './index.scss';
 
-const Menu: React.FC<IMenuProps> = ({ isOpen, closeSidebar }) => {
+const pages: MenuPage[] = [
+    new MenuPage({ pageName: 'PAG. INICIAL', router: '/', pageSubtitle: 'Acessar a pág. inicial', icon:  <ImageIcon />}),
+    new MenuPage({ pageName: 'SOM AO VIVO', router: '/shows', pageSubtitle: 'Ver o próx. som ao vivo', icon:  <ImageIcon />}),
+    new MenuPage({ pageName: 'FALE CONOSCO', router: '/contato', pageSubtitle: 'Deseja contatar nós?', icon: <ImageIcon />}),
+];
+
+const pagesMore: MenuPage[] = [
+    new MenuPage({ pageName: 'Login', router: '/login', icon: <ExitToAppIcon /> }),
+    new MenuPage({ pageName: 'Configurações', router: '#', icon: <SettingsIcon /> }),
+];
+
+const Menu: React.FC<IMenuProps> = ({ isOpen, closeSidebar }: IMenuProps) => {
     if (!isOpen) return null;
 
-    return <>
-        <Box>
+    return <Box>
             <div className='sidebar-bg-effect' onClick={closeSidebar} style={{ display: isOpen ? 'block' : 'none' }} />
 
             <nav className={`sidebar animate__animated ${isOpen ? 'animate__slideInRight' : 'animate__slideOutRight'}`} style={{ display: isOpen ? 'block' : 'none' }}>
@@ -33,37 +40,29 @@ const Menu: React.FC<IMenuProps> = ({ isOpen, closeSidebar }) => {
                 </Box>
 
                 <List className='divider-bottom' sx={{ width: '100%', padding: '20px 0 20px 0' }}>
-                    <Link to={'/'}>
-                        <SidebarPageItem icon={<ImageIcon />} title='PAG. INICIAL' subtitle='Acessar a pág. inicial' />
-                    </Link>
-
-                    <Link to={'/shows'}>
-                        <SidebarPageItem icon={<ImageIcon />} title='SOM AO VIVO' subtitle='Ver o próx. som ao vivo' />
-                    </Link>
-
-                    <Link to={'/contato'}>
-                        <SidebarPageItem icon={<ImageIcon />} title='FALE CONOSCO' subtitle='Deseja contatar nós?' />
-                    </Link>
-
-                    <Link to={'/shows/selecao'}>
-                        <SidebarPageItem icon={<ImageIcon />} title='VOTAÇÃO' subtitle='Decidir um som ao vivo' />
-                    </Link>
+                    {
+                        pages.map(menuItem => <Link to={menuItem.router}>
+                            <SidebarPageItem icon={menuItem.icon} title={menuItem.pageName} subtitle={menuItem.pageSubtitle} />
+                        </Link>)
+                    }
                 </List>
 
                 <Box className='' sx={{ width: '100%', padding: '20px 0 20px 0' }}>
                     <nav aria-label="main mailbox folders">
-                        <Link to={'/login'}>
-                            <SidebarMoreItem icon={<ExitToAppIcon />} title='Login' />
-                        </Link>
-
-                        <Link to={'#'}>
-                            <SidebarMoreItem icon={<SettingsIcon />} title='Configurações' />
-                        </Link>
+                        {
+                            pagesMore.map(menuItem => <Link to={menuItem.router}>
+                                <SidebarMoreItem icon={menuItem.icon} title={menuItem.pageName} />
+                            </Link>)
+                        }
                     </nav>
                 </Box>
             </nav>
         </Box>
-    </>
+};
+
+interface IMenuProps {
+    isOpen: boolean;
+    closeSidebar: () => void;
 };
 
 

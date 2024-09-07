@@ -10,14 +10,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from 'react-router-dom';
 
-import Menu from './blocks/Menu/menu';
+import Menu from './blocks/Menu';
 import { NavbarPage } from './types/objects';
 
 import './index.scss';
 
 const pages: NavbarPage[] = [
     new NavbarPage({ pageName: 'PAG. INICIAL', router: '/' }),
-    new NavbarPage({ pageName: 'SOM AO VIVO', router: '/shows' }),
+   // new NavbarPage({ pageName: 'SOM AO VIVO', router: '/shows' }),
     new NavbarPage({ pageName: 'FALE CONOSCO', router: '/contato' }),
     new NavbarPage({ pageName: 'LOGIN', router: '/login' }),
 ];

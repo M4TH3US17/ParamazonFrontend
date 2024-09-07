@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import HomeBanner from './blocks/HomeBannerComponent';
 import { WIDTH_SCREEN } from '../../utils/ScreenUtils/screen-measurements-data';
-import Menu from '../../components/NavBarComponent/blocks/Menu/menu';
+import Menu from '../../components/NavBarComponent/blocks/Menu';
 import { IHomePageProps } from './types/interfaces';
 
 import { Box } from '@mui/material';
